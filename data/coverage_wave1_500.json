@@ -1,0 +1,19 @@
+{
+  "version": "W1-500",
+  "entry_count": 500,
+  "relationship_count": 5322,
+  "groups": {
+    "Chinese Materia Medica": 105,
+    "Chinese Core Systems": 20,
+    "Aroma & Essential Oils": 71,
+    "Apothecary & Preparations": 45,
+    "Global Traditional Systems": 80,
+    "Water & Bath": 35,
+    "Sound & Chant": 35,
+    "Nature & Animals": 35,
+    "Folk Ritual Stone Energy": 35,
+    "Texts History Institutions": 39
+  },
+  "status": "STRUCTURED",
+  "qa_status": "PENDING_SOURCE_AND_SAFETY_REVIEW"
+}
