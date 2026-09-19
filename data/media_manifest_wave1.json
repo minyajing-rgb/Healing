@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "source_context": "user-provided current conversation",
+  "policy": "Repository assets are web-optimized derivatives for prototyping. Original high-resolution conversation uploads remain source masters and are not falsely labeled as archived originals.",
+  "assets": [
+    {
+      "id": "MEDIA-001",
+      "type": "image",
+      "title_zh": "普罗旺斯玫瑰花园与鸟类植物图鉴",
+      "path": "assets/reference/images/provence_bird_botanical_atlas.webp",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "home",
+        "atlas",
+        "story",
+        "map_story_rail"
+      ]
+    },
+    {
+      "id": "MEDIA-002",
+      "type": "image",
+      "title_zh": "普罗旺斯玫瑰葡萄园与香水庄园",
+      "path": "assets/reference/images/provence_perfume_estate.webp",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "home",
+        "aroma_lab",
+        "story",
+        "map_story_rail"
+      ]
+    },
+    {
+      "id": "MEDIA-003",
+      "type": "image",
+      "title_zh": "阿里山 Healing Adventure",
+      "path": "assets/reference/images/alishan_healing_adventure.webp",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "home",
+        "nature",
+        "story",
+        "journey"
+      ]
+    },
+    {
+      "id": "MEDIA-004",
+      "type": "image",
+      "title_zh": "香蝶香氛庄园信息图",
+      "path": "assets/reference/images/butterfly_perfume_estate_infographic.webp",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "home",
+        "aroma_lab",
+        "atlas",
+        "journey"
+      ]
+    },
+    {
+      "id": "MEDIA-005",
+      "type": "video",
+      "title_zh": "香水实验室新手教学与采摘/酿造操作演示",
+      "path": "assets/reference/videos/perfume_lab_tutorial.mp4",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "aroma_lab",
+        "apothecary_lab",
+        "story"
+      ]
+    },
+    {
+      "id": "MEDIA-006",
+      "type": "video",
+      "title_zh": "普罗旺斯玫瑰葡萄园酒庄香水 Lab SIM",
+      "path": "assets/reference/videos/provence_estate_sim.mp4",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "home",
+        "provence_story",
+        "aroma_lab"
+      ]
+    },
+    {
+      "id": "MEDIA-007",
+      "type": "video",
+      "title_zh": "庄园装饰、湖畔、帆船、茶会与音乐会",
+      "path": "assets/reference/videos/estate_lifestyle_scenes.mp4",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "nature",
+        "slow_living",
+        "story"
+      ]
+    },
+    {
+      "id": "MEDIA-008",
+      "type": "video",
+      "title_zh": "香氛蝴蝶花园宣传预告片",
+      "path": "assets/reference/videos/butterfly_garden_trailer.mp4",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "home",
+        "aroma",
+        "garden",
+        "story"
+      ]
+    },
+    {
+      "id": "MEDIA-009",
+      "type": "video",
+      "title_zh": "稀有香水原料探索场景",
+      "path": "assets/reference/videos/rare_ingredient_expedition.mp4",
+      "status": "COMMITTED_WEB_PROXY",
+      "modules": [
+        "aroma_lab",
+        "expedition",
+        "ingredient_story"
+      ]
+    }
+  ]
+}
