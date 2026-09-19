@@ -1,0 +1,41 @@
+name: Website audit
+on:
+  push:
+    paths: ['.github/workflows/site-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install Pillow --quiet
+      - name: Check images, videos and live site
+        run: |
+          python - <<'PY'
+          import pathlib, urllib.request, json, subprocess
+          from PIL import Image
+          out={"images":[],"videos":[],"live":{}}
+          for p in pathlib.Path('assets/reference/images').glob('*'):
+            try:
+              im=Image.open(p); im.load()
+              item={"path":str(p),"bytes":p.stat().st_size,"valid":True,"dimensions":list(im.size)}
+            except Exception as exc:
+              item={"path":str(p),"bytes":p.stat().st_size,"valid":False,"error":str(exc)}
+            out['images'].append(item)
+          for p in pathlib.Path('assets/reference/videos').glob('*'):
+            r=subprocess.run(['ffprobe','-v','error','-show_entries','format=duration:stream=width,height','-of','json',str(p)],capture_output=True,text=True)
+            out['videos'].append({"path":str(p),"bytes":p.stat().st_size,"valid":r.returncode==0,"probe":r.stdout,"error":r.stderr[:350]})
+          try:
+            u='https://minyajing-rgb.github.io/Healing/'
+            r=urllib.request.urlopen(u,timeout=30)
+            out['live']={"url":r.url,"status":r.status,"bytes":len(r.read())}
+          except Exception as exc: out['live']={"error":str(exc)}
+          pathlib.Path('audit-report.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: website-audit
+          path: audit-report.json
