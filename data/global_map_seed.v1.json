@@ -1,0 +1,128 @@
+{
+  "version":"0.1-discovery",
+  "note_zh":"第一批全球地图发现节点，仅用于确定采集范围。所有节点在公开发布前必须补来源、细化社区归属并做安全/文化权利审核。",
+  "note_en":"First global-map discovery nodes. These define collection scope only. Every node requires sourcing, cultural attribution and safety/rights review before publication.",
+  "nodes":[
+    {
+      "id":"seed-cn-chinese-medicine",
+      "name_zh":"中国传统医学与本草",
+      "name_en":"Chinese Medicine & Materia Medica",
+      "place_name":"China",
+      "lat":35.0,"lng":103.0,"precision":"country",
+      "modalities":["MOD-PLANT","MOD-NEEDLE","MOD-HEAT","MOD-CUP","MOD-SCRAPE","MOD-FOOD","MOD-MOVE","MOD-WATER"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-cn-guangxi-yao",
+      "name_zh":"广西瑶医与瑶浴",
+      "name_en":"Guangxi Yao Medicine & Medicinal Bathing",
+      "place_name":"Guangxi, China",
+      "lat":23.8,"lng":108.3,"precision":"region",
+      "modalities":["MOD-PLANT","MOD-WATER","MOD-FOLK"],
+      "cultural_access":"community_context_required",
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-jp-kampo-onsen-forest",
+      "name_zh":"日本汉方、温泉与森林疗愈",
+      "name_en":"Japan: Kampo, Onsen & Forest-Based Practices",
+      "place_name":"Japan",
+      "lat":36.2,"lng":138.2,"precision":"country",
+      "modalities":["MOD-PLANT","MOD-WATER","MOD-NATURE"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-in-ayurveda",
+      "name_zh":"印度阿育吠陀与瑜伽传统",
+      "name_en":"India: Ayurveda & Yoga Traditions",
+      "place_name":"India",
+      "lat":22.5,"lng":79.0,"precision":"country",
+      "modalities":["MOD-PLANT","MOD-FOOD","MOD-BODY","MOD-MOVE","MOD-BREATH","MOD-MEDITATE"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-westasia-unani-persian",
+      "name_zh":"尤纳尼与波斯-阿拉伯医药传统",
+      "name_en":"Unani & Persian-Arabic Medical Traditions",
+      "place_name":"West and South Asia",
+      "lat":30.0,"lng":55.0,"precision":"approximate",
+      "modalities":["MOD-PLANT","MOD-APOTH","MOD-FOOD"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-provence-aroma",
+      "name_zh":"普罗旺斯芳香植物与香气文化",
+      "name_en":"Provence Aromatic Plants & Scent Culture",
+      "place_name":"Provence, France",
+      "lat":43.9,"lng":5.1,"precision":"region",
+      "modalities":["MOD-PLANT","MOD-AROMA","MOD-APOTH","MOD-GARDEN"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-thai-traditions",
+      "name_zh":"泰国传统草药与身体疗法",
+      "name_en":"Thai Herbal & Bodywork Traditions",
+      "place_name":"Thailand",
+      "lat":15.8,"lng":101.0,"precision":"country",
+      "modalities":["MOD-PLANT","MOD-BODY","MOD-WATER"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-indonesia-jamu",
+      "name_zh":"印度尼西亚 Jamu 草药传统",
+      "name_en":"Indonesia: Jamu Herbal Tradition",
+      "place_name":"Indonesia",
+      "lat":-2.5,"lng":118.0,"precision":"country",
+      "modalities":["MOD-PLANT","MOD-APOTH","MOD-FOOD"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-africa-ethnobotany",
+      "name_zh":"非洲地区性民族植物疗愈",
+      "name_en":"Regional African Ethnobotanical Healing Traditions",
+      "place_name":"Africa",
+      "lat":1.0,"lng":20.0,"precision":"approximate",
+      "modalities":["MOD-PLANT","MOD-FOLK","MOD-RITUAL"],
+      "cultural_access":"community_context_required",
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-andes-amazonia",
+      "name_zh":"安第斯与亚马逊地区民族植物传统",
+      "name_en":"Andean & Amazonian Ethnobotanical Traditions",
+      "place_name":"Andes and Amazonia, South America",
+      "lat":-8.0,"lng":-68.0,"precision":"approximate",
+      "modalities":["MOD-PLANT","MOD-RITUAL","MOD-SHAMAN"],
+      "cultural_access":"community_context_required",
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-aotearoa-rongoa",
+      "name_zh":"Aotearoa / 新西兰 Māori Rongoā",
+      "name_en":"Aotearoa New Zealand: Māori Rongoā",
+      "place_name":"Aotearoa New Zealand",
+      "lat":-41.0,"lng":174.0,"precision":"country",
+      "modalities":["MOD-PLANT","MOD-RITUAL","MOD-NATURE"],
+      "cultural_access":"community_context_required",
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-global-sound",
+      "name_zh":"全球声音、吟唱与音乐疗愈传统",
+      "name_en":"Global Sound, Chant & Music Healing Traditions",
+      "place_name":"Global",
+      "lat":0.0,"lng":0.0,"precision":"approximate",
+      "modalities":["MOD-SOUND","MOD-CHANT","MOD-VIBRO","MOD-PRAYER"],
+      "status":"PLANNED"
+    },
+    {
+      "id":"seed-global-animal",
+      "name_zh":"全球动物辅助疗愈",
+      "name_en":"Global Animal-Assisted Practices",
+      "place_name":"Global",
+      "lat":0.0,"lng":0.0,"precision":"approximate",
+      "modalities":["MOD-ANIMAL","MOD-NATURE"],
+      "status":"PLANNED"
+    }
+  ]
+}
