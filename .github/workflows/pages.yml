@@ -1,38 +1,22 @@
-name: Deploy Earth Healing to GitHub Pages
+name: Prepare Earth Healing static site
 
 on:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare static site
+      - name: Verify static website files
         run: |
-          mkdir -p public/assets/reference public/data
-          cp index.html public/index.html
-          cp styles.css public/styles.css
-          cp app.js public/app.js
-          cp -R assets/reference/images public/assets/reference/
-          cp -R assets/reference/videos public/assets/reference/
-          cp data/site_featured_content_v1.json public/data/ || true
-          touch public/.nojekyll
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          test -f index.html
+          test -f map.html
+          test -f story-provence.html
+          test -f atlas-lavender.html
+          test -f styles.css
+          test -f app.js
+          echo "Earth Healing static site is ready for GitHub Pages, Cloudflare Pages, Vercel, Netlify, or any static host."
