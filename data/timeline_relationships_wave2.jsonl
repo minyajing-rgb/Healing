@@ -1,0 +1,96 @@
+{"from":"EH-TIME-W2-001","type":"STORY_FOR_PLACE","to":"Mesopotamia"}
+{"from":"EH-TIME-W2-001","type":"HAS_TIMELINE_RANGE","to":"-2000:-500"}
+{"from":"EH-TIME-W2-001","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-001#media"}
+{"from":"EH-TIME-W2-001","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-001#sources"}
+{"from":"EH-TIME-W2-002","type":"STORY_FOR_PLACE","to":"Ancient Egypt"}
+{"from":"EH-TIME-W2-002","type":"HAS_TIMELINE_RANGE","to":"-1550:-1500"}
+{"from":"EH-TIME-W2-002","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-002#media"}
+{"from":"EH-TIME-W2-002","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-002#sources"}
+{"from":"EH-TIME-W2-003","type":"STORY_FOR_PLACE","to":"South Asia"}
+{"from":"EH-TIME-W2-003","type":"HAS_TIMELINE_RANGE","to":"-1200:-500"}
+{"from":"EH-TIME-W2-003","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-003#media"}
+{"from":"EH-TIME-W2-003","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-003#sources"}
+{"from":"EH-TIME-W2-004","type":"STORY_FOR_PLACE","to":"China"}
+{"from":"EH-TIME-W2-004","type":"HAS_TIMELINE_RANGE","to":"-300:200"}
+{"from":"EH-TIME-W2-004","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-004#media"}
+{"from":"EH-TIME-W2-004","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-004#sources"}
+{"from":"EH-TIME-W2-005","type":"STORY_FOR_PLACE","to":"Ancient Greece"}
+{"from":"EH-TIME-W2-005","type":"HAS_TIMELINE_RANGE","to":"-500:-300"}
+{"from":"EH-TIME-W2-005","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-005#media"}
+{"from":"EH-TIME-W2-005","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-005#sources"}
+{"from":"EH-TIME-W2-006","type":"STORY_FOR_PLACE","to":"Ancient Greece"}
+{"from":"EH-TIME-W2-006","type":"HAS_TIMELINE_RANGE","to":"-500:400"}
+{"from":"EH-TIME-W2-006","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-006#media"}
+{"from":"EH-TIME-W2-006","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-006#sources"}
+{"from":"EH-TIME-W2-007","type":"STORY_FOR_PLACE","to":"South Asia"}
+{"from":"EH-TIME-W2-007","type":"HAS_TIMELINE_RANGE","to":"-300:700"}
+{"from":"EH-TIME-W2-007","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-007#media"}
+{"from":"EH-TIME-W2-007","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-007#sources"}
+{"from":"EH-TIME-W2-008","type":"STORY_FOR_PLACE","to":"Mediterranean"}
+{"from":"EH-TIME-W2-008","type":"HAS_TIMELINE_RANGE","to":"50:600"}
+{"from":"EH-TIME-W2-008","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-008#media"}
+{"from":"EH-TIME-W2-008","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-008#sources"}
+{"from":"EH-TIME-W2-009","type":"STORY_FOR_PLACE","to":"China"}
+{"from":"EH-TIME-W2-009","type":"HAS_TIMELINE_RANGE","to":"100:300"}
+{"from":"EH-TIME-W2-009","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-009#media"}
+{"from":"EH-TIME-W2-009","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-009#sources"}
+{"from":"EH-TIME-W2-010","type":"STORY_FOR_PLACE","to":"Roman Empire"}
+{"from":"EH-TIME-W2-010","type":"HAS_TIMELINE_RANGE","to":"-100:400"}
+{"from":"EH-TIME-W2-010","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-010#media"}
+{"from":"EH-TIME-W2-010","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-010#sources"}
+{"from":"EH-TIME-W2-011","type":"STORY_FOR_PLACE","to":"Eurasia"}
+{"from":"EH-TIME-W2-011","type":"HAS_TIMELINE_RANGE","to":"100:800"}
+{"from":"EH-TIME-W2-011","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-011#media"}
+{"from":"EH-TIME-W2-011","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-011#sources"}
+{"from":"EH-TIME-W2-012","type":"STORY_FOR_PLACE","to":"Tang China"}
+{"from":"EH-TIME-W2-012","type":"HAS_TIMELINE_RANGE","to":"659:700"}
+{"from":"EH-TIME-W2-012","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-012#media"}
+{"from":"EH-TIME-W2-012","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-012#sources"}
+{"from":"EH-TIME-W2-013","type":"STORY_FOR_PLACE","to":"West Asia"}
+{"from":"EH-TIME-W2-013","type":"HAS_TIMELINE_RANGE","to":"750:1000"}
+{"from":"EH-TIME-W2-013","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-013#media"}
+{"from":"EH-TIME-W2-013","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-013#sources"}
+{"from":"EH-TIME-W2-014","type":"STORY_FOR_PLACE","to":"Persianate world / Europe"}
+{"from":"EH-TIME-W2-014","type":"HAS_TIMELINE_RANGE","to":"1020:1700"}
+{"from":"EH-TIME-W2-014","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-014#media"}
+{"from":"EH-TIME-W2-014","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-014#sources"}
+{"from":"EH-TIME-W2-015","type":"STORY_FOR_PLACE","to":"Song China"}
+{"from":"EH-TIME-W2-015","type":"HAS_TIMELINE_RANGE","to":"960:1279"}
+{"from":"EH-TIME-W2-015","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-015#media"}
+{"from":"EH-TIME-W2-015","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-015#sources"}
+{"from":"EH-TIME-W2-016","type":"STORY_FOR_PLACE","to":"Europe"}
+{"from":"EH-TIME-W2-016","type":"HAS_TIMELINE_RANGE","to":"800:1500"}
+{"from":"EH-TIME-W2-016","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-016#media"}
+{"from":"EH-TIME-W2-016","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-016#sources"}
+{"from":"EH-TIME-W2-017","type":"STORY_FOR_PLACE","to":"Europe"}
+{"from":"EH-TIME-W2-017","type":"HAS_TIMELINE_RANGE","to":"1450:1650"}
+{"from":"EH-TIME-W2-017","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-017#media"}
+{"from":"EH-TIME-W2-017","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-017#sources"}
+{"from":"EH-TIME-W2-018","type":"STORY_FOR_PLACE","to":"Ottoman world"}
+{"from":"EH-TIME-W2-018","type":"HAS_TIMELINE_RANGE","to":"1400:1900"}
+{"from":"EH-TIME-W2-018","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-018#media"}
+{"from":"EH-TIME-W2-018","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-018#sources"}
+{"from":"EH-TIME-W2-019","type":"STORY_FOR_PLACE","to":"Japan"}
+{"from":"EH-TIME-W2-019","type":"HAS_TIMELINE_RANGE","to":"1600:1868"}
+{"from":"EH-TIME-W2-019","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-019#media"}
+{"from":"EH-TIME-W2-019","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-019#sources"}
+{"from":"EH-TIME-W2-020","type":"STORY_FOR_PLACE","to":"Andes → Global"}
+{"from":"EH-TIME-W2-020","type":"HAS_TIMELINE_RANGE","to":"1600:1900"}
+{"from":"EH-TIME-W2-020","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-020#media"}
+{"from":"EH-TIME-W2-020","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-020#sources"}
+{"from":"EH-TIME-W2-021","type":"STORY_FOR_PLACE","to":"Europe / Global"}
+{"from":"EH-TIME-W2-021","type":"HAS_TIMELINE_RANGE","to":"1700:1900"}
+{"from":"EH-TIME-W2-021","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-021#media"}
+{"from":"EH-TIME-W2-021","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-021#sources"}
+{"from":"EH-TIME-W2-022","type":"STORY_FOR_PLACE","to":"Europe / North America"}
+{"from":"EH-TIME-W2-022","type":"HAS_TIMELINE_RANGE","to":"1800:1900"}
+{"from":"EH-TIME-W2-022","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-022#media"}
+{"from":"EH-TIME-W2-022","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-022#sources"}
+{"from":"EH-TIME-W2-023","type":"STORY_FOR_PLACE","to":"France / Global"}
+{"from":"EH-TIME-W2-023","type":"HAS_TIMELINE_RANGE","to":"1900:2000"}
+{"from":"EH-TIME-W2-023","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-023#media"}
+{"from":"EH-TIME-W2-023","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-023#sources"}
+{"from":"EH-TIME-W2-024","type":"STORY_FOR_PLACE","to":"Global"}
+{"from":"EH-TIME-W2-024","type":"HAS_TIMELINE_RANGE","to":"1970:2026"}
+{"from":"EH-TIME-W2-024","type":"HAS_MEDIA_SLOT","to":"EH-TIME-W2-024#media"}
+{"from":"EH-TIME-W2-024","type":"REQUIRES_SOURCE_REVIEW","to":"EH-TIME-W2-024#sources"}
