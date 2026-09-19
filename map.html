@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>World Healing Map · Earth Healing</title><link rel="stylesheet" href="./styles.css"></head>
+<body data-page="map">
+<header class="site-header">
+  <a class="brand" href="./index.html"><span class="brand-medallion">EH</span><span><strong>Earth Healing 地球疗愈</strong><small>PEOPLE · PLANTS · PLACES · A BRIGHTER TOMORROW</small></span></a>
+  <nav class="nav"><a href="./index.html">探索</a><a class="active" href="./map.html">地图</a><a href="#timeline">时间线</a><a href="./atlas-lavender.html">图鉴</a><a href="./story-provence.html">故事</a></nav>
+  <div class="header-actions"><button class="tiny-btn" data-font-btn>A+</button><button class="tiny-btn" data-lang-btn>EN / 中文</button><a class="pill-btn" href="./index.html">返回首页</a></div>
+</header>
+<main class="map-page">
+  <section class="page-banner compact-banner">
+    <div class="hanging-tag left-tag"><span>Good People<br>Heal a<br>Brighter World</span></div>
+    <div class="hanging-tag right-tag"><span>A KINDER<br>PLANET<br>A BRIGHTER<br>YOU</span></div>
+    <p class="kicker">EXPLORE HEALING WISDOM ACROSS TIME</p>
+    <h1 data-zh="探索世界地图" data-en="Explore the World Map">探索世界地图</h1>
+    <p data-zh="穿越时间，遇见植物，遇见人，也遇见更好的地球。" data-en="Across time and places, meet plants, people and a kinder Earth.">穿越时间，遇见植物，遇见人，也遇见更好的地球。</p>
+  </section>
+
+  <section class="map-shell">
+    <aside class="map-filter-panel">
+      <button class="map-filter active" data-filter="all">✦ <span data-zh="全部" data-en="All">全部</span></button>
+      <button class="map-filter" data-filter="plant">🌿 <span data-zh="植物" data-en="Plants">植物</span></button>
+      <button class="map-filter" data-filter="aroma">🧴 <span data-zh="芳香" data-en="Aroma">芳香</span></button>
+      <button class="map-filter" data-filter="water">💧 <span data-zh="水疗" data-en="Water">水疗</span></button>
+      <button class="map-filter" data-filter="sound">♪ <span data-zh="声音" data-en="Sound">声音</span></button>
+      <button class="map-filter" data-filter="body">✿ <span data-zh="身体" data-en="Body">身体</span></button>
+      <button class="map-filter" data-filter="ritual">✧ <span data-zh="仪式" data-en="Ritual">仪式</span></button>
+    </aside>
+
+    <div class="big-map-panel">
+      <div class="map-era-title" id="mapEraTitle">17世纪 · Early Modern</div>
+      <div class="faux-world-map" id="fauxWorldMap">
+        <svg viewBox="0 0 1000 560" aria-hidden="true">
+          <defs><linearGradient id="land2" x1="0" x2="1"><stop offset="0%" stop-color="#8ab56d"/><stop offset="52%" stop-color="#d7b77a"/><stop offset="100%" stop-color="#b38ac2"/></linearGradient></defs>
+          <path d="M88 120C162 55 276 70 321 137c25 37 10 71-23 98-41 34-48 74-85 92-54 27-98-22-137-59-37-36-35-102 12-148z" />
+          <path d="M248 340c42 0 83 36 83 82 0 54-40 104-72 123-21-41-36-82-48-126-11-42 0-79 37-79z"/>
+          <path d="M430 109c44-36 113-35 149 5 23 26 14 56-16 76-31 20-77 24-111 6-39-21-50-63-22-87z"/>
+          <path d="M509 220c53-18 113 8 132 59 16 45-1 111-44 169-20 28-40 50-65 67-27-45-49-87-59-133-12-52-2-136 36-162z"/>
+          <path d="M598 92c78-45 190-30 271 20 56 35 86 78 71 112-24 49-110 35-158 54-48 20-90-8-122-37-39-36-103-93-62-149z"/>
+          <path d="M825 368c49-19 95 8 101 46 4 29-27 55-68 55-39 0-70-25-66-54 3-22 12-38 33-47z"/>
+        </svg>
+        <div class="trade-line l1"></div><div class="trade-line l2"></div><div class="trade-line l3"></div>
+        <div id="mapMarkers"></div>
+        <div class="map-poem p1">Different places.<br>Same healing power.</div>
+        <div class="map-poem p2">Plants heal people.<br>People heal the Earth.</div>
+      </div>
+      <div class="timeline-ribbon" id="timeline">
+        <button data-era="ancient"><span>古代</span><small>Ancient</small></button>
+        <button data-era="classical"><span>古典时期</span><small>Classical</small></button>
+        <button data-era="medieval"><span>中世纪</span><small>Medieval</small></button>
+        <button class="active" data-era="early"><span>17世纪</span><small>Early Modern</small></button>
+        <button data-era="modern"><span>现代</span><small>Modern</small></button>
+        <button data-era="today"><span>当代</span><small>Today</small></button>
+      </div>
+    </div>
+
+    <aside class="story-rail rich-rail">
+      <div class="rail-orn">✦</div>
+      <h2 data-zh="此时代的故事" data-en="Stories from This Era">此时代的故事</h2>
+      <div id="mapStoryRail"></div>
+    </aside>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-motto">DIFFERENT PLACES · ONE HEALING EARTH</div><div>Earth Healing © 2026</div></footer>
+<dialog id="storyDialog" class="story-dialog"><button class="dialog-close" data-close-dialog>×</button><div id="dialogBody"></div></dialog>
+<script src="./app.js"></script>
+</body></html>
