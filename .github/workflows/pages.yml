@@ -1,0 +1,52 @@
+name: Deploy Earth Healing to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare static site
+        run: |
+          mkdir -p public/assets/reference public/data
+          cp site/index.html public/index.html
+          cp site/styles.css public/styles.css
+          cp site/app.js public/app.js
+          cp -R assets/reference/images public/assets/reference/
+          cp -R assets/reference/videos public/assets/reference/
+          cp data/coverage_wave1_500.json public/data/ || true
+          cp data/media_manifest_wave1.json public/data/ || true
+          cp data/timeline_backbone_wave2_24.jsonl public/data/ || true
+          touch public/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
