@@ -1,0 +1,54 @@
+{
+  "version":"1.0",
+  "project":"Earth Healing / 地球疗愈",
+  "languages":["zh-CN","en-US"],
+  "primary_modalities":[
+    {"id":"MOD-PLANT","zh":"植物疗愈","en":"Plant & Herbal"},
+    {"id":"MOD-AROMA","zh":"芳香疗法","en":"Aroma & Essential Oil"},
+    {"id":"MOD-APOTH","zh":"药师制剂","en":"Apothecary & Formulation"},
+    {"id":"MOD-WATER","zh":"水疗/浴疗","en":"Water, Bath & Thermal"},
+    {"id":"MOD-NEEDLE","zh":"针刺","en":"Needling"},
+    {"id":"MOD-HEAT","zh":"艾灸/热疗","en":"Moxibustion & Heat"},
+    {"id":"MOD-CUP","zh":"拔罐","en":"Cupping"},
+    {"id":"MOD-SCRAPE","zh":"刮痧","en":"Scraping / Gua Sha"},
+    {"id":"MOD-BODY","zh":"手法疗愈","en":"Manual & Bodywork"},
+    {"id":"MOD-FOOD","zh":"食疗","en":"Food & Dietetics"},
+    {"id":"MOD-MOVE","zh":"运动导引","en":"Movement"},
+    {"id":"MOD-BREATH","zh":"呼吸","en":"Breath"},
+    {"id":"MOD-MEDITATE","zh":"冥想观照","en":"Meditation & Contemplation"},
+    {"id":"MOD-SOUND","zh":"声音疗愈","en":"Sound & Music"},
+    {"id":"MOD-CHANT","zh":"吟唱/咒音","en":"Chant & Recitation"},
+    {"id":"MOD-VIBRO","zh":"振动/频率","en":"Vibration/Frequency Practices"},
+    {"id":"MOD-ANIMAL","zh":"动物辅助","en":"Animal-Assisted"},
+    {"id":"MOD-NATURE","zh":"自然疗愈","en":"Nature/Ecotherapy"},
+    {"id":"MOD-GARDEN","zh":"园艺疗愈","en":"Horticultural"},
+    {"id":"MOD-STONE","zh":"药石/矿物","en":"Stone/Mineral"},
+    {"id":"MOD-CRYSTAL","zh":"晶石传统","en":"Crystal Traditions"},
+    {"id":"MOD-RITUAL","zh":"仪式疗愈","en":"Ritual Healing"},
+    {"id":"MOD-FOLK","zh":"民间疗法","en":"Folk Healing"},
+    {"id":"MOD-SHAMAN","zh":"萨满传统","en":"Shamanic Traditions"},
+    {"id":"MOD-ENERGY","zh":"能量体系","en":"Energy/Subtle-Body"},
+    {"id":"MOD-PRAYER","zh":"祈祷/敬拜性疗愈","en":"Prayer/Devotional"},
+    {"id":"MOD-PLACE","zh":"疗愈地域","en":"Therapeutic Place"},
+    {"id":"MOD-INTEGRATIVE","zh":"整合疗法","en":"Integrative"}
+  ],
+  "experience_dimensions":[
+    "body","mind","emotion","sleep","pain","stress","attention","social_connection",
+    "spiritual_meaning","ritual_transition","sense","season","life_stage"
+  ],
+  "claim_types":[
+    "historical_record","traditional_use","living_practice","mechanistic_hypothesis",
+    "preclinical","clinical_claim","subjective_wellbeing","cultural_symbolism",
+    "spiritual_metaphysical","commercial_claim"
+  ],
+  "traditional_depth":["T0","T1","T2","T3"],
+  "modern_evidence":["E0","E1","E2","E3","E4","E5"],
+  "cultural_access":[
+    "open_public","attribution_required","community_context_required",
+    "restricted_detail","sacred_private","unknown"
+  ],
+  "content_status":[
+    "PLANNED","SOURCE_FOUND","EXTRACTED","STRUCTURED","REVIEWED",
+    "BILINGUAL","MAP_READY","TIMELINE_READY","PUBLISHED"
+  ]
+}
