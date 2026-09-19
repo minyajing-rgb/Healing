@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f7f3ea" />
+  <title>Earth Healing · 地球疗愈</title>
+  <meta name="description" content="Ancient wisdom, living traditions, modern evidence — explored through a dynamic world map and timeline." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Earth Healing home">
+      <span class="brand-mark">✦</span>
+      <span><strong>Earth Healing</strong><small>地球疗愈</small></span>
+    </a>
+    <nav class="mainnav" aria-label="Primary navigation">
+      <a href="#explore" data-i18n="navExplore">探索</a>
+      <a href="#timeline" data-i18n="navTimeline">时间线</a>
+      <a href="#atlas" data-i18n="navAtlas">图鉴</a>
+      <a href="#stories" data-i18n="navStories">故事</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="textSizeBtn" aria-label="Increase text size">A+</button>
+      <button class="lang-btn" id="langBtn" aria-label="Switch language">EN / 中文</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">PLANTS · PEOPLE · PLACES · TIME</p>
+        <h1 data-i18n="heroTitle">沿着时间，重新看见人类如何疗愈自己</h1>
+        <p class="hero-sub" data-i18n="heroSub">不需要先懂中医、草药、芳香、冥想或传统医学。选一个地方，滑过年代，点开一个故事。</p>
+        <div class="hero-cta">
+          <a class="primary" href="#explore" data-i18n="startJourney">开始探索</a>
+          <button class="ghost" id="surpriseBtn" data-i18n="surprise">随便带我看看</button>
+        </div>
+        <div class="hero-stats" aria-label="Database summary">
+          <div><strong>1,024</strong><span data-i18n="statEntities">知识与故事节点</span></div>
+          <div><strong>8,900+</strong><span data-i18n="statRelations">知识关系</span></div>
+          <div><strong>ZH / EN</strong><span data-i18n="statLang">双语浏览</span></div>
+        </div>
+      </div>
+      <div class="hero-media card">
+        <video controls playsinline preload="metadata" poster="./assets/reference/images/provence_perfume_estate.webp">
+          <source src="./assets/reference/videos/provence_estate_sim.mp4" type="video/mp4" />
+        </video>
+        <div class="media-caption">
+          <span class="tag" data-i18n="featuredJourney">精选旅程</span>
+          <h2 data-i18n="provenceTitle">从花园到香气：普罗旺斯的植物、蒸馏与生活</h2>
+          <p data-i18n="provenceDesc">一段适合第一次进入 Earth Healing 的 3 分钟入口。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="How it works">
+      <div><b>01</b><strong data-i18n="how1">选一个地方</strong><span data-i18n="how1d">从地图上的一个点开始</span></div>
+      <div><b>02</b><strong data-i18n="how2">移动时间</strong><span data-i18n="how2d">地图会跟着年代变化</span></div>
+      <div><b>03</b><strong data-i18n="how3">点开故事</strong><span data-i18n="how3d">先看懂，再决定要不要深入</span></div>
+    </section>
+
+    <section class="explorer" id="explore">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="mapEyebrow">DYNAMIC WORLD MAP</p>
+          <h2 data-i18n="mapTitle">世界地图会随着时间改变</h2>
+        </div>
+        <p data-i18n="mapDesc">拖动时间轴，看不同地区的植物、浴疗、声音、药师制剂与传统如何出现、传播和变化。</p>
+      </div>
+
+      <div class="explorer-grid">
+        <aside class="filters card" aria-label="Filters">
+          <h3 data-i18n="filterTitle">探索筛选</h3>
+          <button class="filter active" data-filter="all"><span>✦</span><b data-i18n="allMethods">全部方法</b></button>
+          <button class="filter" data-filter="plant"><span>❧</span><b data-i18n="plants">植物</b></button>
+          <button class="filter" data-filter="aroma"><span>✿</span><b data-i18n="aroma">芳香</b></button>
+          <button class="filter" data-filter="water"><span>≈</span><b data-i18n="water">水疗</b></button>
+          <button class="filter" data-filter="sound"><span>♪</span><b data-i18n="sound">声音</b></button>
+          <button class="filter" data-filter="body"><span>◌</span><b data-i18n="body">身体</b></button>
+          <button class="filter" data-filter="ritual"><span>✧</span><b data-i18n="ritual">仪式</b></button>
+          <div class="legend">
+            <span><i class="dot solid"></i><span data-i18n="documented">已有记录</span></span>
+            <span><i class="dot halo"></i><span data-i18n="approximate">年代约数</span></span>
+          </div>
+        </aside>
+
+        <div class="map-wrap card">
+          <div class="map-toolbar">
+            <span id="eraLabel">近代早期 · 1500–1800</span>
+            <button id="playBtn" aria-label="Play timeline">▶ <span data-i18n="throughTime">穿越时间</span></button>
+          </div>
+
+          <div class="world-map" id="worldMap" aria-label="Interactive world map">
+            <div class="ocean-glow"></div>
+            <svg viewBox="0 0 1000 520" role="img" aria-label="Stylized world map">
+              <defs>
+                <linearGradient id="land" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#e9dfc7"/>
+                  <stop offset="100%" stop-color="#d6c89d"/>
+                </linearGradient>
+                <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+              </defs>
+              <g class="continents">
+                <path d="M105 110 C160 70 230 78 280 106 C310 122 330 155 315 190 C300 226 250 235 236 278 C215 300 185 278 160 251 C140 230 120 210 94 190 C75 165 78 130 105 110Z"/>
+                <path d="M260 302 C290 320 310 354 306 390 C300 440 270 480 246 495 C232 455 228 420 216 388 C205 354 214 323 260 302Z"/>
+                <path d="M420 110 C462 82 516 82 550 106 C573 125 580 147 566 168 C545 189 512 192 489 204 C470 213 462 244 448 250 C430 220 410 190 400 160 C395 140 404 122 420 110Z"/>
+                <path d="M505 208 C545 196 588 207 610 240 C631 270 623 314 604 352 C585 390 560 425 532 444 C512 410 500 382 486 350 C470 314 472 268 505 208Z"/>
+                <path d="M555 105 C615 75 692 73 754 95 C810 114 860 152 889 190 C870 214 835 219 810 212 C778 202 750 216 730 232 C705 246 680 228 660 215 C635 198 612 185 585 178 C555 168 536 132 555 105Z"/>
+                <path d="M820 340 C855 330 890 344 908 369 C920 392 905 420 877 426 C850 430 820 415 808 390 C798 370 804 350 820 340Z"/>
+              </g>
+            </svg>
+            <div class="map-lines" aria-hidden="true"></div>
+            <div id="markers"></div>
+            <div class="map-key">
+              <span class="key plant">❧ <span data-i18n="plants">植物</span></span>
+              <span class="key aroma">✿ <span data-i18n="aroma">芳香</span></span>
+              <span class="key water">≈ <span data-i18n="water">水疗</span></span>
+              <span class="key sound">♪ <span data-i18n="sound">声音</span></span>
+              <span class="key ritual">✧ <span data-i18n="ritual">仪式</span></span>
+            </div>
+          </div>
+
+          <div class="timeline" id="timeline">
+            <button class="era" data-era="ancient"><i></i><b data-i18n="eraAncient">古代</b><small>Before 0</small></button>
+            <button class="era" data-era="classical"><i></i><b data-i18n="eraClassical">古典时期</b><small>0–500</small></button>
+            <button class="era" data-era="medieval"><i></i><b data-i18n="eraMedieval">中世纪</b><small>500–1500</small></button>
+            <button class="era active" data-era="early"><i></i><b data-i18n="eraEarly">近代早期</b><small>1500–1800</small></button>
+            <button class="era" data-era="modern"><i></i><b data-i18n="eraModern">现代</b><small>1800–2000</small></button>
+            <button class="era" data-era="today"><i></i><b data-i18n="eraToday">当代</b><small>2000+</small></button>
+          </div>
+        </div>
+
+        <aside class="story-rail card" id="storyRail">
+          <div class="rail-head">
+            <span class="eyebrow" data-i18n="storyRail">STORY RAIL</span>
+            <h3 data-i18n="storyNow">这个年代正在发生什么？</h3>
+          </div>
+          <div id="storyCards"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="story-feature" id="stories">
+      <div class="story-copy">
+        <p class="eyebrow" data-i18n="storyMode">STORY MODE</p>
+        <h2 data-i18n="storyFeatureTitle">不是先学术语，而是先进入一个时代</h2>
+        <p data-i18n="storyFeatureDesc">你先知道“我们在哪里、现在是什么年代、眼前是什么”，再展开人物、植物、器物、视频、证据与安全信息。</p>
+        <div class="story-steps">
+          <div><span>10s</span><b data-i18n="step10">一句话看懂</b></div>
+          <div><span>3m</span><b data-i18n="step3m">读完一个故事</b></div>
+          <div><span>∞</span><b data-i18n="stepDeep">想深挖再展开</b></div>
+        </div>
+      </div>
+      <div class="story-gallery">
+        <img src="./assets/reference/images/provence_bird_botanical_atlas.webp" alt="Botanical atlas reference" />
+        <img src="./assets/reference/images/alishan_healing_adventure.webp" alt="Healing adventure reference" />
+      </div>
+    </section>
+
+    <section class="atlas" id="atlas">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="atlasEyebrow">EXPLORE BY THEME</p>
+          <h2 data-i18n="atlasTitle">从你感兴趣的入口开始</h2>
+        </div>
+      </div>
+      <div class="theme-grid">
+        <article class="theme"><span>❧</span><h3 data-i18n="plants">植物</h3><p data-i18n="themePlant">本草、药用植物、花园与民族植物知识</p></article>
+        <article class="theme"><span>✿</span><h3 data-i18n="aroma">芳香</h3><p data-i18n="themeAroma">精油、纯露、香料、蒸馏与气味文化</p></article>
+        <article class="theme"><span>≈</span><h3 data-i18n="water">水疗</h3><p data-i18n="themeWater">药浴、温泉、Hammam、Sauna 与蓝色空间</p></article>
+        <article class="theme"><span>♪</span><h3 data-i18n="sound">声音</h3><p data-i18n="themeSound">吟唱、音乐、鼓、声学与“频率”分层</p></article>
+        <article class="theme"><span>◌</span><h3 data-i18n="body">身体</h3><p data-i18n="themeBody">针、灸、推拿、按摩、呼吸与运动</p></article>
+        <article class="theme"><span>✧</span><h3 data-i18n="ritual">仪式</h3><p data-i18n="themeRitual">民间疗愈、宗教仪式、地方传统与文化语境</p></article>
+      </div>
+    </section>
+
+    <section class="evidence-note">
+      <div>
+        <p class="eyebrow" data-i18n="evidenceEyebrow">TRADITION ≠ BIOMEDICAL PROOF</p>
+        <h2 data-i18n="evidenceTitle">传统怎么说，与现代证据到哪一步，分开看</h2>
+      </div>
+      <p data-i18n="evidenceDesc">Earth Healing 会保留历史、文化、灵性和民间叙事，但不会把它们自动写成现代医学事实。每个条目都可以继续展开 Evidence · Safety · Sources。</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand footer-brand"><span class="brand-mark">✦</span><span><strong>Earth Healing</strong><small>地球疗愈</small></span></div>
+    <p data-i18n="footerLine">Pick a place. Move through time. Open a story.</p>
+    <a href="https://github.com/minyajing-rgb/Healing" rel="noopener">GitHub ↗</a>
+  </footer>
+
+  <dialog id="storyDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
