@@ -1,0 +1,183 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-19",
+  "journeys": [
+    {
+      "id": "journey-provence",
+      "title_zh": "普罗旺斯：花园、香气与蒸馏",
+      "title_en": "Provence: Gardens, Scent & Distillation",
+      "place_zh": "法国 · 普罗旺斯",
+      "place_en": "Provence, France",
+      "era_zh": "近代早期 → 当代",
+      "era_en": "Early Modern → Today",
+      "theme": "aroma",
+      "image": "assets/reference/images/provence_perfume_estate.webp",
+      "video": "assets/reference/videos/provence_estate_sim.mp4",
+      "hook_zh": "从玫瑰、薰衣草与香草园开始，看植物如何进入蒸馏器、药房、香水产业与今天的芳香文化。",
+      "hook_en": "Start with roses, lavender and aromatic gardens, then follow plants into stills, apothecaries, perfumery and modern aroma culture."
+    },
+    {
+      "id": "journey-yao-bath",
+      "title_zh": "广西瑶浴：一桶热水里的植物世界",
+      "title_en": "Yao Medicinal Bathing: A Botanical World in Hot Water",
+      "place_zh": "中国 · 广西",
+      "place_en": "Guangxi, China",
+      "era_zh": "活态传统",
+      "era_en": "Living Tradition",
+      "theme": "water",
+      "image": "assets/reference/images/alishan_healing_adventure.webp",
+      "hook_zh": "先看一眼“瑶浴到底是什么”，再展开植物、家庭实践、民族医药语境、安全与现代研究。",
+      "hook_en": "First understand what Yao medicinal bathing is, then unfold plants, household practice, ethnomedical context, safety and modern research."
+    },
+    {
+      "id": "journey-ayurveda",
+      "title_zh": "印度：从日常起居走进 Ayurveda",
+      "title_en": "India: Entering Ayurveda Through Everyday Life",
+      "place_zh": "印度",
+      "place_en": "India",
+      "era_zh": "古典传统 → 当代",
+      "era_en": "Classical Traditions → Today",
+      "theme": "body",
+      "image": "assets/reference/images/butterfly_perfume_estate_infographic.webp",
+      "hook_zh": "不先背 Dosha。先看人们怎样安排饮食、油浴、植物、呼吸和一天的节奏。",
+      "hook_en": "No need to memorize doshas first. See how food, oil massage, plants, breath and daily rhythm fit together."
+    },
+    {
+      "id": "journey-sound",
+      "title_zh": "世界声音疗愈：同一个词下的不同世界",
+      "title_en": "Sound & Healing: Different Worlds Under One Label",
+      "place_zh": "全球",
+      "place_en": "Global",
+      "era_zh": "古代 → 当代",
+      "era_en": "Ancient → Today",
+      "theme": "sound",
+      "image": "assets/reference/images/alishan_healing_adventure.webp",
+      "hook_zh": "吟唱、音乐治疗、鼓、颂钵、振动声学和“频率疗愈”并不是同一件事。这里把它们一层层拆开。",
+      "hook_en": "Chant, music therapy, drums, singing bowls, vibroacoustics and ‘frequency healing’ are not the same thing. Explore them layer by layer."
+    }
+  ],
+  "plants": [
+    {
+      "id": "lavender",
+      "zh": "薰衣草",
+      "en": "Lavender",
+      "latin": "Lavandula angustifolia",
+      "theme": "aroma",
+      "region_zh": "地中海 / 普罗旺斯",
+      "region_en": "Mediterranean / Provence",
+      "image": "assets/reference/images/provence_perfume_estate.webp",
+      "story_zh": "一朵花如何连接农田、蒸馏、香水、药房和现代芳香文化。",
+      "story_en": "How one flower connects fields, distillation, perfumery, pharmacy and modern aroma culture."
+    },
+    {
+      "id": "rose",
+      "zh": "玫瑰",
+      "en": "Rose",
+      "latin": "Rosa spp.",
+      "theme": "aroma",
+      "region_zh": "西亚 / 欧洲 / 全球",
+      "region_en": "West Asia / Europe / Global",
+      "image": "assets/reference/images/provence_bird_botanical_atlas.webp",
+      "story_zh": "既是花园植物，也是香材、纯露与文化象征。",
+      "story_en": "A garden flower, aromatic material, hydrosol source and cultural symbol."
+    },
+    {
+      "id": "mugwort",
+      "zh": "艾草",
+      "en": "Mugwort",
+      "latin": "Artemisia argyi",
+      "theme": "plant",
+      "region_zh": "中国 / 东亚",
+      "region_en": "China / East Asia",
+      "image": "assets/reference/images/butterfly_perfume_estate_infographic.webp",
+      "story_zh": "从端午草束到艾灸与药浴，看同一植物怎样进入不同生活场景。",
+      "story_en": "From seasonal herb bundles to moxibustion and bathing, see one plant across many contexts."
+    },
+    {
+      "id": "ginseng",
+      "zh": "人参",
+      "en": "Ginseng",
+      "latin": "Panax ginseng",
+      "theme": "plant",
+      "region_zh": "东北亚",
+      "region_en": "Northeast Asia",
+      "image": "assets/reference/images/alishan_healing_adventure.webp",
+      "story_zh": "植物、山林、贸易、珍贵药材与现代商品化交织在一起。",
+      "story_en": "A story of forests, trade, precious materia medica and modern commercialization."
+    },
+    {
+      "id": "frankincense",
+      "zh": "乳香",
+      "en": "Frankincense",
+      "latin": "Boswellia spp.",
+      "theme": "ritual",
+      "region_zh": "阿拉伯半岛 / 非洲之角",
+      "region_en": "Arabia / Horn of Africa",
+      "image": "assets/reference/images/provence_perfume_estate.webp",
+      "story_zh": "树脂如何沿贸易路线进入宗教、香气、药房与仪式。",
+      "story_en": "How a resin travelled through trade into religion, scent, pharmacy and ritual."
+    },
+    {
+      "id": "turmeric",
+      "zh": "姜黄",
+      "en": "Turmeric",
+      "latin": "Curcuma longa",
+      "theme": "plant",
+      "region_zh": "南亚",
+      "region_en": "South Asia",
+      "image": "assets/reference/images/butterfly_perfume_estate_infographic.webp",
+      "story_zh": "厨房、染色、传统医药与现代研究围绕同一种根茎展开。",
+      "story_en": "Kitchen, dye, traditional medicine and modern research meet around one rhizome."
+    }
+  ],
+  "storyHighlights": [
+    {
+      "era": "ancient",
+      "zh": "当河流、植物与圣所组成疗愈空间",
+      "en": "When rivers, plants and sanctuaries formed healing spaces",
+      "place_zh": "古代多地区",
+      "place_en": "Ancient Worlds",
+      "theme": "water"
+    },
+    {
+      "era": "classical",
+      "zh": "一本药物书如何跨越地中海",
+      "en": "How a materia medica text crossed the Mediterranean",
+      "place_zh": "地中海",
+      "place_en": "Mediterranean",
+      "theme": "plant"
+    },
+    {
+      "era": "medieval",
+      "zh": "翻译、药房与蒸馏如何重新连接世界",
+      "en": "How translation, pharmacy and distillation reconnected worlds",
+      "place_zh": "西亚 / 欧亚",
+      "place_en": "West Asia / Eurasia",
+      "theme": "aroma"
+    },
+    {
+      "era": "early",
+      "zh": "植物园、香料与远洋贸易改变了什么",
+      "en": "What botanical gardens, aromatics and long-distance trade changed",
+      "place_zh": "欧洲 / 全球",
+      "place_en": "Europe / Global",
+      "theme": "plant"
+    },
+    {
+      "era": "modern",
+      "zh": "温泉、芳香与近代健康旅行兴起",
+      "en": "The rise of spas, aromatics and modern health travel",
+      "place_zh": "欧洲 / 全球",
+      "place_en": "Europe / Global",
+      "theme": "water"
+    },
+    {
+      "era": "today",
+      "zh": "传统疗愈进入证据、安全与文化权利时代",
+      "en": "Traditional healing enters an era of evidence, safety and cultural rights",
+      "place_zh": "全球",
+      "place_en": "Global",
+      "theme": "body"
+    }
+  ]
+}
