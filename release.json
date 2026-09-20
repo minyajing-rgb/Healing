@@ -1,6 +1,6 @@
 {
   "release": "2026.09.20-map2",
-  "source_commit": "06443350cb126a90acc78c2245b81c61540b1ea2",
+  "source_commit": "382b7bf13e32ed70f366e09912cf7740dc844556",
   "published_stories": 19,
   "research_index_records": 500,
   "validated_video_proxies": 3,
@@ -54,7 +54,9 @@
     {
       "path": "data/land-50m.json",
       "source": "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-50m.json",
-      "sha256": "619477ff690c086885e45cb91707d783805561bd75ae8e437b7d4694b0204e0f"
+      "sha256": "0b81ac1259dd07c3d6d7dac07bff9e46b959062ccd7ac62660611438e0a2f3a2",
+      "original_sha256": "619477ff690c086885e45cb91707d783805561bd75ae8e437b7d4694b0204e0f",
+      "transformation": "antimeridian ring normalization; same source coastlines"
     }
   ],
   "artwork_sha256": "a4da328e715e84ea27a352cc760df1d1b6dcde0ee29a2538c61d993e779abcd0",
@@ -64,5 +66,9 @@
     "garden-local",
     "geographic-detail-openfreemap"
   ],
-  "google_maps_enabled": false
+  "google_maps_enabled": false,
+  "geography_normalization": {
+    "polygons": 1419,
+    "dateline_rings_normalized": 5
+  }
 }
