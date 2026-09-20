@@ -16,4 +16,36 @@
 @media(max-width:620px){.explorer-shell{padding:12px;border-radius:22px 8px 22px 8px;margin:0 9px}.map-canvas{height:405px!important}.map-experience-bar{padding-bottom:13px;gap:8px}.map-mode-title strong{font-size:18px}.map-style-switch button{font-size:12px;padding:6px 9px}.map-expand{font-size:12px;padding:6px 10px}.map-status{padding:7px 10px}.map-bottom-note{bottom:32px;left:15px;padding:7px 10px;gap:7px}.map-bottom-note strong{font-size:12px}.map-bottom-note small{font-size:9px}.map-botanical-mark{font-size:27px}.map-engravings{inset:7px}.map-engravings span:first-child{left:7px;top:12px;width:32px;height:32px}.map-engravings span:last-child{display:none}.zoom-controls{right:15px;top:21px}.time-panel{padding:18px 13px}.eh-pin-label{font-size:10px;max-width:120px}.map-focused-page .atlas-section>.section-heading{padding-top:24px}.story-rail #storyRail{display:block}.rail-card .art{width:63px;height:70px}.map-style-switch{flex:1}.map-expand{margin-left:auto}.maplibregl-ctrl-attrib{font-size:9px!important}}
 @media(prefers-reduced-motion:reduce){.eh-map-marker,.map-gl-pane{transition:none!important}}
 
+/* Google/detail layer and richer atlas presentation */
+.map-canvas{background:
+  radial-gradient(circle at 18% 20%,rgba(255,244,185,.22),transparent 25%),
+  radial-gradient(circle at 78% 68%,rgba(241,139,164,.12),transparent 24%),
+  linear-gradient(180deg,#76aec4 0%,#5e9eb9 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,249,226,.65),inset 0 0 70px rgba(21,76,103,.18)}
+.map-canvas:before,.map-canvas:after{content:'';position:absolute;z-index:2;pointer-events:none;background:url('./assets/botanical.svg') center/contain no-repeat;opacity:.38;width:130px;height:180px;filter:sepia(.18) saturate(1.35)}
+.map-canvas:before{left:-42px;top:-40px;transform:rotate(-22deg)}
+.map-canvas:after{right:-46px;bottom:-34px;transform:scaleX(-1) rotate(-16deg)}
+.map-frame{background:linear-gradient(180deg,#6aa5bd,#f7f1dd 92%);border-color:#c9a85d;box-shadow:0 16px 42px rgba(57,61,48,.13)}
+.map-engravings{border-color:rgba(255,239,183,.62);box-shadow:inset 0 0 35px rgba(255,236,172,.08)}
+.map-style-switch{box-shadow:0 5px 18px rgba(74,43,77,.08)}
+.map-style-switch [data-map-style=google] i{
+  background:
+  radial-gradient(circle at 30% 32%,#5a86d8 0 19%,transparent 20%),
+  linear-gradient(135deg,#6aa66a 0 33%,#f0cf67 34% 57%,#d16464 58% 77%,#76a1de 78%);
+}
+.map-style-switch [data-map-style=google].chosen{background:linear-gradient(135deg,#fffdf7,#f7edf8);box-shadow:0 3px 12px rgba(88,42,104,.16)}
+.google-map-pane{position:absolute;inset:0;z-index:3;background:#f3ede0}
+.google-map-pane[hidden]{display:none!important}
+.google-map-pane .gm-style{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.google-story-pin{width:38px;height:38px;border-radius:50%;border:2px solid #fff8df;background:#6d307c;color:#f6db91;box-shadow:0 0 0 5px rgba(246,219,145,.22),0 5px 14px rgba(70,35,78,.28);font-size:18px;display:grid;place-items:center;padding:0}
+.google-story-pin:hover{transform:scale(1.06)}
+#mapCanvas[data-map-style="google"] .map-engravings,#mapCanvas[data-map-style="google"] .map-bottom-note{z-index:5}
+#mapCanvas[data-map-style="google"] .zoom-controls{display:none}
+#mapCanvas[data-map-style="google"] .map-bottom-note{background:rgba(255,250,240,.94)}
+@media(max-width:760px){
+  .map-style-switch{width:100%;overflow-x:auto;justify-content:flex-start}
+  .map-style-switch button{flex:0 0 auto}
+  .map-canvas:before,.map-canvas:after{width:90px;height:130px;opacity:.28}
+}
+
 .eh-pin-ring>span{transform:rotate(45deg)}.is-cluster .eh-pin-ring>span{transform:none}.eh-cluster-list{display:grid;gap:7px;padding:10px}.eh-cluster-list button{border:1px solid #d5be8d;background:#fffaf0;color:#64336d;border-radius:10px;min-height:44px;padding:8px;font-size:14px;text-align:left}.maplibregl-popup-content{border:1px solid #d3b77a;border-radius:15px;background:#fffaf0}

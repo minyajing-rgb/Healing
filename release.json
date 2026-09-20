@@ -1,10 +1,10 @@
 {
-  "release": "2026.09.20-map2",
-  "source_commit": "5661e938d9f5a858accdef0a5d8b6bc1cf12a5c8",
+  "release": "2026.09.20-map3",
+  "source_commit": "5c66eaa757c347fff45fbc277c4f99e3cfe9b8dd",
   "published_stories": 19,
   "research_index_records": 500,
   "validated_video_proxies": 3,
-  "map": "Natural Earth 1:50m geography; optional present-day OpenFreeMap detail, not historical boundaries",
+  "map": "Natural Earth 1:50m branded atlas; optional OpenFreeMap detail; optional Google Maps place detail when configured",
   "dependency_digests": [
     {
       "path": "vendor/d3.min.js",
@@ -59,14 +59,16 @@
       "transformation": "antimeridian ring normalization; same source coastlines"
     }
   ],
+  "google_maps_enabled": false,
+  "google_map_id_enabled": false,
   "artwork_sha256": "a4da328e715e84ea27a352cc760df1d1b6dcde0ee29a2538c61d993e779abcd0",
   "video_format": "VP9/WebM",
-  "map_engine": "MapLibre GL JS 5.6.0",
+  "map_engine": "MapLibre GL JS 5.6.0 + optional Google Maps JavaScript API detail layer",
   "map_styles": [
     "garden-local",
-    "geographic-detail-openfreemap"
+    "geographic-detail-openfreemap",
+    "google-maps-external-fallback"
   ],
-  "google_maps_enabled": false,
   "geography_normalization": {
     "polygons": 1419,
     "dateline_rings_normalized": 5

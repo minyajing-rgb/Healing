@@ -162,7 +162,7 @@
       const id=params.get('story')||(location.pathname.endsWith('story-provence.html')?'grasse':null);
       if(id)openStory(id);else if(location.pathname.endsWith('map.html')||location.hash==='#map')$('map').scrollIntoView({behavior:'auto'});
       window.EARTH_HEALING_READY=true;
-      window.EARTH_HEALING={state:()=>({lang,year,theme,region,mode,published:stories.length,visible:visible.length,research:research.length,mapReady,playing:!!timer})};
+      window.EARTH_HEALING={state:()=>({lang,year,theme,region,mode,published:stories.length,visible:visible.length,research:research.length,mapReady,playing:!!timer}),visibleStories:()=>visible.slice(),allStories:()=>stories.slice(),openStory,mapForStory,toast};
     }catch(error){$('featuredStories').innerHTML='<p class="empty-state">'+tx('暂时未能读取故事资料，请刷新页面。','Story data could not be loaded. Please refresh.')+'</p>';$('mapLoading').textContent=tx('资料加载失败。','Data loading failed.');}
   })();
 })();
