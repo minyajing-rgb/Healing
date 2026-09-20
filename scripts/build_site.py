@@ -82,11 +82,11 @@ world=json.loads((OUT/'data/land-110m.json').read_text());assert world['type']==
 audit=[];media=[];reference_images=[]
 (OUT/'assets'/'reference'/'images').mkdir(parents=True,exist_ok=True)
 titles={
- 'estate_lifestyle_scenes.mp4':('庄园生活 · 概念片段','Estate life · concept clip'),
- 'butterfly_garden_trailer.mp4':('蝴蝶花园 · 概念片段','Butterfly garden · concept clip'),
- 'rare_ingredient_expedition.mp4':('香材探索 · 概念片段','Ingredient discovery · concept clip'),
- 'provence_estate_sim.mp4':('普罗旺斯庄园 · 概念片段','Provence estate · concept clip'),
- 'perfume_lab_tutorial.mp4':('香水工坊 · 概念片段','Perfume atelier · concept clip')
+ 'estate_lifestyle_scenes':('庄园生活 · 概念片段','Estate life · concept clip'),
+ 'butterfly_garden_trailer':('蝴蝶花园 · 概念片段','Butterfly garden · concept clip'),
+ 'rare_ingredient_expedition':('香材探索 · 概念片段','Ingredient discovery · concept clip'),
+ 'provence_estate_sim':('普罗旺斯庄园 · 概念片段','Provence estate · concept clip'),
+ 'perfume_lab_tutorial':('香水工坊 · 概念片段','Perfume atelier · concept clip')
 }
 for p in sorted((ROOT/'assets/reference/images').glob('*')):
     try:
@@ -97,17 +97,22 @@ for p in sorted((ROOT/'assets/reference/images').glob('*')):
         audit.append({'file':p.name,'decodable':True,'used':True,'published_path':'./assets/reference/images/'+p.name})
     except Exception as e:audit.append({'file':p.name,'decodable':False,'excluded_reason':str(e)})
 write_json(OUT/'data/reference-images.json',reference_images)
-for p in sorted((ROOT/'assets/reference/videos').glob('*.mp4')):
+video_dir=ROOT/'assets/reference/videos'
+candidates={}
+for p in sorted(list(video_dir.glob('*.mp4'))+list(video_dir.glob('*.webm'))):
+    # Prefer the repaired WebM proxy when both formats exist for one source.
+    if p.stem not in candidates or p.suffix.lower()=='.webm': candidates[p.stem]=p
+for stem,p in sorted(candidates.items()):
     run=subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(p),'-f','null','-'],capture_output=True,text=True,timeout=30)
     valid=run.returncode==0
     audit.append({'file':p.name,'decodable':valid,'error':run.stderr[:200]})
-    if valid and p.name in titles:
+    if valid and stem in titles:
         probe=subprocess.run(['ffprobe','-v','error','-show_entries','format=duration:stream=width,height','-of','json',str(p)],capture_output=True,text=True,check=True)
         info=json.loads(probe.stdout)
         assert info.get('streams') and float(info['format']['duration'])>0
         shutil.copy2(p,OUT/'assets/films'/p.name)
-        zh,en=titles[p.name]
-        media.append({'id':p.stem,'path':'./assets/films/'+p.name,'zh':zh,'en':en,'status':'validated_low_resolution_proxy','width':info['streams'][0].get('width'),'duration':float(info['format']['duration'])})
+        zh,en=titles[stem]
+        media.append({'id':stem,'path':'./assets/films/'+p.name,'mime':'video/webm' if p.suffix.lower()=='.webm' else 'video/mp4','zh':zh,'en':en,'status':'validated_web_preview','width':info['streams'][0].get('width'),'height':info['streams'][0].get('height'),'duration':float(info['format']['duration'])})
 write_json(OUT/'data/media.json',media)
 write_json(REPORT/'media-validation.json',audit)
 
