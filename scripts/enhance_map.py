@@ -60,9 +60,9 @@ for dep in digests:
     if dep['path']=='data/land-50m.json':
         dep['original_sha256']=dep['sha256'];dep['sha256']=hashlib.sha256((OUT/dep['path']).read_bytes()).hexdigest();dep['transformation']='antimeridian ring normalization; same source coastlines'
 assets='''<link rel="stylesheet" href="./vendor/maplibre-gl.css">
-<link rel="stylesheet" href="./map-experience.css?v=20260920-map2">
+<link rel="stylesheet" href="./map-experience.css?v=20260920-gm1">
 <script defer src="./vendor/maplibre-gl.js"></script>
-<script defer src="./map-experience.js?v=20260920-map2"></script>
+<script defer src="./map-experience.js?v=20260920-gm1"></script>
 '''
 for path in OUT.glob('*.html'):
     content=path.read_text(encoding='utf-8')
@@ -71,9 +71,10 @@ for path in OUT.glob('*.html'):
 with (OUT/'map-experience.css').open('a',encoding='utf-8') as f:
     f.write('\n.eh-pin-ring>span{transform:rotate(45deg)}.is-cluster .eh-pin-ring>span{transform:none}.eh-cluster-list{display:grid;gap:7px;padding:10px}.eh-cluster-list button{border:1px solid #d5be8d;background:#fffaf0;color:#64336d;border-radius:10px;min-height:44px;padding:8px;font-size:14px;text-align:left}.maplibregl-popup-content{border:1px solid #d3b77a;border-radius:15px;background:#fffaf0}\n')
 release=json.loads((OUT/'release.json').read_text())
-release.update({'release':'2026.09.20-map2','map_engine':'MapLibre GL JS 5.6.0','map_styles':['garden-local','geographic-detail-openfreemap'],'google_maps_enabled':False,'map':'Natural Earth 1:50m geography; optional present-day OpenFreeMap detail, not historical boundaries','geography_normalization':json.loads(result.stdout)})
+google_enabled=bool(release.get('google_maps_enabled'))
+release.update({'release':'2026.09.20-map3','map_engine':'MapLibre GL JS 5.6.0 + optional Google Maps JavaScript API detail layer','map_styles':['garden-local','geographic-detail-openfreemap','google-maps-detail' if google_enabled else 'google-maps-external-fallback'],'google_maps_enabled':google_enabled,'map':'Natural Earth 1:50m branded atlas; optional OpenFreeMap detail; optional Google Maps place detail when configured','geography_normalization':json.loads(result.stdout)})
 release['dependency_digests'].extend(digests)
 for path in (OUT/'release.json',REPORT/'build-summary.json'):path.write_text(json.dumps(release,ensure_ascii=False,indent=2),encoding='utf-8')
 with (OUT/'ASSET-LICENSES.txt').open('a',encoding='utf-8') as f:
-    f.write('\nMapLibre GL JS 5.6.0: see vendor/MAPLIBRE-LICENSE. Garden base uses Natural Earth (public domain), packaged with world-atlas; dateline rings normalized for planar rendering. Geographic detail is an optional external OpenFreeMap service, with OpenMapTiles / OpenStreetMap attribution shown by the map. No Google Maps API is activated or billed.\n')
+    f.write('\nMapLibre GL JS 5.6.0: see vendor/MAPLIBRE-LICENSE. Garden base uses Natural Earth (public domain), packaged with world-atlas; dateline rings normalized for planar rendering. Geographic detail is an optional external OpenFreeMap service, with OpenMapTiles / OpenStreetMap attribution shown by the map. Google Maps detail is only activated when a referrer-restricted browser key is injected at build time; otherwise the site offers a Google Maps URL fallback.\n')
 print(json.dumps(release,ensure_ascii=False,indent=2))
