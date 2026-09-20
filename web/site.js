@@ -31,18 +31,10 @@
   };
   const icon=type=>'<span class="icon" aria-hidden="true"><svg viewBox="0 0 64 64">'+(paths[type]||paths.plant)+'</svg></span>';
   const storyArt={
-    grasse:'./assets/garden.jpg',
-    padua:'./assets/garden.jpg',
-    chelsea:'./assets/garden.jpg',
-    forest:'./assets/garden.jpg',
-    rongoa:'./assets/garden.jpg',
-    ebers:'./assets/garden.jpg',
-    kallawaya:'./assets/garden.jpg',
-    argan:'./assets/garden.jpg',
-    jamu:'./assets/garden.jpg',
-    spatowns:'./assets/garden.jpg',
-    lum:'./assets/garden.jpg',
-    sauna:'./assets/garden.jpg'
+    grasse:'./assets/media/provence-story.webp',
+    forest:'./assets/media/provence-story.webp',
+    padua:'./assets/media/atlas-lavender.webp',
+    chelsea:'./assets/media/atlas-lavender.webp'
   };
   const art=(s,label=false)=>{
     const src=storyArt[s.id];
