@@ -47,6 +47,13 @@ try:
   detail={'state':page.evaluate('window.EARTH_HEALING_MAP.state()'),'hint':page.locator('#mapExperienceHint').inner_text()}
   check('Optional external style loads or safely falls back',detail['state']['detailHealth'] in ['loaded','fallback'])
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-v2-detail.png'))
+  page.locator('[data-map-style="google"]').click()
+  page.wait_for_function("window.EARTH_HEALING_GOOGLE_MAP?.state().active===true",timeout=10000)
+  google_state=page.evaluate('window.EARTH_HEALING_GOOGLE_MAP.state()')
+  check('Google Maps mode stays in the website',google_state['active'] and google_state['mode'] in ['embed','javascript'])
+  if google_state['mode']=='embed':
+   check('Google Maps iframe fallback renders in-page',page.locator('#googleMapPane iframe').count()==1)
+  page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-v3-google.png'))
   page.locator('[data-map-style="garden"]').click();page.wait_for_timeout(600)
   check('Switch back to self-hosted map',page.evaluate('window.EARTH_HEALING_MAP.state().style')=='garden')
   page.locator('#listView').click();check('List alternative remains available',page.locator('#mapList').is_visible())
