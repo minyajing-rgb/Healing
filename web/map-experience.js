@@ -19,6 +19,8 @@
   function updateStyleButtons(){document.querySelectorAll('[data-map-style]').forEach(b=>{b.disabled=b.dataset.mapStyle==='google'?false:!enhanced;b.classList.toggle('chosen',b.dataset.mapStyle===activeStyle);b.setAttribute('aria-pressed',String(b.dataset.mapStyle===activeStyle));});$('mapCanvas').dataset.mapStyle=activeStyle;}
   function translate(){
     document.querySelectorAll('[data-map-zh]').forEach(e=>e.textContent=e.getAttribute('data-map-'+language()));
+    const gb=document.querySelector('[data-map-style="google"] span');
+    if(gb&&!window.EARTH_HEALING_GOOGLE_MAP?.configured?.())gb.textContent=text('Google Maps ↗','Google Maps ↗');
     $('mapEngineStatus').textContent=activeStyle==='google'?text('地点详情 · Google Maps','Place detail · Google Maps'):(enhanced?text('交互图谱 · MapLibre','Interactive atlas · MapLibre'):text('轻量地图','Lightweight map'));
     hint(activeStyle==='google'?text('Google Maps 详情层 · 可继续放大到具体地点','Google Maps detail layer · zoom into specific places'):(activeStyle==='detail'?text('现代地理细节 · OpenFreeMap','Present-day geographic detail · OpenFreeMap'):text('花园世界图谱 · 用于跨地区与年代探索','Garden world atlas · for cross-region and time exploration')),activeStyle==='google'?'Google Maps detail layer · zoom into specific places':(activeStyle==='detail'?'Present-day geographic detail · OpenFreeMap':'Garden world atlas · for cross-region and time exploration'));
     if(enhanced){if(activeStyle==='detail'&&map.isStyleLoaded())for(const l of map.getStyle().layers||[])if(l.type==='symbol'&&l.layout?.['text-field'])map.setLayoutProperty(l.id,'text-field',['coalesce',['get',language()==='zh'?'name:zh':'name:en'],['get','name']]);drawMarkers();}
@@ -37,10 +39,10 @@
     updateStyleButtons();translate();
   }
   function localStyle(land){return {version:8,name:'Earth Healing — Garden Atlas',sources:{land:{type:'geojson',data:land,attribution:'<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>'},grid:{type:'geojson',data:window.d3.geoGraticule10()}},layers:[
-    {id:'ocean',type:'background',paint:{'background-color':'#6fabc3'}},
+    {id:'ocean',type:'background',paint:{'background-color':'rgba(72,139,168,0.78)'}},
     {id:'latitude',type:'line',source:'grid',paint:{'line-color':'#fff9df','line-width':0.55,'line-opacity':0.28}},
     {id:'shore-halo',type:'line',source:'land',paint:{'line-color':'#f6dfa2','line-width':7,'line-blur':5,'line-opacity':0.52}},
-    {id:'islands',type:'fill',source:'land',paint:{'fill-color':'#d9d4a6','fill-opacity':0.98}},
+    {id:'islands',type:'fill',source:'land',paint:{'fill-color':'rgba(218,211,161,0.90)','fill-opacity':0.92}},
     {id:'coastline',type:'line',source:'land',paint:{'line-color':'#d8ac4c','line-width':1.15,'line-opacity':0.92}}
   ]};}
   function restoreGarden(failed=false){clearTimeout(detailTimer);window.EARTH_HEALING_GOOGLE_MAP?.deactivate?.();activeStyle='garden';if(failed)detailHealth='fallback';map.setMaxZoom(6);map.setStyle(gardenStyle);updateStyleButtons();translate();if(failed)hint('地理服务暂不可用；仍可探索本站花园图谱。','Detail service unavailable; the local garden atlas remains available.');}
