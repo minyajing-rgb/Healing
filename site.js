@@ -39,7 +39,10 @@
     ebers:'./assets/garden.jpg',
     kallawaya:'./assets/garden.jpg',
     argan:'./assets/garden.jpg',
-    jamu:'./assets/garden.jpg'
+    jamu:'./assets/garden.jpg',
+    spatowns:'./assets/garden.jpg',
+    lum:'./assets/garden.jpg',
+    sauna:'./assets/garden.jpg'
   };
   const art=(s,label=false)=>{
     const src=storyArt[s.id];

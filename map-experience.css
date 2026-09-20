@@ -67,4 +67,23 @@
 .map-frame:before{content:'EARTH HEALING · WORLD OF CARE';position:absolute;z-index:3;left:50%;top:74px;transform:translateX(-50%);pointer-events:none;color:rgba(255,248,217,.82);font:10px/1.2 Georgia,serif;letter-spacing:.22em;text-shadow:0 1px 5px rgba(39,61,68,.28)}
 .map-focused-page .map-frame:before{top:76px}
 
+/* Keyless cloud detail map — Leaflet + OpenStreetMap, same pattern as Dharma Atlas */
+.cloud-map-pane{position:absolute;inset:0;z-index:3;background:#e7eef0}
+.cloud-map-pane[hidden]{display:none!important}
+.cloud-map-pane .leaflet-container{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+#mapCanvas[data-map-style="cloud"] .map-engravings,
+#mapCanvas[data-map-style="cloud"] .map-bottom-note{z-index:6}
+#mapCanvas[data-map-style="cloud"] .zoom-controls{display:none}
+.map-style-switch [data-map-style=cloud] i{
+  background:radial-gradient(circle at 28% 34%,#8ab5d1 0 18%,transparent 19%),
+  linear-gradient(135deg,#d8d0a5 0 46%,#a6c38a 47% 70%,#7ab5c9 71%);
+}
+.map-style-switch [data-map-style=cloud].chosen{background:linear-gradient(135deg,#fffdf7,#eef7f2);box-shadow:0 3px 12px rgba(62,92,78,.14)}
+.eh-cloud-marker{background:transparent;border:0}
+.cloud-pin{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:2px solid #fff8de;background:#5d2b70;color:#f7d986;box-shadow:0 0 0 5px rgba(247,217,134,.22),0 5px 14px rgba(60,40,65,.24);font:18px/1 Georgia,serif}
+.cloud-pin-water{background:#317e9f}.cloud-pin-nature{background:#557b61}.cloud-pin-aroma{background:#91446f}.cloud-pin-body{background:#9a6b3a}.cloud-pin-sound{background:#6f5491}.cloud-pin-animal{background:#916f49}
+.cloud-map-pane .leaflet-control-attribution{font-size:9px;background:rgba(255,250,240,.88)!important}
+.cloud-map-pane .leaflet-control-zoom a{color:#5b1d70;background:#fffaf2;border-color:#d5bd8a}
+@media(max-width:760px){.cloud-pin{width:34px;height:34px;font-size:16px}}
+
 .eh-pin-ring>span{transform:rotate(45deg)}.is-cluster .eh-pin-ring>span{transform:none}.eh-cluster-list{display:grid;gap:7px;padding:10px}.eh-cluster-list button{border:1px solid #d5be8d;background:#fffaf0;color:#64336d;border-radius:10px;min-height:44px;padding:8px;font-size:14px;text-align:left}.maplibregl-popup-content{border:1px solid #d3b77a;border-radius:15px;background:#fffaf0}
