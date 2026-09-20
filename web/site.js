@@ -36,10 +36,10 @@
     chelsea:'./assets/reference/images/provence_bird_botanical_atlas.webp',
     forest:'./assets/reference/images/alishan_healing_adventure.webp',
     rongoa:'./assets/reference/images/alishan_healing_adventure.webp',
-    ebers:'./assets/reference/images/butterfly_perfume_estate_infographic.webp',
+    ebers:'./assets/reference/images/provence_perfume_estate.webp',
     kallawaya:'./assets/reference/images/alishan_healing_adventure.webp',
-    argan:'./assets/reference/images/butterfly_perfume_estate_infographic.webp',
-    jamu:'./assets/reference/images/butterfly_perfume_estate_infographic.webp',
+    argan:'./assets/reference/images/provence_perfume_estate.webp',
+    jamu:'./assets/reference/images/provence_perfume_estate.webp',
     spatowns:'./assets/reference/images/provence_perfume_estate.webp',
     lum:'./assets/reference/images/provence_bird_botanical_atlas.webp',
     sauna:'./assets/reference/images/provence_perfume_estate.webp'
