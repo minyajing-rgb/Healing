@@ -84,7 +84,8 @@ for dest,url in remote.items():
 world=json.loads((OUT/'data/land-110m.json').read_text());assert world['type']=='Topology'
 
 # Do not trust filenames or ffprobe metadata: decode the actual media.
-audit=[];media=[]
+audit=[];media=[];reference_images=[]
+(OUT/'assets'/'reference'/'images').mkdir(parents=True,exist_ok=True)
 titles={
  'estate_lifestyle_scenes.mp4':('庄园生活 · 概念片段','Estate life · concept clip'),
  'butterfly_garden_trailer.mp4':('蝴蝶花园 · 概念片段','Butterfly garden · concept clip'),
@@ -94,8 +95,13 @@ titles={
 }
 for p in sorted((ROOT/'assets/reference/images').glob('*')):
     try:
-        pic=Image.open(p);pic.load();audit.append({'file':p.name,'decodable':True,'used':False})
+        pic=Image.open(p);pic.load()
+        dest=OUT/'assets'/'reference'/'images'/p.name
+        shutil.copy2(p,dest)
+        reference_images.append({'id':p.stem,'path':'./assets/reference/images/'+p.name,'width':pic.width,'height':pic.height,'status':'user_reference_web_proxy'})
+        audit.append({'file':p.name,'decodable':True,'used':True,'published_path':'./assets/reference/images/'+p.name})
     except Exception as e:audit.append({'file':p.name,'decodable':False,'excluded_reason':str(e)})
+write_json(OUT/'data/reference-images.json',reference_images)
 for p in sorted((ROOT/'assets/reference/videos').glob('*.mp4')):
     run=subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(p),'-f','null','-'],capture_output=True,text=True,timeout=30)
     valid=run.returncode==0
