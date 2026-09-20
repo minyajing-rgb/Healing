@@ -26,13 +26,13 @@ js=(OUT/'site.js').read_text()
 assert "m.mime||'video/webm'" in js,'Media renderer must respect manifest MIME types'
 # The approved production hero is the new high-resolution web artwork. Keep the
 # legacy garden crop only for provenance/backward compatibility.
-hero=OUT/'assets/media/hero-garden.webp'
-atlas=OUT/'assets/media/map-atlas.webp'
-botanical=OUT/'assets/media/atlas-lavender.webp'
+hero=OUT/'assets/media/hero-garden.avif'
+atlas=OUT/'assets/media/map-atlas.avif'
+botanical=OUT/'assets/media/atlas-lavender.avif'
 for asset_path in (hero,atlas,botanical):
     pic=Image.open(asset_path);pic.load();assert pic.width>=1000,asset_path
 with (OUT/'site.css').open('a') as f:
-    f.write('\n/* Layout hardening after real-browser visual review. */\n.button,.secondary{white-space:nowrap;flex-shrink:0}.explorer-search input{min-width:0}.hero-landscape{background-image:url(./assets/media/hero-garden.webp)!important;}\n')
+    f.write('\n/* Layout hardening after real-browser visual review. */\n.button,.secondary{white-space:nowrap;flex-shrink:0}.explorer-search input{min-width:0}.hero-landscape{background-image:url(./assets/media/hero-garden.avif)!important;}\n')
 release=json.loads((OUT/'release.json').read_text())
 release['artwork_sha256']=expected
 release['production_hero_sha256']=hashlib.sha256(hero.read_bytes()).hexdigest()
