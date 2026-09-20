@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://healing.saga1001.com/sitemap.xml
