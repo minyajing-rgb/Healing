@@ -21,7 +21,7 @@
   radial-gradient(circle at 18% 20%,rgba(255,244,185,.14),transparent 25%),
   radial-gradient(circle at 78% 68%,rgba(241,139,164,.10),transparent 24%),
   linear-gradient(rgba(63,128,158,.20),rgba(63,128,158,.20)),
-  url('./assets/media/map-atlas.webp') center/cover no-repeat,
+  url('./assets/media/map-atlas.avif') center/cover no-repeat,
   linear-gradient(180deg,#76aec4 0%,#5e9eb9 100%);
   box-shadow:inset 0 0 0 1px rgba(255,249,226,.72),inset 0 0 70px rgba(21,76,103,.16)}
 .map-canvas:before,.map-canvas:after{content:'';position:absolute;z-index:2;pointer-events:none;background:url('./assets/botanical.svg') center/contain no-repeat;opacity:.38;width:130px;height:180px;filter:sepia(.18) saturate(1.35)}
