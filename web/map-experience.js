@@ -20,7 +20,7 @@
   function translate(){
     document.querySelectorAll('[data-map-zh]').forEach(e=>e.textContent=e.getAttribute('data-map-'+language()));
     $('mapEngineStatus').textContent=activeStyle==='cloud'?text('云端地图 · Leaflet / OSM','Cloud map · Leaflet / OSM'):(enhanced?text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre'):text('轻量地图','Lightweight map'));
-    hint(activeStyle==='cloud'?'OpenStreetMap 云端细节 · 可放大到城镇与街道 · 无需 API Key':'疗愈图谱 · 地点、年代与 Story 联动','OpenStreetMap cloud detail · zoom to towns and streets · no API key required':'Healing atlas · place, time and Story stay synchronized');
+    hint(activeStyle==='cloud'?'OpenStreetMap 云端细节 · 可放大到城镇与街道 · 无需 API Key':'疗愈图谱 · 地点、年代与 Story 联动',activeStyle==='cloud'?'OpenStreetMap cloud detail · zoom to towns and streets · no API key required':'Healing atlas · place, time and Story stay synchronized');
     if(enhanced){if(activeStyle==='detail'&&map.isStyleLoaded())for(const l of map.getStyle().layers||[])if(l.type==='symbol'&&l.layout?.['text-field'])map.setLayoutProperty(l.id,'text-field',['coalesce',['get',language()==='zh'?'name:zh':'name:en'],['get','name']]);drawMarkers();}
   }
   function controls(){
@@ -73,7 +73,7 @@
       wrap.append(b,label);markers.push(new maplibregl.Marker({element:wrap,anchor:'center'}).setLngLat(s.coordinates).addTo(map));
     }
     const r=current().region;if(r!==activeRegion){activeRegion=r;home();}
-    if(activeStyle!=='google')$('mapEngineStatus').textContent=text('交互图谱 · MapLibre','Interactive atlas · MapLibre');
+    if(activeStyle!=='cloud')$('mapEngineStatus').textContent=text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre');
   }
   function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;drawMarkers();});}
   async function enhance(){
@@ -85,7 +85,7 @@
     map=new maplibregl.Map({container:pane,style:gardenStyle,center:[18,17],zoom:1.05,minZoom:-1,maxZoom:6,renderWorldCopies:false,attributionControl:{compact:false},dragRotate:false,pitchWithRotate:false,touchPitch:false,canvasContextAttributes:{preserveDrawingBuffer:true}});
     map.touchZoomRotate.disableRotation();map.scrollZoom.disable();
     let initError;
-    map.on('error',event=>{if(enhanced&&activeStyle==='detail')restoreGarden(true);else if(!enhanced)initError=event.error;});
+    map.on('error',event=>{if(enhanced&&activeStyle==='cloud')restoreGarden(true);else if(!enhanced)initError=event.error;});
     await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(initError||new Error('Map initialization timeout')),16000);map.once('load',()=>{clearTimeout(timeout);resolve();});});
     enhanced=true;$('mapCanvas').classList.add('map-enhanced');document.body.classList.add('map-experience-ready');$('worldSvg').setAttribute('aria-hidden','true');
     const hideSvgPins=()=>$('worldSvg').querySelectorAll('.pin').forEach(p=>p.setAttribute('tabindex','-1'));hideSvgPins();updateStyleButtons();
