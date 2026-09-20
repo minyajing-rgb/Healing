@@ -18,10 +18,12 @@
 
 /* Google/detail layer and richer atlas presentation */
 .map-canvas{background:
-  radial-gradient(circle at 18% 20%,rgba(255,244,185,.22),transparent 25%),
-  radial-gradient(circle at 78% 68%,rgba(241,139,164,.12),transparent 24%),
+  radial-gradient(circle at 18% 20%,rgba(255,244,185,.14),transparent 25%),
+  radial-gradient(circle at 78% 68%,rgba(241,139,164,.10),transparent 24%),
+  linear-gradient(rgba(63,128,158,.20),rgba(63,128,158,.20)),
+  
   linear-gradient(180deg,#76aec4 0%,#5e9eb9 100%);
-  box-shadow:inset 0 0 0 1px rgba(255,249,226,.65),inset 0 0 70px rgba(21,76,103,.18)}
+  box-shadow:inset 0 0 0 1px rgba(255,249,226,.72),inset 0 0 70px rgba(21,76,103,.16)}
 .map-canvas:before,.map-canvas:after{content:'';position:absolute;z-index:2;pointer-events:none;background:url('./assets/botanical.svg') center/contain no-repeat;opacity:.38;width:130px;height:180px;filter:sepia(.18) saturate(1.35)}
 .map-canvas:before{left:-42px;top:-40px;transform:rotate(-22deg)}
 .map-canvas:after{right:-46px;bottom:-34px;transform:scaleX(-1) rotate(-16deg)}
@@ -60,5 +62,9 @@
   .google-embed-overlay{grid-template-columns:1fr;top:10px;left:10px;right:10px;gap:7px}
   .google-embed-head{display:none}.google-open-link{justify-self:end}
 }
+
+.map-enhanced .map-gl-pane{opacity:.94}
+.map-frame:before{content:'EARTH HEALING · WORLD OF CARE';position:absolute;z-index:3;left:50%;top:74px;transform:translateX(-50%);pointer-events:none;color:rgba(255,248,217,.82);font:10px/1.2 Georgia,serif;letter-spacing:.22em;text-shadow:0 1px 5px rgba(39,61,68,.28)}
+.map-focused-page .map-frame:before{top:76px}
 
 .eh-pin-ring>span{transform:rotate(45deg)}.is-cluster .eh-pin-ring>span{transform:none}.eh-cluster-list{display:grid;gap:7px;padding:10px}.eh-cluster-list button{border:1px solid #d5be8d;background:#fffaf0;color:#64336d;border-radius:10px;min-height:44px;padding:8px;font-size:14px;text-align:left}.maplibregl-popup-content{border:1px solid #d3b77a;border-radius:15px;background:#fffaf0}
