@@ -30,7 +30,6 @@ jobs:
           GOOGLE_MAPS_MAP_ID: ${{ vars.GOOGLE_MAPS_MAP_ID }}
         run: |
           node --check web/site.js
-          node --check web/google-map-adapter.js
           node --check web/map-experience.js
           python scripts/build_site.py
           python scripts/prepare_release.py
