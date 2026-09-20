@@ -48,4 +48,17 @@
   .map-canvas:before,.map-canvas:after{width:90px;height:130px;opacity:.28}
 }
 
+/* Real Google Maps in-page fallback + story selector */
+.google-map-iframe{width:100%;height:100%;border:0;display:block;background:#f4efe4}
+.google-embed-overlay{position:absolute;z-index:6;left:18px;right:18px;top:18px;display:grid;grid-template-columns:minmax(180px,auto) 1fr auto;gap:12px;align-items:center;pointer-events:none}
+.google-embed-head,.google-embed-stories,.google-open-link{pointer-events:auto;background:rgba(255,250,240,.95);border:1px solid #c9a75d;box-shadow:0 8px 24px rgba(72,45,63,.16)}
+.google-embed-head{border-radius:18px 7px 18px 7px;padding:9px 14px}.google-embed-head strong{display:block;font:15px/1.45 Georgia,'Songti SC',serif;color:#5b286c}.google-embed-head small{font-size:10px;color:#786b66}
+.google-embed-stories{display:flex;gap:6px;overflow:auto;padding:6px;border-radius:18px}.google-embed-stories button{white-space:nowrap;border:1px solid #e1d0ae;background:#fffdf7;border-radius:999px;padding:7px 11px;font-size:11px;color:#625366;min-height:36px}.google-embed-stories button.active{background:#5b1d70;color:#fff9ed;border-color:#5b1d70}
+.google-open-link{border-radius:999px;padding:9px 14px;font-size:11px;color:#5b286c;white-space:nowrap}
+#mapCanvas[data-map-style="google"] .map-bottom-note{display:none}
+@media(max-width:760px){
+  .google-embed-overlay{grid-template-columns:1fr;top:10px;left:10px;right:10px;gap:7px}
+  .google-embed-head{display:none}.google-open-link{justify-self:end}
+}
+
 .eh-pin-ring>span{transform:rotate(45deg)}.is-cluster .eh-pin-ring>span{transform:none}.eh-cluster-list{display:grid;gap:7px;padding:10px}.eh-cluster-list button{border:1px solid #d5be8d;background:#fffaf0;color:#64336d;border-radius:10px;min-height:44px;padding:8px;font-size:14px;text-align:left}.maplibregl-popup-content{border:1px solid #d3b77a;border-radius:15px;background:#fffaf0}
