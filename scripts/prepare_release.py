@@ -37,7 +37,6 @@ with (OUT/'site.css').open('a') as f:
     f.write('\n/* Layout hardening after real-browser visual review. */\n.button,.secondary{white-space:nowrap;flex-shrink:0}.explorer-search input{min-width:0}.hero-landscape{background-image:url(./assets/garden.jpg)!important;}\n')
 release=json.loads((OUT/'release.json').read_text())
 release['artwork_sha256']=expected
-release['production_hero_sha256']=hashlib.sha256(hero.read_bytes()).hexdigest()
 release['video_format']='VP9/WebM'
 for path in (OUT/'release.json',REPORT/'build-summary.json'):path.write_text(json.dumps(release,ensure_ascii=False,indent=2))
 print('Validated high-quality garden crop and',len(manifest),'WebM previews')
