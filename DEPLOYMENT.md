@@ -1,42 +1,53 @@
-# Earth Healing Static Website Deployment / 官网部署说明
+# Earth Healing / 官网发布
 
-This repository now contains a **plain static HTML/CSS/JS website at repository root**.
+## Live endpoint
 
-## Production entry files
+https://minyajing-rgb.github.io/Healing/
 
-- `index.html` — homepage
-- `map.html` — dynamic time-driven world map
-- `story-provence.html` — story-mode page
-- `atlas-lavender.html` — botanical atlas page
-- `styles.css` — shared visual system
-- `app.js` — bilingual / timeline / story interactions
-- `assets/reference/` — website image/video assets
+The Pages site is enabled. Verified configuration: legacy branch publishing, source `gh-pages`, directory `/`. The earlier first-time enablement problem no longer describes the current repository state.
 
-The site uses **relative URLs**, so it can be deployed under:
-- GitHub Pages project path;
-- a custom root domain;
-- a subdomain such as `healing.example.com`;
-- Cloudflare Pages / Vercel / Netlify / any static host.
+## Canonical source and output
+
+- `web/index.html` — real HTML interface
+- `web/site.css` — responsive botanical visual system
+- `web/site.js` — geographic map, time slider/playback, filters, bilingual stories, local bookmarks and sharing
+- `web/assets/` — validated web artwork and original UI ornaments
+- `data/published-stories.json` — source-linked, bilingual cultural/historical stories eligible for publication
+- `data/canonical_entries_wave1_500.jsonl` — research index; not automatically treated as verified content
+- `scripts/build_site.py` — validation and static build
+- `scripts/test_site.py` — real-browser functional checks and desktop/mobile screenshots
+- `.github/workflows/publish-site.yml` — build, test, update `gh-pages`, request Pages build, verify live release
+
+`main` contains research and editable source. `_site` is the build artifact. The `gh-pages` branch contains generated public output. Earlier root HTML files and the old `site/` folder are historical prototypes, not the canonical production source.
+
+## Delivery states
+
+An uploaded source file, a successful build and a verified live release are distinct states. Check the latest **Publish Earth Healing** run and the public `release.json`; a source commit is live only when it matches `source_commit` in that file.
+
+Initial editorial release: 19 actual bilingual story introductions and 500 separately labelled research-index records. The previous 500 generic story shells are not counted as finished stories. Structural graph relations are not claims of historical transmission.
+
+## Update loop
+
+1. Research and edit a story, attaching its primary sources.
+2. Distinguish origin, historical documentation, institutional dates and heritage-recognition dates.
+3. Use approximate regional coordinates where appropriate and explain precision.
+4. Set eligible content to `published` after editorial review.
+5. Commit to `main`. The workflow validates the data and media, tests the actual UI and publishes the static result.
+
+This is automatic publication after a repository update, not unsupervised research or medical review.
+
+## Media integrity
+
+The earlier four WebP proxies and two MP4 proxies failed decoding. They remain in source history but are excluded from the live build. Three existing 160×90, 10-second concept video proxies decode completely and are labelled as low-resolution previews. They are not high-resolution master archives. The new garden artwork is checked by SHA-256 and image decoding before publication.
+
+Official documentary films are linked to their source websites; they are not silently copied or represented as owned media.
 
 ## Custom domain later
 
-When the final domain is known:
+No domain is invented or bound in this release. When the final domain is supplied, configure it in GitHub Pages and its DNS provider. Relative website paths support the current `/Healing/` project path and a future domain root.
 
-1. Point the deployment provider to this GitHub repository.
-2. Use repository root as the static site root.
-3. Add the domain in the provider's domain settings.
-4. If using GitHub Pages, create a root `CNAME` file containing only the final domain name.
-5. Update DNS according to the selected host.
-6. Keep all site asset links relative; no code rewrite should be required.
+The publication script preserves any existing `gh-pages/CNAME` unless a replacement root `CNAME` has explicitly been committed in `main`. Do not put a placeholder domain in a live `CNAME` file.
 
-## GitHub Pages note
+## Portable build
 
-The connected GitHub App can write repository files but does not have the repository-administration permission required to enable a Pages site for the first time. This does **not** affect the website code. The website is already host-ready.
-
-## Content workflow
-
-The website and database are intentionally decoupled:
-
-`data → QA → story objects → map/timeline bindings → published HTML/UI`
-
-New database content can continue to be researched and structured while verified, visually strong content is progressively surfaced on the live site.
+Run `python scripts/build_site.py` with Pillow and FFmpeg installed. Serve `_site` through a static server. The build vendors version-pinned mapping libraries and the Natural Earth geographic basemap, avoiding runtime dependence on third-party map/CDN requests by visitors. Library license files are included; no font binaries are distributed.
