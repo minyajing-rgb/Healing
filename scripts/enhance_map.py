@@ -71,8 +71,7 @@ for path in OUT.glob('*.html'):
 with (OUT/'map-experience.css').open('a',encoding='utf-8') as f:
     f.write('\n.eh-pin-ring>span{transform:rotate(45deg)}.is-cluster .eh-pin-ring>span{transform:none}.eh-cluster-list{display:grid;gap:7px;padding:10px}.eh-cluster-list button{border:1px solid #d5be8d;background:#fffaf0;color:#64336d;border-radius:10px;min-height:44px;padding:8px;font-size:14px;text-align:left}.maplibregl-popup-content{border:1px solid #d3b77a;border-radius:15px;background:#fffaf0}\n')
 release=json.loads((OUT/'release.json').read_text())
-google_enabled=bool(release.get('google_maps_enabled'))
-release.update({'release':'2026.09.20-map3','map_engine':'MapLibre GL JS 5.6.0 + optional Google Maps JavaScript API detail layer','map_styles':['garden-local','geographic-detail-openfreemap','google-maps-detail' if google_enabled else 'google-maps-external-fallback'],'google_maps_enabled':google_enabled,'map':'Natural Earth 1:50m branded atlas; optional OpenFreeMap detail; optional Google Maps place detail when configured','geography_normalization':json.loads(result.stdout)})
+release.update({'release':'2026.09.20-atlas4','map_engine':'self-hosted MapLibre GL JS 5.6.0 atlas','map_styles':['garden-local'],'google_maps_enabled':False,'map':'Self-hosted Natural Earth atlas with local story coordinates and timeline; not historical boundaries','geography_normalization':json.loads(result.stdout)})
 release['dependency_digests'].extend(digests)
 for path in (OUT/'release.json',REPORT/'build-summary.json'):path.write_text(json.dumps(release,ensure_ascii=False,indent=2),encoding='utf-8')
 with (OUT/'ASSET-LICENSES.txt').open('a',encoding='utf-8') as f:
