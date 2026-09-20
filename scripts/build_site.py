@@ -1,7 +1,7 @@
 """Build the public static website without publishing unfinished story shells."""
 from __future__ import annotations
 import hashlib, json, os, pathlib, re, shutil, subprocess, time, urllib.request
-from PIL import Image
+from PIL import Image, ImageEnhance
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'_site'
 REPORT=ROOT/'site-report'
@@ -19,7 +19,22 @@ asset=OUT/'assets/garden.avif'
 assert hashlib.sha256(asset.read_bytes()).hexdigest()=='e476481ab71416b3652c973fa8f19f6295129dd1786eb999a51f5ed5ce1c9032','Hero image bytes did not match source'
 im=Image.open(asset);im.load();assert im.width>=900
 # Provide a broadly compatible web derivative as well.
-im.convert('RGB').save(OUT/'assets/garden.jpg',quality=87,optimize=True)
+im.convert('RGB').save(OUT/'assets/garden.jpg',quality=92,optimize=True)
+# Retina rendering derivative: improves browser presentation, but does not invent new source detail.
+hq=im.convert('RGB').resize((im.width*2,im.height*2),Image.Resampling.LANCZOS)
+hq=ImageEnhance.Sharpness(hq).enhance(1.16)
+hq.save(OUT/'assets/garden@2x.jpg',quality=94,subsampling=0,optimize=True)
+
+# Google Maps JavaScript API browser credentials are injected at build time.
+# The browser key is expected to be HTTP-referrer restricted to the production domain.
+google_key=os.environ.get('GOOGLE_MAPS_API_KEY','').strip()
+google_map_id=os.environ.get('GOOGLE_MAPS_MAP_ID','').strip()
+(OUT/'google-map-config.js').write_text(
+    'window.EARTH_HEALING_GOOGLE_MAPS = Object.freeze('+json.dumps({
+      'apiKey':google_key,
+      'mapId':google_map_id,
+      'productionDomain':'healing.saga1001.com'
+    },ensure_ascii=False)+');\n',encoding='utf-8')
 
 payload=json.loads((ROOT/'data/published-stories.json').read_text())
 records=payload['stories']
@@ -103,7 +118,7 @@ for name in ('map.html','story-provence.html','atlas-lavender.html','story.html'
 if (ROOT/'CNAME').exists():shutil.copy2(ROOT/'CNAME',OUT/'CNAME')
 (OUT/'ASSET-LICENSES.txt').write_text('Basemap: Natural Earth, public domain; packaged by world-atlas (see vendor license). D3 and TopoJSON: ISC licenses in vendor/. User-provided artwork is illustrative and not historical evidence. Original photos and movies on external source websites remain with their rights holders. They are linked, not republished.\n',encoding='utf-8')
 sha=os.environ.get('GITHUB_SHA','local')
-release={'release':'2026.09.20-r1','source_commit':sha,'published_stories':len(records),'research_index_records':len(catalog),'validated_video_proxies':len(media),'map':'Natural Earth geographic coastlines, not historical borders','dependency_digests':deps}
+release={'release':'2026.09.20-r1','source_commit':sha,'published_stories':len(records),'research_index_records':len(catalog),'validated_video_proxies':len(media),'map':'Natural Earth geographic coastlines, not historical borders','dependency_digests':deps,'google_maps_enabled':bool(google_key),'google_map_id_enabled':bool(google_map_id)}
 write_json(OUT/'release.json',release)
 write_json(REPORT/'build-summary.json',release)
 # Check local HTML resources before allowing deployment.
