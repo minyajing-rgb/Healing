@@ -31,18 +31,18 @@
   };
   const icon=type=>'<span class="icon" aria-hidden="true"><svg viewBox="0 0 64 64">'+(paths[type]||paths.plant)+'</svg></span>';
   const storyArt={
-    grasse:'./assets/reference/images/provence_perfume_estate.webp',
-    padua:'./assets/reference/images/provence_bird_botanical_atlas.webp',
-    chelsea:'./assets/reference/images/provence_bird_botanical_atlas.webp',
-    forest:'./assets/reference/images/alishan_healing_adventure.webp',
-    rongoa:'./assets/reference/images/alishan_healing_adventure.webp',
-    ebers:'./assets/reference/images/provence_perfume_estate.webp',
-    kallawaya:'./assets/reference/images/alishan_healing_adventure.webp',
-    argan:'./assets/reference/images/provence_perfume_estate.webp',
-    jamu:'./assets/reference/images/provence_perfume_estate.webp',
-    spatowns:'./assets/reference/images/provence_perfume_estate.webp',
-    lum:'./assets/reference/images/provence_bird_botanical_atlas.webp',
-    sauna:'./assets/reference/images/provence_perfume_estate.webp'
+    grasse:'./assets/garden.jpg',
+    padua:'./assets/garden.jpg',
+    chelsea:'./assets/garden.jpg',
+    forest:'./assets/garden.jpg',
+    rongoa:'./assets/garden.jpg',
+    ebers:'./assets/garden.jpg',
+    kallawaya:'./assets/garden.jpg',
+    argan:'./assets/garden.jpg',
+    jamu:'./assets/garden.jpg',
+    spatowns:'./assets/garden.jpg',
+    lum:'./assets/garden.jpg',
+    sauna:'./assets/garden.jpg'
   };
   const art=(s,label=false)=>{
     const src=storyArt[s.id];
