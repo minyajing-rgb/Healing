@@ -25,9 +25,7 @@ try:
   check('Pins share the published story filter',initial['visible']==page.evaluate('window.EARTH_HEALING.state().visible'))
   check('Nearby places are clustered',page.locator('.is-cluster').count()>0)
   check('Interactive markers exist',page.locator('.eh-map-pin').count()>0)
-  check('Google Maps detail control is present',page.locator('[data-map-style="google"]').count()==1)
-  check('Google adapter exposes safe configuration state',page.evaluate("typeof window.EARTH_HEALING_GOOGLE_MAP?.state==='function'"))
-  check('Desktop no horizontal overflow',page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'))
+      check('Desktop no horizontal overflow',page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'))
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-v2-desktop.png'))
   page.locator('[data-year="1750"]').click();page.wait_for_function('window.EARTH_HEALING_MAP.state().visible===8')
   check('1750 drives enhanced map',page.evaluate('window.EARTH_HEALING_MAP.state().visible')==8)
@@ -42,20 +40,10 @@ try:
   check('Zoom controls use new engine',page.evaluate('window.EARTH_HEALING_MAP.state().zoom')>before)
   page.locator('#languageToggle').click();check('Map controls translated','Garden atlas' in page.locator('.map-style-switch').inner_text())
   page.locator('#regionFilter').select_option('europe');page.wait_for_timeout(300)
-  page.locator('[data-map-style="detail"]').click()
-  page.wait_for_function("['loaded','fallback'].includes(window.EARTH_HEALING_MAP.state().detailHealth)",timeout=35000)
-  detail={'state':page.evaluate('window.EARTH_HEALING_MAP.state()'),'hint':page.locator('#mapExperienceHint').inner_text()}
-  check('Optional external style loads or safely falls back',detail['state']['detailHealth'] in ['loaded','fallback'])
-  page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-v2-detail.png'))
-  page.locator('[data-map-style="google"]').click()
-  page.wait_for_function("window.EARTH_HEALING_GOOGLE_MAP?.state().active===true",timeout=10000)
-  google_state=page.evaluate('window.EARTH_HEALING_GOOGLE_MAP.state()')
-  check('Google Maps mode stays in the website',google_state['active'] and google_state['mode'] in ['embed','javascript'])
-  if google_state['mode']=='embed':
-   check('Google Maps iframe fallback renders in-page',page.locator('#googleMapPane iframe').count()==1)
-  page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-v3-google.png'))
-  page.locator('[data-map-style="garden"]').click();page.wait_for_timeout(600)
-  check('Switch back to self-hosted map',page.evaluate('window.EARTH_HEALING_MAP.state().style')=='garden')
+  check('Self-hosted atlas remains active',page.evaluate("window.EARTH_HEALING_MAP.state().style")=='garden')
+  check('Self-hosted atlas requires no Google configuration',page.locator('[data-map-style="google"]').count()==0)
+  check('Branded atlas control is visible','Healing world atlas' in page.locator('.map-style-switch').inner_text())
+  page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-self-hosted.png'))
   page.locator('#listView').click();check('List alternative remains available',page.locator('#mapList').is_visible())
   mobile=browser.new_page(viewport={'width':390,'height':844},is_mobile=True,has_touch=True,reduced_motion='reduce');mobile.on('pageerror',lambda e:errors.append(str(e)))
   mobile.goto(base+'map.html',wait_until='networkidle');mobile.wait_for_function('window.EARTH_HEALING_MAP?.state().ready',timeout=35000)
@@ -71,5 +59,5 @@ try:
 except Exception:
  (REPORT/'map-v2-failure.txt').write_text(traceback.format_exc());raise
 finally:
- server.shutdown();report={'checks':checks,'errors':errors,'http_failures':bad,'initial_state':initial,'detail_service':detail}
+ server.shutdown();report={'checks':checks,'errors':errors,'http_failures':bad,'initial_state':initial}
  (REPORT/'map-v2-tests.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2))
