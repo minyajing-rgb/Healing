@@ -1,70 +1,38 @@
-# Google Maps Detail Layer Setup / Google 地图详情层配置
+# Google Maps Detail Layer / Google 云端地图详情层
 
-Earth Healing now has three map modes:
+## Current production behavior
 
-1. **Garden Atlas / 花园图谱** — self-hosted branded MapLibre + Natural Earth overview.
-2. **Geographic Detail / 地理细节** — OpenFreeMap fallback for modern geographic detail.
-3. **Google Maps / Google 地图** — embedded Google Maps JavaScript API when a production browser key is configured; otherwise opens the selected place in Google Maps via a normal Maps URL.
+**No Google API key is required for the normal Earth Healing website flow.**
 
-## Required Google Cloud configuration
+Earth Healing uses three map layers:
 
-Enable **Maps JavaScript API** in the Google Cloud project that will serve `healing.saga1001.com`.
+1. **Garden Atlas / 花园图谱** — branded interactive MapLibre + Natural Earth overview.
+2. **Geographic Detail / 地理细节** — modern geographic detail fallback.
+3. **Google Maps / Google 地图** — when the visitor selects this mode, the site uses a real Google Maps in-page embed centered on the selected story coordinates. Visitors can also open that exact coordinate in Google Maps.
 
-Create a dedicated **browser API key** and restrict it:
+This no-key embedded flow is the default production path and is sufficient for:
+- viewing the selected modern place;
+- zooming/panning in Google Maps;
+- switching between Earth Healing story locations;
+- opening exact coordinates in full Google Maps.
 
-### Application restriction
-HTTP referrers (web sites)
+## Optional advanced mode
 
-Recommended allowed referrers:
+A `GOOGLE_MAPS_API_KEY` is **optional**, not required.
+
+It is only needed if we later want the full Maps JavaScript API for:
+- custom cloud map styles / Map ID;
+- programmatic advanced markers;
+- more control over the embedded map UI;
+- deeper Google Maps JavaScript API integrations.
+
+If enabled later, keep the key HTTP-referrer restricted to:
 - `https://healing.saga1001.com/*`
-- `https://minyajing-rgb.github.io/Healing/*` only if the GitHub Pages staging URL should also load embedded Google Maps.
 
-### API restriction
-Restrict key to:
-- Maps JavaScript API
+and restrict the key to Maps JavaScript API.
 
-Do not use an unrestricted key.
+## Product hierarchy
 
-## GitHub configuration
+`Garden Atlas → era / region / story → Google Maps modern place detail`
 
-Repository:
-`minyajing-rgb/Healing`
-
-Open:
-**Settings → Secrets and variables → Actions**
-
-Add:
-
-### Repository secret
-- Name: `GOOGLE_MAPS_API_KEY`
-- Value: the HTTP-referrer-restricted browser API key
-
-### Optional repository variable
-- Name: `GOOGLE_MAPS_MAP_ID`
-- Value: a Google Maps Map ID if Cloud-based Map Styling / Advanced Markers are desired.
-
-Do not commit the API key into HTML, JS, JSON, Markdown or the repository.
-
-The publishing workflow already injects these values into the generated public `google-map-config.js`.
-
-## After configuration
-
-Re-run **Publish Earth Healing** or make any site commit.
-
-The build release metadata will change from:
-`google_maps_enabled: false`
-
-to:
-`google_maps_enabled: true`.
-
-The **Google 地图 / Google Maps** button will then switch the in-page detail layer to Google Maps and allow normal Google zoom/pan to specific modern places and streets.
-
-## Product model
-
-Do not replace the branded world overview with Google Maps.
-
-Recommended hierarchy:
-
-`Garden Atlas → select era / region / story → Google Maps detail → exact modern location`
-
-Historical eras continue to use the Earth Healing atlas and sourced story dates. Google Maps is treated as **present-day geographic detail**, not as a reconstruction of historical borders, roads or settlements.
+Google Maps represents present-day geography. Historical dates, routes and cultural context remain controlled by the Earth Healing database and timeline; Google Maps is not treated as a reconstruction of historical borders.
