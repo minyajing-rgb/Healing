@@ -14,18 +14,18 @@
   const current=()=>window.EARTH_HEALING?.state()||{year:2026,region:'all'};
   function visibleStories(){const ids=new Set([...$('storyRail').querySelectorAll('[data-story]')].map(e=>e.dataset.story));return data.filter(s=>ids.has(s.id));}
   function hint(zh,en){$('mapExperienceHint').textContent=text(zh,en);}
-  function home(){if(!map)return;const r=views[current().region]||views.all;if(current().region==='all')map.fitBounds([[-174,-56],[179,74]],{padding:{top:45,bottom:90,left:40,right:55},maxZoom:2,duration:duration(),bearing:0,pitch:0});else map.easeTo({...r,bearing:0,pitch:0,duration:duration()});}
-  function focus(s){if(map&&s)map.easeTo({center:s.coordinates,zoom:Math.max(map.getZoom(),activeStyle==='detail'?8:4.2),duration:duration()});}
-  function updateStyleButtons(){document.querySelectorAll('[data-map-style]').forEach(b=>{b.disabled=!enhanced;b.classList.toggle('chosen',b.dataset.mapStyle===activeStyle);b.setAttribute('aria-pressed',String(b.dataset.mapStyle===activeStyle));});$('mapCanvas').dataset.mapStyle=activeStyle;}
+  function home(){if(activeStyle==='google'&&window.EARTH_HEALING_GOOGLE_MAP?.state?.().active){window.EARTH_HEALING_GOOGLE_MAP.sync();return;}if(!map)return;const r=views[current().region]||views.all;if(current().region==='all')map.fitBounds([[-174,-56],[179,74]],{padding:{top:45,bottom:90,left:40,right:55},maxZoom:2,duration:duration(),bearing:0,pitch:0});else map.easeTo({...r,bearing:0,pitch:0,duration:duration()});}
+  function focus(s){if(activeStyle==='google'&&window.EARTH_HEALING_GOOGLE_MAP?.focus?.(s))return;if(map&&s)map.easeTo({center:s.coordinates,zoom:Math.max(map.getZoom(),activeStyle==='detail'?8:4.2),duration:duration()});}
+  function updateStyleButtons(){document.querySelectorAll('[data-map-style]').forEach(b=>{b.disabled=b.dataset.mapStyle==='google'?false:!enhanced;b.classList.toggle('chosen',b.dataset.mapStyle===activeStyle);b.setAttribute('aria-pressed',String(b.dataset.mapStyle===activeStyle));});$('mapCanvas').dataset.mapStyle=activeStyle;}
   function translate(){
     document.querySelectorAll('[data-map-zh]').forEach(e=>e.textContent=e.getAttribute('data-map-'+language()));
-    $('mapEngineStatus').textContent=enhanced?text('交互地图 · MapLibre','Interactive map · MapLibre'):text('轻量地图','Lightweight map');
-    hint(activeStyle==='detail'?'现代地理细节 · 外部地图服务':'地理轮廓 · 本站加载 · 不表示历史国界',activeStyle==='detail'?'Present-day geography · external map service':'Geographic coastlines · hosted here · not historical borders');
+    $('mapEngineStatus').textContent=activeStyle==='google'?text('地点详情 · Google Maps','Place detail · Google Maps'):(enhanced?text('交互图谱 · MapLibre','Interactive atlas · MapLibre'):text('轻量地图','Lightweight map'));
+    hint(activeStyle==='google'?text('Google Maps 详情层 · 可继续放大到具体地点','Google Maps detail layer · zoom into specific places'):(activeStyle==='detail'?text('现代地理细节 · OpenFreeMap','Present-day geographic detail · OpenFreeMap'):text('花园世界图谱 · 用于跨地区与年代探索','Garden world atlas · for cross-region and time exploration')),activeStyle==='google'?'Google Maps detail layer · zoom into specific places':(activeStyle==='detail'?'Present-day geographic detail · OpenFreeMap':'Garden world atlas · for cross-region and time exploration'));
     if(enhanced){if(activeStyle==='detail'&&map.isStyleLoaded())for(const l of map.getStyle().layers||[])if(l.type==='symbol'&&l.layout?.['text-field'])map.setLayoutProperty(l.id,'text-field',['coalesce',['get',language()==='zh'?'name:zh':'name:en'],['get','name']]);drawMarkers();}
   }
   function controls(){
     if(location.pathname.endsWith('map.html'))document.body.classList.add('map-focused-page');
-    const bar=node('div','map-experience-bar','<div class="map-mode-title"><span>EARTH HEALING ATLAS</span><strong data-map-zh="每一处，都有照护的故事" data-map-en="Every place has a story of care"></strong></div><div class="map-style-switch" role="group" aria-label="Map style"><button type="button" data-map-style="garden" class="chosen" aria-pressed="true"><i></i><span data-map-zh="花园图谱" data-map-en="Garden atlas"></span></button><button type="button" data-map-style="detail" aria-pressed="false"><i></i><span data-map-zh="地理细节" data-map-en="Geographic detail"></span></button></div><button type="button" id="mapFullscreen" class="map-expand" data-map-zh="⛶ 全屏地图" data-map-en="⛶ Full screen"></button>');
+    const bar=node('div','map-experience-bar','<div class="map-mode-title"><span>EARTH HEALING ATLAS</span><strong data-map-zh="每一处，都有照护的故事" data-map-en="Every place has a story of care"></strong></div><div class="map-style-switch" role="group" aria-label="Map style"><button type="button" data-map-style="garden" class="chosen" aria-pressed="true"><i></i><span data-map-zh="花园图谱" data-map-en="Garden atlas"></span></button><button type="button" data-map-style="detail" aria-pressed="false"><i></i><span data-map-zh="地理细节" data-map-en="Geographic detail"></span></button><button type="button" data-map-style="google" aria-pressed="false"><i></i><span data-map-zh="Google 地图" data-map-en="Google Maps"></span></button></div><button type="button" id="mapFullscreen" class="map-expand" data-map-zh="⛶ 全屏地图" data-map-en="⛶ Full screen"></button>');
     $('mapCanvas').parentElement.before(bar);
     $('mapCanvas').appendChild(node('div','map-engravings','<span>❧</span><span>✧</span>'));
     $('mapCanvas').appendChild(node('div','map-bottom-note','<span class="map-botanical-mark">❧</span><div><strong data-map-zh="跟随好奇，走进一个地方。" data-map-en="Follow curiosity into a place."></strong><small id="mapExperienceHint"></small></div>'));
@@ -37,14 +37,20 @@
     updateStyleButtons();translate();
   }
   function localStyle(land){return {version:8,name:'Earth Healing — Garden Atlas',sources:{land:{type:'geojson',data:land,attribution:'<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>'},grid:{type:'geojson',data:window.d3.geoGraticule10()}},layers:[
-    {id:'ocean',type:'background',paint:{'background-color':'#c2e2e1'}},
-    {id:'latitude',type:'line',source:'grid',paint:{'line-color':'#f5fcf6','line-width':0.6,'line-opacity':0.7}},
-    {id:'shore-halo',type:'line',source:'land',paint:{'line-color':'#a3cac3','line-width':9,'line-blur':6}},
-    {id:'islands',type:'fill',source:'land',paint:{'fill-color':'#f4eddc'}},
-    {id:'coastline',type:'line',source:'land',paint:{'line-color':'#bcab7b','line-width':0.65}}
+    {id:'ocean',type:'background',paint:{'background-color':'#6fabc3'}},
+    {id:'latitude',type:'line',source:'grid',paint:{'line-color':'#fff9df','line-width':0.55,'line-opacity':0.28}},
+    {id:'shore-halo',type:'line',source:'land',paint:{'line-color':'#f6dfa2','line-width':7,'line-blur':5,'line-opacity':0.52}},
+    {id:'islands',type:'fill',source:'land',paint:{'fill-color':'#d9d4a6','fill-opacity':0.98}},
+    {id:'coastline',type:'line',source:'land',paint:{'line-color':'#d8ac4c','line-width':1.15,'line-opacity':0.92}}
   ]};}
-  function restoreGarden(failed=false){clearTimeout(detailTimer);activeStyle='garden';if(failed)detailHealth='fallback';map.setMaxZoom(6);map.setStyle(gardenStyle);updateStyleButtons();translate();if(failed)hint('地理服务暂不可用；仍可探索本站花园图谱。','Detail service unavailable; the local garden atlas remains available.');}
+  function restoreGarden(failed=false){clearTimeout(detailTimer);window.EARTH_HEALING_GOOGLE_MAP?.deactivate?.();activeStyle='garden';if(failed)detailHealth='fallback';map.setMaxZoom(6);map.setStyle(gardenStyle);updateStyleButtons();translate();if(failed)hint('地理服务暂不可用；仍可探索本站花园图谱。','Detail service unavailable; the local garden atlas remains available.');}
   async function changeStyle(style){
+    if(style==='google'){
+      const ok=await window.EARTH_HEALING_GOOGLE_MAP?.activate?.();
+      if(ok){activeStyle='google';updateStyleButtons();translate();return;}
+      updateStyleButtons();translate();return;
+    }
+    window.EARTH_HEALING_GOOGLE_MAP?.deactivate?.();
     if(!enhanced)return;const seq=++switching;popup?.remove();clearTimeout(detailTimer);
     if(style!=='detail'){restoreGarden();return;}
     hint('正在载入地理细节……','Loading geographic details…');detailHealth='loading';
@@ -74,7 +80,7 @@
     }else map.fitBounds(bounds,{padding:90,maxZoom:activeStyle==='garden'?5.7:12,duration:duration()});
   }
   function drawMarkers(){
-    if(!enhanced||!map)return;markers.forEach(m=>m.remove());markers=[];available=visibleStories();
+    if(!enhanced||!map)return;markers.forEach(m=>m.remove());markers=[];available=visibleStories();if(activeStyle==='google'){window.EARTH_HEALING_GOOGLE_MAP?.sync?.();return;}
     for(const group of cluster(available)){
       const s=group.stories[0],multiple=group.stories.length>1,lang=language();
       const wrap=node('div','eh-map-marker'+(multiple?' is-cluster':'')),b=node('button','eh-map-pin');b.type='button';b.style.setProperty('--pin-color',palette[s.themes[0]]||'#775983');
@@ -85,7 +91,7 @@
       wrap.append(b,label);markers.push(new maplibregl.Marker({element:wrap,anchor:'center'}).setLngLat(s.coordinates).addTo(map));
     }
     const r=current().region;if(r!==activeRegion){activeRegion=r;home();}
-    $('mapEngineStatus').textContent=text('交互地图 · MapLibre','Interactive map · MapLibre');
+    if(activeStyle!=='google')$('mapEngineStatus').textContent=text('交互图谱 · MapLibre','Interactive atlas · MapLibre');
   }
   function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;drawMarkers();});}
   async function enhance(){
@@ -108,7 +114,7 @@
     for(const [id,action] of Object.entries({zoomIn:()=>map.zoomIn({duration:duration()}),zoomOut:()=>map.zoomOut({duration:duration()}),zoomReset:home}))$(id).addEventListener('click',e=>{e.stopImmediatePropagation();action();},true);
     $('mapView').addEventListener('click',()=>setTimeout(()=>{map.resize();schedule();},30));$('clearFilters').addEventListener('click',()=>setTimeout(home,0));
     document.addEventListener('click',e=>{const target=e.target.closest('[data-map-story],[data-story]');if(!target)return;const s=data.find(s=>s.id===(target.dataset.mapStory||target.dataset.story));if(s)setTimeout(()=>focus(s),20);});
-    window.EARTH_HEALING_MAP={engine:'maplibre',state:()=>({ready:enhanced,style:activeStyle,detailHealth,visible:available.length,markers:markers.length,zoom:map.getZoom(),center:map.getCenter().toArray()}),setStyle:changeStyle,reset:home};
+    window.EARTH_HEALING_MAP={engine:'maplibre+google-ready',state:()=>({ready:enhanced,style:activeStyle,detailHealth,google:window.EARTH_HEALING_GOOGLE_MAP?.state?.(),visible:available.length,markers:markers.length,zoom:map.getZoom(),center:map.getCenter().toArray()}),setStyle:changeStyle,reset:home};
     home();translate();drawMarkers();
   }
   controls();let attempts=0;
