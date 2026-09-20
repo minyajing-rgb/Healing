@@ -1,0 +1,122 @@
+name: Publish Earth Healing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'scripts/build_site.py'
+      - 'scripts/test_site.py'
+      - 'data/published-stories.json'
+      - 'data/canonical_entries_wave1_500.jsonl'
+      - 'assets/reference/**'
+      - 'CNAME'
+      - '.github/workflows/publish-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: earth-healing-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: https://minyajing-rgb.github.io/Healing/
+    steps:
+      - name: Check out the canonical source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Install media and browser validation tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk
+          python -m pip install --quiet 'Pillow>=11.3,<13' 'playwright==1.55.0'
+          python -m playwright install --with-deps chromium
+      - name: Check JavaScript and build the static site
+        run: |
+          node --check web/site.js
+          python scripts/build_site.py
+      - name: Test real interactions and capture desktop/mobile screenshots
+        run: python scripts/test_site.py
+      - name: Preserve test reports and the portable website
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: earth-healing-site-and-preview
+          path: |
+            site-report/
+            _site/
+          include-hidden-files: true
+          retention-days: 30
+      - name: Publish validated files to the existing Pages branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api repos/${{ github.repository }}/pages > /tmp/earth-healing-pages.json
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/earth-healing-pages.json'))
+          assert p['source']['branch']=='gh-pages', 'Unexpected Pages source: refusing to overwrite another publication branch'
+          assert p['source']['path']=='/'
+          print('Publishing to enabled site:',p['html_url'])
+          PY
+          git fetch origin gh-pages --depth=1
+          git worktree add --detach /tmp/earth-healing-publication origin/gh-pages
+          if [ ! -f _site/CNAME ] && [ -f /tmp/earth-healing-publication/CNAME ]; then
+            cp /tmp/earth-healing-publication/CNAME _site/CNAME
+          fi
+          rsync -a --delete --exclude='.git' --exclude='.github' _site/ /tmp/earth-healing-publication/
+          git -C /tmp/earth-healing-publication config user.name 'github-actions[bot]'
+          git -C /tmp/earth-healing-publication config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C /tmp/earth-healing-publication add --all
+          if ! git -C /tmp/earth-healing-publication diff --cached --quiet; then
+            git -C /tmp/earth-healing-publication commit -m "Publish validated Earth Healing from ${GITHUB_SHA}"
+            git -C /tmp/earth-healing-publication push origin HEAD:gh-pages
+          fi
+          gh api --method POST repos/${{ github.repository }}/pages/builds > /tmp/earth-healing-build.json
+          cat /tmp/earth-healing-build.json
+      - name: Verify the public deployment matches this source commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json,os,time,urllib.request,pathlib
+          info=json.load(open('/tmp/earth-healing-pages.json'))
+          base=info['html_url'].rstrip('/')+'/'
+          expected=os.environ['GITHUB_SHA']
+          result=None
+          for attempt in range(45):
+              try:
+                  req=urllib.request.Request(base+'release.json?check='+str(time.time_ns()),headers={'Cache-Control':'no-cache','User-Agent':'EarthHealing-deployment-verifier'})
+                  with urllib.request.urlopen(req,timeout=20) as r: current=json.load(r)
+                  if current.get('source_commit')==expected:
+                      checked=[]
+                      for path in ('index.html','map.html','site.js','site.css','assets/garden.avif','data/stories.json','data/land-110m.json'):
+                          with urllib.request.urlopen(base+path,timeout=20) as r:
+                              data=r.read()
+                              assert r.status==200 and len(data)>100
+                              checked.append({'path':path,'status':r.status,'bytes':len(data)})
+                      result={'url':base,'source_commit':expected,'release':current,'public_resources':checked,'status':'LIVE_VERIFIED'}
+                      break
+              except Exception as e: print('Waiting for publication:',str(e))
+              time.sleep(8)
+          assert result,'Public site did not reach the expected source commit within the verification window'
+          pathlib.Path('site-report/deployment-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+          print(json.dumps(result,ensure_ascii=False,indent=2))
+          PY
+      - name: Upload public-deployment verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: earth-healing-live-verification
+          path: site-report/deployment-verification.json
+          if-no-files-found: warn
