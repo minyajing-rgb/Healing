@@ -1,0 +1,1 @@
+Basemap: Natural Earth, public domain; packaged by world-atlas (see vendor license). D3 and TopoJSON: ISC licenses in vendor/. User-provided artwork is illustrative and not historical evidence. Original photos and movies on external source websites remain with their rights holders. They are linked, not republished.

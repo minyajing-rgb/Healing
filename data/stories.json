@@ -1,0 +1,877 @@
+{
+  "version": "2026.09.20-r1",
+  "editorial_policy": "Published cultural and historical introductions; not clinical advice. Date anchors distinguish historical documentation, institutional milestones and heritage recognition. Coordinates are approximate regional navigation points, never proof of origin. Full research-index and story-shell counts are not publication counts.",
+  "stories": [
+    {
+      "id": "ebers",
+      "region": "africa",
+      "themes": [
+        "plant",
+        "apothecary"
+      ],
+      "coordinates": [
+        32.64,
+        25.69
+      ],
+      "from": -1525,
+      "to": -1500,
+      "date_kind": "historical_range",
+      "art": "plant",
+      "status": "published",
+      "zh": {
+        "title": "尼罗河畔，一卷纸草留下的照护世界",
+        "place": "埃及 · 底比斯地区",
+        "hook": "在印刷书出现之前，人们已经把药物和身体经验写进长卷。",
+        "date": "约公元前16世纪末",
+        "date_note": "采用莱比锡大学图书馆所述的约略年代；不是一项疗法的发明年份。",
+        "story": [
+          "从尼罗河畔开始这段旅程。《埃伯斯纸草书》把治疗知识留在一卷长长的纸草上，让今天的读者得以接近古埃及人理解身体的方式。",
+          "这不是一本可以照着开药的现代手册，而是一份历史见证。看这些记录时，值得问的是：当时怎样描述问题？怎样组织知识？哪些解释后来发生了变化？"
+        ]
+      },
+      "en": {
+        "title": "A world of care on a papyrus scroll",
+        "place": "Thebes region · Egypt",
+        "hook": "Long before printed books, knowledge about bodies and remedies travelled on papyrus.",
+        "date": "Late 16th century BCE, approximately",
+        "date_note": "An approximate manuscript date reported by Leipzig University Library, not the invention date of a treatment.",
+        "story": [
+          "The Ebers Papyrus opens a window onto ancient Egyptian knowledge about care and the body. Its long scroll preserves a way of organizing remedies before the age of printed medical books.",
+          "Read it as historical evidence, not a modern prescription book. The interesting journey is through how people described problems, arranged knowledge and understood their world."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Leipzig University Library · Ebers Papyrus",
+          "url": "https://www.ub.uni-leipzig.de/en/about-us/exhibitions/permanent-exhibition/ebers-papyrus"
+        }
+      ]
+    },
+    {
+      "id": "jamu",
+      "region": "asia",
+      "themes": [
+        "plant",
+        "apothecary"
+      ],
+      "coordinates": [
+        110.37,
+        -7.8
+      ],
+      "from": 700,
+      "to": 799,
+      "date_kind": "historical_range",
+      "art": "plant",
+      "status": "published",
+      "zh": {
+        "title": "Jamu：一杯草本饮品背后的社区",
+        "place": "印度尼西亚 · 爪哇地区",
+        "hook": "从种植者到制作者，草本知识在人与人的信任中流动。",
+        "date": "8世纪的传统线索 · 2023年列入非遗",
+        "date_note": "8世纪依据 UNESCO 的传统史叙述；地图点代表爪哇地区，不主张唯一发源地。",
+        "story": [
+          "Jamu 不只指某一种配方，也是一套围绕草本饮品的制作、交流和照护文化。当地植物与香料经过制作者的经验判断，进入日常生活。",
+          "UNESCO 的介绍强调女性制作者、家族传授，以及生产者和消费者之间的联系。看懂 Jamu，可以从认识这些人开始，而不是先背一份材料表。"
+        ]
+      },
+      "en": {
+        "title": "Jamu: a community inside a cup",
+        "place": "Java region · Indonesia",
+        "hook": "Herbal knowledge travels through growers, makers and personal trust.",
+        "date": "8th-century tradition · UNESCO inscription 2023",
+        "date_note": "The historical range follows UNESCO's account. The Java pin is representative, not a unique birthplace.",
+        "story": [
+          "Jamu is more than a single recipe. It is a culture of making, sharing and using preparations from local plants and spices in everyday life.",
+          "UNESCO highlights women makers, family transmission and relationships between producers and consumers. Begin with these people, rather than a list of ingredients."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Jamu wellness culture",
+          "url": "https://ich.unesco.org/en/RL/jamu-wellness-culture-01972"
+        }
+      ],
+      "film": "https://ich.unesco.org/en/video/66693"
+    },
+    {
+      "id": "grasse",
+      "region": "europe",
+      "themes": [
+        "aroma",
+        "plant",
+        "apothecary"
+      ],
+      "coordinates": [
+        6.93,
+        43.66
+      ],
+      "from": 1500,
+      "to": 1599,
+      "date_kind": "historical_range",
+      "art": "garden",
+      "status": "published",
+      "zh": {
+        "title": "格拉斯：花园如何走进一瓶香水",
+        "place": "法国 · 格拉斯与普罗旺斯",
+        "hook": "种花、处理香材、调香，是同一个故事的三个章节。",
+        "date": "至少16世纪已有实践 · 2018年列入非遗",
+        "date_note": "16世纪是法国文化部描述的实践年代范围；2018年是非遗认可年份，两者不可混用。",
+        "story": [
+          "走进格拉斯，先看田里的花，再看工坊里的原料，最后才看香水瓶。这里的香水技艺把植物栽培、天然原料处理与香气创作连接起来。",
+          "法国文化部记述这些知识至少自16世纪便在当地实践。2018年的国际非遗认可，保护的是这条由种植者、原料处理者和调香者共同传递的技艺链。香水工艺史与现代芳香疗法的疗效研究，是不同的问题。"
+        ]
+      },
+      "en": {
+        "title": "Grasse: from a garden to a perfume",
+        "place": "Grasse & Provence · France",
+        "hook": "Growing flowers, processing materials and composing scent form three chapters of one story.",
+        "date": "Practised since at least the 16th century · inscription 2018",
+        "date_note": "The practice range follows France's Ministry of Culture. UNESCO recognition in 2018 is not its origin date.",
+        "story": [
+          "Start in the flower field, continue into the workshop and only then look at the bottle. Grasse's perfume skills connect cultivation, natural-material processing and fragrance composition.",
+          "France's Ministry of Culture traces these practices to at least the sixteenth century. Their 2018 heritage recognition concerns a living chain of knowledge. Perfumery history and evidence for clinical aromatherapy remain different subjects."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Ministère de la Culture · Grasse, 2018",
+          "url": "https://www.culture.gouv.fr/presse/communiques-de-presse/Les-savoir-faire-lies-au-parfum-en-Pays-de-Grasse-reconnus-patrimoine-culturel-immateriel-de-l-humanite-par-l-UNESCO"
+        },
+        {
+          "title": "Ville de Grasse · UNESCO",
+          "url": "https://www.ville-grasse.fr/label-unesco/"
+        }
+      ]
+    },
+    {
+      "id": "gnawa",
+      "region": "africa",
+      "themes": [
+        "sound",
+        "ritual"
+      ],
+      "coordinates": [
+        -9.77,
+        31.51
+      ],
+      "from": 1500,
+      "to": 1599,
+      "date_kind": "historical_range",
+      "art": "sound",
+      "status": "published",
+      "zh": {
+        "title": "Gnawa：音乐、记忆与仪式相遇",
+        "place": "摩洛哥 · 以索维拉为导览点",
+        "hook": "这里的声音不是一个 Hz 数值，而是社区的历史与共同经验。",
+        "date": "至少16世纪的历史根源 · 2019年列入非遗",
+        "date_note": "年代对应 UNESCO 对历史根源的描述；索维拉是区域导览点，不是唯一发源地。",
+        "story": [
+          "理解 Gnawa，需要同时听见音乐与它承载的历史。UNESCO 将它描述为音乐、表演、兄弟会实践与治疗性仪式交织的传统，其历史与奴隶贸易和受奴役群体有关。",
+          "因此，不宜把这套传统缩成一段可以复制的“疗愈频率”。仪式中的治疗意义属于其文化语境，不能直接改写成某个音高已被证明能够治病。"
+        ]
+      },
+      "en": {
+        "title": "Gnawa: where sound meets memory",
+        "place": "Morocco · Essaouira navigation point",
+        "hook": "Sound here carries community history, not just a frequency in hertz.",
+        "date": "Roots dating to at least the 16th century · inscription 2019",
+        "date_note": "The range follows UNESCO's historical account. Essaouira is a representative navigation point.",
+        "story": [
+          "Gnawa combines music, performance, brotherhood practices and therapeutic ritual. UNESCO connects its historical roots with the slave trade and communities that experienced enslavement.",
+          "Reducing it to a downloadable healing frequency loses that context. A ritual's therapeutic meaning is not evidence that a particular pitch treats disease."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Gnawa",
+          "url": "https://ich.unesco.org/en/RL/gnawa-01170"
+        }
+      ]
+    },
+    {
+      "id": "padua",
+      "region": "europe",
+      "themes": [
+        "plant",
+        "nature",
+        "apothecary"
+      ],
+      "coordinates": [
+        11.88,
+        45.4
+      ],
+      "from": 1545,
+      "to": 1545,
+      "date_kind": "institution",
+      "art": "plant",
+      "status": "published",
+      "zh": {
+        "title": "帕多瓦：把药用植物种成一间课堂",
+        "place": "意大利 · 帕多瓦植物园",
+        "hook": "一座花园，也可以是辨认植物与交换知识的地方。",
+        "date": "1545年建立",
+        "date_note": "确切年份指植物园建立，不是植物药传统的起源。",
+        "story": [
+          "1545年，帕多瓦植物园建立。它把植物收集、观察与教学放进同一片土地，让药用植物不只存在于文字和药柜里。",
+          "UNESCO 强调它在植物学、医学及植物交流中的历史作用。今天沿着园中的路径阅读，便能理解：一株植物如何从地方经验走入更广阔的知识网络。"
+        ]
+      },
+      "en": {
+        "title": "Padua: a garden becomes a classroom",
+        "place": "Botanical Garden of Padua · Italy",
+        "hook": "A garden can be a place to identify plants and exchange knowledge.",
+        "date": "Founded in 1545",
+        "date_note": "This is the institution's founding year, not the origin of herbal medicine.",
+        "story": [
+          "Founded in 1545, Padua's botanical garden brought collecting, observation and teaching onto the same ground. Medicinal plants could be studied alive rather than only in texts or cabinets.",
+          "UNESCO highlights its role in botany, medicine and plant exchange. Its paths offer a way to follow plants into wider networks of knowledge."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO World Heritage · Botanical Garden, Padua",
+          "url": "https://whc.unesco.org/en/list/824"
+        }
+      ]
+    },
+    {
+      "id": "taichi",
+      "region": "asia",
+      "themes": [
+        "body",
+        "mind"
+      ],
+      "coordinates": [
+        113.08,
+        34.94
+      ],
+      "from": 1640,
+      "to": 1660,
+      "date_kind": "historical_range",
+      "art": "body",
+      "status": "published",
+      "zh": {
+        "title": "太极拳：呼吸与圆转动作之间",
+        "place": "中国 · 河南温县",
+        "hook": "不只是一套动作，也是一段传承、教学与生活的历史。",
+        "date": "17世纪中叶的起源叙述 · 2020年列入非遗",
+        "date_note": "起源范围采用 UNESCO 的描述；用区间而非虚构的精确年份。",
+        "story": [
+          "太极拳把舒缓圆转的动作、呼吸调节与心意训练放在一起。UNESCO 的介绍将其起源联系到17世纪中叶的河南温县。",
+          "此后，不同家族和师承形成了各自的风格，也进入学校和社区。阅读这段故事时，可以分别看动作实践、哲学语言与现代健康研究，不必把三者当成同一类证据。"
+        ]
+      },
+      "en": {
+        "title": "Taijiquan: breathing through a circle",
+        "place": "Wenxian, Henan · China",
+        "hook": "Movement opens a story of teaching, lineage and everyday practice.",
+        "date": "Mid-17th-century origin account · inscription 2020",
+        "date_note": "An approximate range follows UNESCO's account, rather than an invented exact founding year.",
+        "story": [
+          "Taijiquan joins relaxed circular movement with breathing and mental cultivation. UNESCO associates its beginnings with mid-seventeenth-century Wenxian in Henan.",
+          "Family and teacher lineages developed different styles, alongside later school and community teaching. Movement, philosophical language and modern health research can be explored separately."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Taijiquan",
+          "url": "https://ich.unesco.org/en/RL/taijiquan-00424"
+        }
+      ]
+    },
+    {
+      "id": "chelsea",
+      "region": "europe",
+      "themes": [
+        "plant",
+        "nature",
+        "apothecary"
+      ],
+      "coordinates": [
+        -0.163,
+        51.484
+      ],
+      "from": 1673,
+      "to": 1673,
+      "date_kind": "institution",
+      "art": "plant",
+      "status": "published",
+      "zh": {
+        "title": "切尔西：药师学徒的花园",
+        "place": "英国 · 伦敦",
+        "hook": "学会认植物，曾是成为药师的重要一课。",
+        "date": "1673年建立",
+        "date_note": "年份来自植物园自身的历史记录。",
+        "story": [
+          "切尔西药草园由伦敦药师团体于1673年建立，为学徒提供辨认和研究植物的空间。药材不只是柜子里的干燥碎片，也有叶、花、生境和季节。",
+          "植物园后来参与种子与知识的交流。它提醒我们：药房史不只是配方史，也包括园艺、教育，以及人们怎样避免认错植物。"
+        ]
+      },
+      "en": {
+        "title": "Chelsea: the apothecary apprentice's garden",
+        "place": "London · United Kingdom",
+        "hook": "Learning to recognize plants was part of learning to be an apothecary.",
+        "date": "Founded in 1673",
+        "date_note": "The founding year comes from the garden's own history.",
+        "story": [
+          "London's apothecaries founded Chelsea Physic Garden in 1673 as a place to identify and study plants. A medicinal material has leaves, flowers, habitat and seasons before it reaches a cabinet.",
+          "The garden became part of seed and knowledge exchange. Pharmacy history is also a history of gardens, education and careful identification."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Chelsea Physic Garden · History",
+          "url": "https://www.chelseaphysicgarden.co.uk/about/history/"
+        }
+      ]
+    },
+    {
+      "id": "spatowns",
+      "region": "europe",
+      "themes": [
+        "water",
+        "nature"
+      ],
+      "coordinates": [
+        -2.36,
+        51.38
+      ],
+      "from": 1700,
+      "to": 1939,
+      "date_kind": "historical_range",
+      "art": "water",
+      "status": "published",
+      "zh": {
+        "title": "欧洲温泉城：水如何改变一座城市",
+        "place": "欧洲 · 以英国巴斯为导览点",
+        "hook": "浴场之外，还有花园、散步道、剧院与旅馆。",
+        "date": "约1700年代至1930年代的温泉文化",
+        "date_note": "范围对应 UNESCO 描述的欧洲温泉文化发展期；不代表各地泉水或浴场同时出现。",
+        "story": [
+          "一座温泉城往往围绕水来安排生活：浴场、饮水厅、柱廊，再向外延伸到公园与散步道。照护身体、旅行和社交在这里相遇。",
+          "UNESCO 的跨国遗产项目包括七个国家的十一座城镇，呈现约18世纪初至1930年代的发展。这是城市文化史的比较入口，不是对所有温泉疗效的统一背书。"
+        ]
+      },
+      "en": {
+        "title": "Spa towns: how water shapes a city",
+        "place": "Europe · Bath navigation point",
+        "hook": "Beyond the baths lie gardens, promenades, theatres and hotels.",
+        "date": "European spa culture, approximately 1700–1930s",
+        "date_note": "The period concerns a cultural development, not simultaneous origins of springs or baths.",
+        "story": [
+          "In a spa town, water organizes more than bathing. Pump rooms and colonnades connect with gardens, promenades and places of social life.",
+          "UNESCO's serial property includes eleven towns in seven countries and records a cultural development from the early eighteenth century to the 1930s. It is not a blanket endorsement of medical claims."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO World Heritage · Great Spa Towns of Europe",
+          "url": "https://whc.unesco.org/en/list/1613"
+        }
+      ]
+    },
+    {
+      "id": "animals",
+      "region": "americas",
+      "themes": [
+        "animal"
+      ],
+      "coordinates": [
+        -122.68,
+        45.52
+      ],
+      "from": 1977,
+      "to": 1977,
+      "date_kind": "institution",
+      "art": "animal",
+      "status": "published",
+      "zh": {
+        "title": "人宠之间的联系，成为一个研究问题",
+        "place": "美国 · 波特兰",
+        "hook": "“和动物在一起感觉更好”，怎样从观察走向正式项目？",
+        "date": "1977年 Delta Foundation 建立",
+        "date_note": "这是机构里程碑，不是人与动物相伴的起源。",
+        "story": [
+          "1977年，Delta Foundation 在波特兰建立。它的创办者希望把人和动物互动中的观察，转化成可以研究的问题，而不只停留在动人的个人故事。",
+          "这个组织后来更名为 Delta Society，再成为 Pet Partners。对今天的读者，关键区别是：日常宠物陪伴、志愿探访和有专业目标的动物辅助干预，并不是同一种服务。"
+        ]
+      },
+      "en": {
+        "title": "The human–animal bond becomes a research question",
+        "place": "Portland · United States",
+        "hook": "How does a personal experience become an organized field of inquiry?",
+        "date": "Delta Foundation established in 1977",
+        "date_note": "An institutional milestone, not the beginning of human–animal companionship.",
+        "story": [
+          "The Delta Foundation was formed in Portland in 1977. Its founders wanted observations about human–animal interaction to become research questions, not only compelling anecdotes.",
+          "The organization later became Delta Society and then Pet Partners. Everyday companionship, volunteer visits and professionally directed interventions remain different kinds of activity."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Pet Partners · History",
+          "url": "https://petpartners.org/about/history/"
+        }
+      ]
+    },
+    {
+      "id": "forest",
+      "region": "asia",
+      "themes": [
+        "nature",
+        "mind"
+      ],
+      "coordinates": [
+        137.63,
+        35.73
+      ],
+      "from": 1982,
+      "to": 1982,
+      "date_kind": "institution",
+      "art": "nature",
+      "status": "published",
+      "zh": {
+        "title": "森林浴：把注意力重新交给树林",
+        "place": "日本 · 赤泽自然休养林",
+        "hook": "不是赶路或打卡，而是留意光、声音、空气与脚下的路。",
+        "date": "1982年提出“森林浴”概念",
+        "date_note": "1982年指现代术语与推广活动；人类亲近自然的历史远早于此。",
+        "story": [
+          "日本林野厅在1982年提出森林浴概念，将进入森林、感受自然作为一种容易理解的活动。赤泽自然休养林也与当年的早期活动相关。",
+          "它让人把注意力从完成任务转回环境：树影、风声、空气与步行的感受。这里展示的是活动史与体验语境，具体健康结果仍应按研究问题分别考察。"
+        ]
+      },
+      "en": {
+        "title": "Forest bathing: giving attention back to the trees",
+        "place": "Akasawa Natural Recreation Forest · Japan",
+        "hook": "Notice light, sound, air and the ground, rather than completing a checklist.",
+        "date": "Shinrin-yoku promoted in 1982",
+        "date_note": "1982 dates the modern term and promotion, not humanity's first encounter with nature.",
+        "story": [
+          "Japan's Forestry Agency proposed shinrin-yoku in 1982 as an approachable way to spend time in forests. Akasawa is associated with early activities that year.",
+          "The practice invites attention to the surrounding environment rather than performance. Its cultural history and specific health research questions should be explored separately."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Forestry Agency, Japan · Shinrin-yoku",
+          "url": "https://www.rinya.maff.go.jp/j/sin_riyou/morigyo/forest_activity/info/shinrin-yoku.html"
+        },
+        {
+          "title": "Government of Japan · Akasawa history",
+          "url": "https://www.gov-online.go.jp/hlj/en/may_2024/may_2024-04.html"
+        }
+      ]
+    },
+    {
+      "id": "nuadthai",
+      "region": "asia",
+      "themes": [
+        "body"
+      ],
+      "coordinates": [
+        100.5,
+        13.75
+      ],
+      "from": 1985,
+      "to": 1985,
+      "date_kind": "institution",
+      "art": "body",
+      "status": "published",
+      "zh": {
+        "title": "Nuad Thai：从生活照护到专业传承",
+        "place": "泰国 · 曼谷导览点",
+        "hook": "看一种手法传统如何被记录、教学和重新组织。",
+        "date": "1985年复兴项目 · 2019年列入非遗",
+        "date_note": "1985年是 UNESCO 提及的复兴项目年份，绝不是泰式按摩起源年。",
+        "story": [
+          "Nuad Thai 是泰国传统身体照护的一部分。它的实践和解释来自当地医学与生活文化，也通过教学和传承持续变化。",
+          "UNESCO 提到1985年开展的复兴项目，以及后来逐渐规范的训练。这个故事适合了解知识怎样被保存和传授，不提供可以照着实施的手法教程。"
+        ]
+      },
+      "en": {
+        "title": "Nuad Thai: care becomes a teaching tradition",
+        "place": "Thailand · Bangkok navigation point",
+        "hook": "Follow how a bodywork tradition is recorded, taught and renewed.",
+        "date": "Revitalization project 1985 · inscription 2019",
+        "date_note": "1985 is a project milestone reported by UNESCO, not the origin of Thai massage.",
+        "story": [
+          "Nuad Thai belongs to Thailand's traditions of bodily care. Its practices and explanations are rooted in local medical and everyday culture.",
+          "UNESCO describes a revitalization project beginning in 1985 and the development of training. This introduction follows that transmission without becoming an instruction manual."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Nuad Thai",
+          "url": "https://ich.unesco.org/en/RL/nuad-thai-traditional-thai-massage-01384"
+        }
+      ],
+      "film": "https://www.unesco.org/archives/multimedia/document-4955"
+    },
+    {
+      "id": "kallawaya",
+      "region": "americas",
+      "themes": [
+        "plant",
+        "ritual"
+      ],
+      "coordinates": [
+        -68.98,
+        -15.08
+      ],
+      "from": 2003,
+      "to": 2003,
+      "date_kind": "recognition",
+      "art": "plant",
+      "status": "published",
+      "zh": {
+        "title": "Kallawaya：安第斯山中的知识旅人",
+        "place": "玻利维亚 · 拉巴斯北部地区",
+        "hook": "草药知识并不独自存在，而是与旅行、仪式和世界观相连。",
+        "date": "2003年国际认可 · 2008年列入名录",
+        "date_note": "这里只给出可核查的认可年份；传统的历史远早于此。",
+        "story": [
+          "Kallawaya 的故事来自安第斯地区。UNESCO 描述了流动医者的实践，以及植物、矿物和动物来源材料知识与仪式世界观之间的联系。",
+          "因此，读者应先认识社区和历史，而不是把其中的知识直接拆成可商业复制的配方。地图使用区域导览点，不揭示神圣地点或受保护的操作细节。"
+        ]
+      },
+      "en": {
+        "title": "Kallawaya: travelling knowledge in the Andes",
+        "place": "Northern La Paz region · Bolivia",
+        "hook": "Plant knowledge is connected with travel, ritual and a worldview.",
+        "date": "Proclaimed in 2003 · inscribed in 2008",
+        "date_note": "These are verifiable recognition dates. The tradition is much older.",
+        "story": [
+          "UNESCO describes Kallawaya itinerant healers and the connections between knowledge of plants, minerals, animal materials and ritual worldviews.",
+          "Begin with community and history, rather than extracting a commercial recipe. This map uses a regional navigation point and does not disclose sacred locations or protected details."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Andean cosmovision of the Kallawaya",
+          "url": "https://ich.unesco.org/en/RL/andean-cosmovision-of-the-kallawaya-00048"
+        }
+      ],
+      "film": "https://ich.unesco.org/en/video/41470"
+    },
+    {
+      "id": "vedic",
+      "region": "asia",
+      "themes": [
+        "sound",
+        "ritual"
+      ],
+      "coordinates": [
+        82.97,
+        25.32
+      ],
+      "from": 2008,
+      "to": 2008,
+      "date_kind": "recognition",
+      "art": "sound",
+      "status": "published",
+      "zh": {
+        "title": "吠陀吟诵：记忆如何住在声音里",
+        "place": "印度 · 区域导览",
+        "hook": "在录音与印刷之前，声音也能保存知识。",
+        "date": "2008年列入 UNESCO 代表作名录",
+        "date_note": "地图锚点是列入名录的时间，不把古老传统误写成现代发明。",
+        "story": [
+          "吠陀吟诵是一种与文本、仪式和日常传承紧密相连的口述传统。它的意义不仅在于旋律，也在于知识如何被记住、重复和教给下一代。",
+          "可以通过官方纪录影像观察传授方式。宗教意义与吟诵体验值得理解，但这不等于某种音频具有已经确证的通用医疗功效。"
+        ]
+      },
+      "en": {
+        "title": "Vedic chanting: memory lives in sound",
+        "place": "India · regional navigation",
+        "hook": "Before recordings and print, the voice could preserve knowledge.",
+        "date": "UNESCO Representative List inscription 2008",
+        "date_note": "The anchor dates recognition, not the invention of this ancient tradition.",
+        "story": [
+          "Vedic chanting is an oral tradition connected with texts, ritual and everyday transmission. Its story concerns not only melody but how knowledge is remembered and taught.",
+          "Official documentary material shows aspects of that transmission. Religious meaning and lived experience do not establish a universal medical effect for an audio recording."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO Multimedia Archives · Vedic chanting",
+          "url": "https://www.unesco.org/archives/multimedia/document-4671"
+        }
+      ],
+      "film": "https://ich.unesco.org/en/video/41576"
+    },
+    {
+      "id": "acupuncture",
+      "region": "asia",
+      "themes": [
+        "body",
+        "plant"
+      ],
+      "coordinates": [
+        116.4,
+        39.9
+      ],
+      "from": 2010,
+      "to": 2010,
+      "date_kind": "recognition",
+      "art": "body",
+      "status": "published",
+      "zh": {
+        "title": "针与灸：两种不同的身体实践",
+        "place": "中国 · 北京导览点",
+        "hook": "针刺与艾灸常被并称，但材料、操作与风险并不相同。",
+        "date": "2010年列入 UNESCO 名录",
+        "date_note": "2010年是文化遗产认可时间；北京仅作国家级导览点，不是起源断言。",
+        "story": [
+          "针刺和艾灸都处于中医知识与传承体系中，但不应当被视为一种操作。前者涉及针具，后者涉及艾草等材料形成的热刺激。",
+          "从小白视角，先区分实践、传统解释和专业训练，再继续看研究资料。非遗认可说明文化与传承价值，不是对所有治疗主张的临床认可。"
+        ]
+      },
+      "en": {
+        "title": "Needles and moxa: two different practices",
+        "place": "China · Beijing navigation point",
+        "hook": "Acupuncture and moxibustion share a tradition, not an identical procedure.",
+        "date": "UNESCO inscription 2010",
+        "date_note": "2010 is a heritage milestone. Beijing is a national navigation point, not a claimed birthplace.",
+        "story": [
+          "Acupuncture and moxibustion belong to traditions of Chinese medicine but involve different materials and procedures: needles in one case, heat associated with moxa in the other.",
+          "Begin by separating practice, traditional explanation and professional training. Heritage recognition is not clinical approval of every treatment claim."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Acupuncture and moxibustion",
+          "url": "https://ich.unesco.org/en/RL/acupuncture-and-moxibustion-of-traditional-chinese-medicine-00425"
+        }
+      ]
+    },
+    {
+      "id": "argan",
+      "region": "africa",
+      "themes": [
+        "plant",
+        "aroma",
+        "apothecary"
+      ],
+      "coordinates": [
+        -9.6,
+        30.42
+      ],
+      "from": 2014,
+      "to": 2014,
+      "date_kind": "recognition",
+      "art": "plant",
+      "status": "published",
+      "zh": {
+        "title": "摩洛哥坚果油：一棵树与女性的手艺",
+        "place": "摩洛哥 · 西南部 Arganeraie",
+        "hook": "一瓶植物油，连接树木、劳动、家庭与地方生活。",
+        "date": "2014年列入 UNESCO 名录",
+        "date_note": "锚点为非遗认可年份；不是这种植物或制油方法的出现时间。",
+        "story": [
+          "摩洛哥坚果树周围形成了一套制油知识。UNESCO 特别记录了女性在制作和代际传授中的角色，以及油在当地烹饪、照护和美容文化中的使用。",
+          "把它放进芳香与植物图鉴时，要先辨清材料：摩洛哥坚果油属于脂肪油，不是蒸馏得到的精油。相似的瓶子里，可能是完全不同的东西。"
+        ]
+      },
+      "en": {
+        "title": "Argan: a tree and the work of women's hands",
+        "place": "Arganeraie · southwestern Morocco",
+        "hook": "A bottle of plant oil connects trees, labour, families and local life.",
+        "date": "UNESCO inscription 2014",
+        "date_note": "A recognition date, not the first appearance of the plant or oil-making technique.",
+        "story": [
+          "Argan oil-making is a body of local knowledge. UNESCO highlights women's roles in production and transmission, alongside culinary, care and cosmetic uses in local culture.",
+          "Material identity matters: argan oil is a fatty oil, not a distilled essential oil. Similar bottles can contain very different types of material."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Argan practices and know-how",
+          "url": "https://ich.unesco.org/en/RL/argan-practices-and-know-how-concerning-the-argan-tree-00955"
+        }
+      ]
+    },
+    {
+      "id": "yoga",
+      "region": "asia",
+      "themes": [
+        "mind",
+        "body",
+        "sound"
+      ],
+      "coordinates": [
+        78.27,
+        30.09
+      ],
+      "from": 2016,
+      "to": 2016,
+      "date_kind": "recognition",
+      "art": "body",
+      "status": "published",
+      "zh": {
+        "title": "瑜伽：从一个姿势，走进更大的传统",
+        "place": "印度 · 瑞诗凯诗导览点",
+        "hook": "体式只是入口，背后还有呼吸、冥想、吟诵与师承。",
+        "date": "2016年列入 UNESCO 名录",
+        "date_note": "2016年是国际认可时间，不是瑜伽的起源年。",
+        "story": [
+          "UNESCO 对瑜伽的介绍并不只列出姿势，也包括呼吸、冥想、吟诵及其哲学背景。不同练习并不总以相同目的进行。",
+          "师徒传授、修习场所和现代学校都是知识流动的路径。对初次接触者，最有帮助的是先辨认具体练习及其语境，而不是把所有瑜伽当作一种疗法。"
+        ]
+      },
+      "en": {
+        "title": "Yoga: a posture opens onto a larger tradition",
+        "place": "India · Rishikesh navigation point",
+        "hook": "Beyond postures lie breathing, meditation, chanting and lineages of teaching.",
+        "date": "UNESCO inscription 2016",
+        "date_note": "2016 dates recognition, not yoga's origins.",
+        "story": [
+          "UNESCO's account includes posture, breathing, meditation, chanting and philosophical context. Not every practice is performed for the same purpose.",
+          "Teacher–pupil relationships, places of study and modern institutions all transmit knowledge. For a newcomer, the useful first step is identifying a particular practice and its context."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Yoga",
+          "url": "https://ich.unesco.org/en/RL/yoga-01163"
+        }
+      ]
+    },
+    {
+      "id": "lum",
+      "region": "asia",
+      "themes": [
+        "water",
+        "plant"
+      ],
+      "coordinates": [
+        91.13,
+        29.65
+      ],
+      "from": 2018,
+      "to": 2018,
+      "date_kind": "recognition",
+      "art": "water",
+      "status": "published",
+      "zh": {
+        "title": "藏医药浴：水、草药与地方知识",
+        "place": "中国 · 藏族文化地区",
+        "hook": "同样是“浴”，温泉、草药水与蒸汽背后的语境各不相同。",
+        "date": "2018年列入 UNESCO 名录",
+        "date_note": "年份对应非遗认可；地图坐标为拉萨区域导览点，不标示具体神圣泉址。",
+        "story": [
+          "Lum 药浴属于藏医药 Sowa Rigpa 的知识和实践。UNESCO 的记录涉及天然温泉、草药水和蒸汽，以及当地理解自然与身体的传统模型。",
+          "这些模型应按文化知识来呈现，而不是悄悄替换成现代生理学事实。读者可以比较不同地区的浴文化，但不应把一种浴法的研究结果套用到另一种。"
+        ]
+      },
+      "en": {
+        "title": "Lum bathing: water, herbs and local knowledge",
+        "place": "Tibetan cultural regions · China",
+        "hook": "Springs, herbal water and steam belong to distinct local contexts.",
+        "date": "UNESCO inscription 2018",
+        "date_note": "A heritage date. The Lhasa-area pin is representative and does not reveal a sacred spring.",
+        "story": [
+          "Lum medicinal bathing belongs to Sowa Rigpa knowledge and practice. UNESCO records natural hot springs, herbal water and steam alongside traditional models of nature and the body.",
+          "Those models are presented as cultural knowledge, not relabelled as modern physiology. Evidence for one bathing intervention cannot automatically be applied to another."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Decision 13.COM 10.b.8",
+          "url": "https://ich.unesco.org/en/Decisions/13.COM/10.b.8"
+        }
+      ]
+    },
+    {
+      "id": "sauna",
+      "region": "europe",
+      "themes": [
+        "water",
+        "ritual"
+      ],
+      "coordinates": [
+        24.94,
+        60.17
+      ],
+      "from": 2020,
+      "to": 2020,
+      "date_kind": "recognition",
+      "art": "water",
+      "status": "published",
+      "zh": {
+        "title": "芬兰桑拿：不只是洗浴的一间房",
+        "place": "芬兰 · 赫尔辛基导览点",
+        "hook": "蒸汽、休息与家庭传承，共同组成一种生活文化。",
+        "date": "2020年列入 UNESCO 名录",
+        "date_note": "现代认可年份，不代表桑拿传统始于2020年。",
+        "story": [
+          "在芬兰桑拿文化中，水与热石形成的蒸汽、共同休息，以及家庭中的传授都很重要。UNESCO 将它描述为生活与身份的一部分，而不只是清洁身体的设施。",
+          "比较桑拿、温泉与药浴时，可以先观察空间、材料与人与人的关系。文化相似不等于风险相同，体验是否适宜仍取决于具体条件。"
+        ]
+      },
+      "en": {
+        "title": "Finnish sauna: more than a room for bathing",
+        "place": "Finland · Helsinki navigation point",
+        "hook": "Steam, rest and family transmission form a living culture.",
+        "date": "UNESCO inscription 2020",
+        "date_note": "A modern recognition date, not the beginning of sauna culture.",
+        "story": [
+          "Finnish sauna culture includes steam from water and hot stones, shared rest and transmission within families. UNESCO describes its place in everyday life and identity.",
+          "Compare the spaces, materials and relationships of sauna, hot springs and herbal baths. Cultural similarities do not mean identical risks or suitability."
+        ]
+      },
+      "sources": [
+        {
+          "title": "UNESCO · Sauna culture in Finland",
+          "url": "https://ich.unesco.org/en/RL/sauna-culture-in-finland-01596"
+        }
+      ]
+    },
+    {
+      "id": "rongoa",
+      "region": "oceania",
+      "themes": [
+        "plant",
+        "nature",
+        "ritual"
+      ],
+      "coordinates": [
+        175.05,
+        -39.93
+      ],
+      "from": 2020,
+      "to": 2020,
+      "date_kind": "research",
+      "art": "nature",
+      "status": "published",
+      "zh": {
+        "title": "Rongoā Māori：照护人，也照护关系",
+        "place": "Aotearoa 新西兰 · 毛利社区",
+        "hook": "植物只是入口，人与土地、社区和知识的关系同样重要。",
+        "date": "2020年研究项目立项",
+        "date_note": "年份来自新西兰健康研究委员会的项目记录；不是毛利疗愈传统的起源。",
+        "story": [
+          "Rongoā Māori 不能只翻译成一张草药清单。2020年新西兰健康研究委员会支持的项目，关注这种传统中人与人、人与环境的疗愈关系。",
+          "研究采用毛利方法论，通过讨论与个案来理解实践。网站只介绍公开材料，不把社区知识视为可以自由复制的配方，也不发布私密采集地点。"
+        ]
+      },
+      "en": {
+        "title": "Rongoā Māori: caring for relationships",
+        "place": "Māori communities · Aotearoa New Zealand",
+        "hook": "Plants open a wider story about people, land, community and knowledge.",
+        "date": "Research project funded in 2020",
+        "date_note": "This dates a Health Research Council project, not the origin of the tradition.",
+        "story": [
+          "Rongoā Māori is not simply a herbal checklist. A 2020 Health Research Council project examines the relationships between people and environment within this system of care.",
+          "The research uses kaupapa Māori approaches, discussion and case studies. This atlas introduces public material without treating community knowledge as freely reusable recipes or exposing private gathering places."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Health Research Council of New Zealand · Te Ao Rauropi",
+          "url": "https://www.hrc.govt.nz/resources/research-repository/te-ao-rauropi-mapping-biosphere-rongoa-maori"
+        }
+      ]
+    }
+  ]
+}

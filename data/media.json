@@ -1,0 +1,35 @@
+[
+  {
+    "id": "butterfly_garden_trailer",
+    "path": "./assets/films/butterfly_garden_trailer.webm",
+    "zh": "蝴蝶花园 · 概念片段",
+    "en": "Butterfly garden · concept clip",
+    "status": "validated_low_resolution_proxy",
+    "width": 160,
+    "duration": 10.0,
+    "mime": "video/webm",
+    "derivative": "VP9 browser-compatible preview; original resolution unchanged"
+  },
+  {
+    "id": "estate_lifestyle_scenes",
+    "path": "./assets/films/estate_lifestyle_scenes.webm",
+    "zh": "庄园生活 · 概念片段",
+    "en": "Estate life · concept clip",
+    "status": "validated_low_resolution_proxy",
+    "width": 160,
+    "duration": 10.0,
+    "mime": "video/webm",
+    "derivative": "VP9 browser-compatible preview; original resolution unchanged"
+  },
+  {
+    "id": "rare_ingredient_expedition",
+    "path": "./assets/films/rare_ingredient_expedition.webm",
+    "zh": "香材探索 · 概念片段",
+    "en": "Ingredient discovery · concept clip",
+    "status": "validated_low_resolution_proxy",
+    "width": 160,
+    "duration": 10.0,
+    "mime": "video/webm",
+    "derivative": "VP9 browser-compatible preview; original resolution unchanged"
+  }
+]

@@ -1,120 +1,60 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#fff8ef">
-  <title>Earth Healing · 地球疗愈</title>
-  <meta name="description" content="全球疗愈文明地图、时间线与故事图鉴">
-  <link rel="stylesheet" href="./styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fcf8f0"><meta name="description" content="地球疗愈：在世界地图与时间轴上，探索植物、芳香、浴疗、声音、动物与人类照护身心的故事。">
+<title>Earth Healing · 地球疗愈</title>
+<link rel="icon" href="./assets/emblem.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./site.css">
+<script defer src="./vendor/d3.min.js"></script><script defer src="./vendor/topojson-client.min.js"></script><script defer src="./site.js"></script>
 </head>
-<body data-page="home">
-  <header class="site-header">
-    <a class="brand" href="./index.html">
-      <span class="brand-medallion">EH</span>
-      <span><strong>Earth Healing 地球疗愈</strong><small>PEOPLE · PLANTS · PLACES · A BRIGHTER TOMORROW</small></span>
-    </a>
-    <nav class="nav">
-      <a class="active" href="./index.html"><span data-zh="探索" data-en="Explore">探索</span></a>
-      <a href="./map.html"><span data-zh="地图" data-en="Map">地图</span></a>
-      <a href="./map.html#timeline"><span data-zh="时间线" data-en="Timeline">时间线</span></a>
-      <a href="./atlas-lavender.html"><span data-zh="图鉴" data-en="Atlas">图鉴</span></a>
-      <a href="./story-provence.html"><span data-zh="故事" data-en="Stories">故事</span></a>
-    </nav>
-    <div class="header-actions">
-      <button class="tiny-btn" data-font-btn>A+</button>
-      <button class="tiny-btn" data-lang-btn>EN / 中文</button>
-      <a class="pill-btn" href="./map.html"><span data-zh="开始旅程" data-en="Join the Journey">开始旅程</span></a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero-home">
-      <div class="floral-corner floral-left"></div><div class="floral-corner floral-right"></div>
-      <div class="hanging-tag left-tag"><span>Plants<br>People<br>Places<br>Healing</span></div>
-      <div class="hanging-tag right-tag"><span>A KINDER<br>PLANET<br><em>for</em><br>A BRIGHTER<br>YOU</span></div>
-      <div class="hero-overlay">
-        <p class="kicker">EARTH HEALING · 地球疗愈</p>
-        <h1 data-zh="沿着时间，重新看见人类如何疗愈自己" data-en="Explore How Humanity Heals Across Time">沿着时间，重新看见人类如何疗愈自己</h1>
-        <p class="hero-english">Pick a place. Move through time. Open a story.</p>
-        <p class="hero-copy" data-zh="不需要先懂中医、草药、芳香、冥想或传统医学。先看一个地方、一个年代、一个故事，再决定要不要继续深入。" data-en="No specialist vocabulary required. Start with a place, an era and a story—then go deeper only when you want to.">不需要先懂中医、草药、芳香、冥想或传统医学。先看一个地方、一个年代、一个故事，再决定要不要继续深入。</p>
-        <form class="search-shell" action="./map.html">
-          <span>⌕</span>
-          <input name="q" aria-label="Search" placeholder="搜索植物、地点、文化或主题…">
-          <button type="submit" data-zh="探索" data-en="Explore">探索</button>
-        </form>
-        <div class="portal-row">
-          <a class="portal-card" href="./atlas-lavender.html"><b>🌺</b><strong data-zh="植物" data-en="Plants">植物</strong><small>Plants</small></a>
-          <a class="portal-card" href="./story-provence.html"><b>🧴</b><strong data-zh="芳香" data-en="Aroma">芳香</strong><small>Aroma</small></a>
-          <a class="portal-card" href="./map.html?filter=water"><b>💧</b><strong data-zh="水疗" data-en="Water">水疗</strong><small>Water</small></a>
-          <a class="portal-card" href="./map.html?filter=sound"><b>🐦</b><strong data-zh="声音" data-en="Sound">声音</strong><small>Sound</small></a>
-          <a class="portal-card" href="./map.html?filter=body"><b>🌿</b><strong data-zh="身体" data-en="Body">身体</strong><small>Body</small></a>
-          <a class="portal-card" href="./map.html?filter=ritual"><b>🏺</b><strong data-zh="仪式" data-en="Ritual">仪式</strong><small>Ritual</small></a>
-          <a class="portal-card" href="./map.html"><b>🧭</b><strong data-zh="地图" data-en="Map">地图</strong><small>World Map</small></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="ornamental-section featured-section">
-      <div class="section-title-line">
-        <div><span class="orn">✦</span><h2 data-zh="精选故事" data-en="Featured Stories">精选故事</h2><small>Featured Stories</small></div>
-        <a href="./map.html"><span data-zh="查看全部" data-en="See all stories">查看全部</span> →</a>
-      </div>
-      <div class="story-grid">
-        <a class="story-tile" href="./story-provence.html">
-          <img src="./assets/reference/images/provence_perfume_estate.webp" alt="Provence">
-          <div class="tile-badge">FRANCE · 法国</div>
-          <div class="tile-copy"><h3 data-zh="普罗旺斯的薰衣草之歌" data-en="The Song of Provence Lavender">普罗旺斯的薰衣草之歌</h3><p data-zh="阳光、香气与更美好的生活。" data-en="Sunlight, scent, and a kinder life.">阳光、香气与更美好的生活。</p></div>
-        </a>
-        <a class="story-tile" href="./map.html?era=today">
-          <img src="./assets/reference/images/alishan_healing_adventure.webp" alt="Alishan">
-          <div class="tile-badge">TAIWAN · 台湾</div>
-          <div class="tile-copy"><h3 data-zh="阿里山的森林疗愈" data-en="Healing Forests of Alishan">阿里山的森林疗愈</h3><p data-zh="让自然带你回家。" data-en="Let nature lead you home.">让自然带你回家。</p></div>
-        </a>
-        <a class="story-tile" href="./map.html?era=ancient">
-          <img src="./assets/reference/images/provence_bird_botanical_atlas.webp" alt="Botanical knowledge">
-          <div class="tile-badge">EGYPT · 埃及</div>
-          <div class="tile-copy"><h3 data-zh="尼罗河的植物智慧" data-en="Plant Wisdom of the Nile">尼罗河的植物智慧</h3><p data-zh="古老的植物、水和人的照护。" data-en="Ancient plants, timeless healing.">古老的植物、水和人的照护。</p></div>
-        </a>
-        <a class="story-tile" href="./map.html?era=early">
-          <img src="./assets/reference/images/butterfly_perfume_estate_infographic.webp" alt="Japan">
-          <div class="tile-badge">JAPAN · 日本</div>
-          <div class="tile-copy"><h3 data-zh="和草：日本的植物与身心" data-en="Kampo: Nature in Balance">和草：日本的植物与身心</h3><p data-zh="从自然中寻找和谐。" data-en="Finding harmony in nature.">从自然中寻找和谐。</p></div>
-        </a>
-        <aside class="inspiration-card">
-          <span class="butterfly">🦋</span>
-          <h3 data-zh="今日灵感" data-en="Today's Inspiration">今日灵感</h3>
-          <div class="rose-illustration">🌹</div>
-          <blockquote data-zh="“每一朵花，都是地球写给人类的一封温柔信件。”" data-en="“Every flower is a gentle letter from Earth to humanity.”">“每一朵花，都是地球写给人类的一封温柔信件。”</blockquote>
-          <a class="outline-btn" href="./atlas-lavender.html"><span data-zh="探索植物图鉴" data-en="Explore Botanical Atlas">探索植物图鉴</span> →</a>
-        </aside>
-      </div>
-    </section>
-
-    <section class="ornamental-section map-preview-section">
-      <div class="map-preview-copy">
-        <p class="kicker">WORLD MAP · 世界地图</p>
-        <h2 data-zh="探索世界地图" data-en="Explore the World Map">探索世界地图</h2>
-        <p data-zh="从山脉到海洋，从古老文明到现代生活。你看到的不是静态百科，而是一张会随着年代变化的疗愈文明地图。" data-en="From mountains to oceans, from ancient civilizations to modern life. This is not a static encyclopedia—it is a healing map that changes with time.">从山脉到海洋，从古老文明到现代生活。你看到的不是静态百科，而是一张会随着年代变化的疗愈文明地图。</p>
-        <a class="outline-btn" href="./map.html"><span data-zh="打开世界地图" data-en="Open World Map">打开世界地图</span> →</a>
-      </div>
-      <div class="mini-map">
-        <div class="mini-continent c1"></div><div class="mini-continent c2"></div><div class="mini-continent c3"></div><div class="mini-continent c4"></div><div class="mini-continent c5"></div>
-        <span class="mini-node n1"></span><span class="mini-node n2"></span><span class="mini-node n3"></span><span class="mini-node n4"></span><span class="mini-node n5"></span>
-      </div>
-      <div class="journey-time">
-        <h3 data-zh="时间之旅" data-en="Journey Through Time">时间之旅</h3>
-        <div class="journey-line">
-          <span>古代<small>Ancient</small></span><i></i><span>中世纪<small>Medieval</small></span><i></i><span>近代<small>Modern</small></span><i></i><span>当代<small>Today</small></span><i></i><span>未来<small>Future</small></span>
-        </div>
-        <a class="outline-btn" href="./map.html#timeline"><span data-zh="开启时间之旅" data-en="Start the Journey">开启时间之旅</span> →</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-motto">PLANTS HEAL PEOPLE · PEOPLE HEAL THE EARTH</div>
-    <div><a href="https://github.com/minyajing-rgb/Healing">GitHub</a> · <span>Earth Healing © 2026</span></div>
-  </footer>
-  <script src="./app.js"></script>
-</body>
-</html>
+<body>
+<a class="skip" href="#main" data-zh="跳到正文" data-en="Skip to content">跳到正文</a>
+<header class="header">
+<a class="brand" href="./"><img src="./assets/emblem.svg" alt="" width="46" height="46"><span>Earth Healing<small data-zh="地球疗愈 · 自然与人类的故事" data-en="Nature · People · Stories">地球疗愈 · 自然与人类的故事</small></span></a>
+<nav aria-label="Main navigation"><a href="#map" data-zh="世界地图" data-en="World map">世界地图</a><a href="#time" data-zh="时光之旅" data-en="Through time">时光之旅</a><a href="#stories" data-zh="精选故事" data-en="Stories">精选故事</a><a href="#library" data-zh="知识图鉴" data-en="Library">知识图鉴</a></nav>
+<div class="header-controls"><button id="fontToggle" aria-pressed="false" aria-label="大字阅读 / Larger text">A＋</button><button id="languageToggle" aria-label="Switch language">EN</button><a class="button compact" href="#map" data-zh="开始探索 ↗" data-en="Explore ↗">开始探索 ↗</a></div>
+</header>
+<main id="main">
+<section class="hero">
+<div class="hero-landscape" role="img" aria-label="法式繁花花园概念美术 / French garden concept artwork"></div>
+<div class="hero-veil"></div><div class="sprig corner-left" aria-hidden="true"></div><div class="sprig corner-right" aria-hidden="true"></div>
+<div class="hero-copy"><p class="eyebrow">THE EARTH HEALING ATLAS</p><h1 data-zh="世界很大，\n疗愈有许多故事。" data-en="A world of places.\nA history of care.">世界很大，<br>疗愈有许多故事。</h1><p class="hero-sub" data-zh="从一座花园、一株草药、一缕声音开始。\n沿着时间，遇见不同文明照护身心的方式。" data-en="Begin with a garden, a plant or a sound.\nFollow the ways people have cared for themselves across time.">从一座花园、一株草药、一缕声音开始。<br>沿着时间，遇见不同文明照护身心的方式。</p>
+<div class="hero-buttons"><a class="button" href="#map" data-zh="展开世界地图 ↗" data-en="Open the world map ↗">展开世界地图 ↗</a><button class="secondary" id="surprise" data-zh="带我看一个故事" data-en="Surprise me">带我看一个故事</button></div>
+<p class="hero-mantra">Pick a place. Move through time. Open a story.</p>
+</div>
+<div class="hanging-tag" aria-hidden="true"><span>PLANTS<br>PEOPLE<br>PLACES</span><i>✧</i><em>A curious mind.<br>A kinder world.</em></div>
+<div class="hero-caption" data-zh="概念美术 · 非历史现场影像" data-en="Concept artwork · not historical footage">概念美术 · 非历史现场影像</div>
+<div class="hero-baseline" aria-hidden="true">❧ <span></span> ✧ <span></span> ❧</div>
+</section>
+<section class="discovery-strip" aria-label="Explore by theme"><p data-zh="今天，想从哪里开始？" data-en="Where shall we begin?">今天，想从哪里开始？</p><div id="themePortals"></div></section>
+<section class="section stories-section" id="stories">
+<div class="section-heading"><div><p class="eyebrow">STORIES WORTH WANDERING INTO</p><h2 data-zh="把世界，一页页展开" data-en="The world, one story at a time">把世界，一页页展开</h2></div><p data-zh="先读懂一个故事，再展开它的年代、地域与来源。" data-en="Start with a story. Open its time, place and sources when you are curious.">先读懂一个故事，再展开它的年代、地域与来源。</p></div>
+<div id="featuredStories" class="featured-grid"><p class="load-message" data-zh="正在展开故事……" data-en="Opening the stories…">正在展开故事……</p></div>
+</section>
+<section class="atlas-section" id="map">
+<div class="section section-heading"><div><p class="eyebrow">A LIVING ATLAS OF HUMAN CARE</p><h2 data-zh="穿过年代，看见世界" data-en="Move through time. See the world.">穿过年代，看见世界</h2></div><p data-zh="拖动时间轴，地图上的故事会随之出现。\n点一下标记，走进那个地方。" data-en="Move the time slider to reveal stories.\nSelect a marker to enter a place.">拖动时间轴，地图上的故事会随之出现。<br>点一下标记，走进那个地方。</p></div>
+<div class="explorer-shell">
+<form id="explorerSearch" class="explorer-search"><label for="query" data-zh="寻找一个故事" data-en="Find a story">寻找一个故事</label><input id="query" type="search" placeholder="植物、地区、声音、浴疗……" autocomplete="off"><button class="button compact" type="submit" data-zh="搜索" data-en="Search">搜索</button><button type="button" class="secondary compact" id="clearFilters" data-zh="重置筛选" data-en="Reset filters">重置筛选</button></form>
+<div class="filter-row"><div id="methodFilters" class="method-filters" role="group" aria-label="Methods"></div><label class="region-label"><span data-zh="地域" data-en="Region">地域</span><select id="regionFilter"><option value="all">全球 / World</option><option value="asia">亚洲 / Asia</option><option value="europe">欧洲 / Europe</option><option value="africa">非洲 / Africa</option><option value="americas">美洲 / Americas</option><option value="oceania">大洋洲 / Oceania</option></select></label></div>
+<div class="map-and-stories"><div class="map-frame">
+<div class="map-status"><span id="visibleCount" aria-live="polite"></span><span class="map-views"><button id="mapView" class="selected" aria-pressed="true" data-zh="地图" data-en="Map">地图</button><button id="listView" aria-pressed="false" data-zh="列表" data-en="List">列表</button></span></div>
+<div id="mapCanvas" class="map-canvas"><svg id="worldSvg" viewBox="0 0 1000 550" role="img" aria-label="世界地图 / World map"></svg><div class="zoom-controls"><button id="zoomIn" aria-label="Zoom in">＋</button><button id="zoomOut" aria-label="Zoom out">−</button><button id="zoomReset" aria-label="Reset map">⌖</button></div><div class="map-compass" aria-hidden="true">N<br>✧</div><p id="mapLoading" class="map-loading" data-zh="正在展开地图……" data-en="Opening the map…">正在展开地图……</p><div id="mapTooltip" class="map-tooltip" hidden></div></div>
+<div id="mapList" class="map-list" hidden></div>
+<p class="map-footnote" data-zh="底图仅表示地理，不代表历史国界；标记为近似导览点。" data-en="Geographic basemap, not historical borders; markers are approximate navigation points.">底图仅表示地理，不代表历史国界；标记为近似导览点。</p>
+</div><aside class="story-rail"><div class="rail-heading"><span class="eyebrow">YOUR NEXT CHAPTER</span><h3 data-zh="这个时间，有哪些故事？" data-en="Stories at this point in time">这个时间，有哪些故事？</h3></div><div id="storyRail"></div></aside></div>
+<div class="time-panel" id="time"><div class="time-top"><div><span class="eyebrow" data-zh="时间之旅" data-en="THROUGH TIME">时间之旅</span><strong id="yearLabel">2026</strong></div><button id="playTimeline" class="secondary" aria-pressed="false">▶ <span data-zh="播放时间" data-en="Play timeline">播放时间</span></button><label><span class="sr-only" data-zh="时间显示模式" data-en="Time mode">时间显示模式</span><select id="timeMode"><option value="cumulative" data-zh="截至此时的记录" data-en="Records up to this time">截至此时的记录</option><option value="window" data-zh="只看这一时间段" data-en="Only this time window">只看这一时间段</option></select></label></div>
+<label for="yearSlider" class="sr-only" data-zh="选择年代" data-en="Choose a year">选择年代</label><input id="yearSlider" type="range" min="-1600" max="2026" step="1" value="2026">
+<div class="year-presets"><button data-year="-1500">1500 BCE</button><button data-year="800">800</button><button data-year="1600">1600</button><button data-year="1750">1750</button><button data-year="1985">1985</button><button data-year="2026" data-zh="今天" data-en="Today">今天</button></div>
+<p class="time-explainer" data-zh="时间点可能是历史记录、机构建立、研究或非遗认可，绝不把认可年当作起源年。近似年代在故事里单独说明。" data-en="Anchors distinguish historical records, institutions, research and heritage recognition. Recognition dates are not origin dates; approximate ranges are explained in each story.">时间点可能是历史记录、机构建立、研究或非遗认可，绝不把认可年当作起源年。近似年代在故事里单独说明。</p></div>
+</div></section>
+<section class="section library-section" id="library"><div class="section-heading"><div><p class="eyebrow">THE KNOWLEDGE GARDEN</p><h2 data-zh="知识图鉴，持续生长" data-en="A knowledge garden, still growing">知识图鉴，持续生长</h2></div><p id="libraryIntro" data-zh="已完成的故事与待研究的条目分开展示，不把目录当成研究结论。" data-en="Published stories and research-index records are separate. A catalogue is not a research conclusion.">已完成的故事与待研究的条目分开展示，不把目录当成研究结论。</p></div>
+<div class="library-tools"><label for="librarySearch" data-zh="查询图鉴" data-en="Search the library">查询图鉴</label><input type="search" id="librarySearch" placeholder="Lavender / 薰衣草 / 瑶浴 / Kampo…"><label class="research-toggle"><input id="includeResearch" type="checkbox"><span data-zh="也看待研究目录" data-en="Include research index">也看待研究目录</span></label></div><p id="libraryCount" class="quiet" aria-live="polite"></p><div id="libraryGrid" class="library-grid"></div><button id="moreLibrary" class="secondary" hidden data-zh="再看一些" data-en="Show more">再看一些</button></section>
+<section class="section media-section" id="films"><div class="section-heading"><div><p class="eyebrow">WATCH · LISTEN · WANDER</p><h2 data-zh="让故事，有画面与声音" data-en="Give a story sight and sound">让故事，有画面与声音</h2></div><p data-zh="官方纪录片在原站观看；花园概念影像与历史证据分开展示。" data-en="Official films open at their source. Concept imagery is separate from historical evidence.">官方纪录片在原站观看；花园概念影像与历史证据分开展示。</p></div><div id="filmGrid" class="film-grid"></div></section>
+<section class="about section" id="about"><div><span class="eyebrow">AN OPEN DOOR, NOT A PRESCRIPTION</span><h2 data-zh="好奇，是最好的起点。" data-en="Curiosity is a beautiful beginning.">好奇，是最好的起点。</h2><p data-zh="这里是一部逐步展开的自然与文明图鉴。先看故事，再看传统如何解释、现代研究回答了什么、还有什么尚未确定。" data-en="This is an unfolding atlas of nature and culture. Begin with stories, then distinguish traditional explanations, research findings and questions that remain open.">这里是一部逐步展开的自然与文明图鉴。先看故事，再看传统如何解释、现代研究回答了什么、还有什么尚未确定。</p></div><div class="editorial"><h3 data-zh="阅读这座知识花园" data-en="Reading this knowledge garden">阅读这座知识花园</h3><p data-zh="文化介绍不等于医疗建议；非遗认定不等于疗效证据。精油、草药、针灸与热疗不以“天然”替代安全评估。" data-en="Cultural introductions are not medical advice, and heritage recognition is not evidence of efficacy. Natural materials and procedures still need safety assessment.">文化介绍不等于医疗建议；非遗认定不等于疗效证据。精油、草药、针灸与热疗不以“天然”替代安全评估。</p><a href="https://www.nccih.nih.gov/health/aromatherapy" target="_blank" rel="noopener noreferrer" data-zh="阅读 NCCIH 芳香疗法介绍 ↗" data-en="Read NCCIH on aromatherapy ↗">阅读 NCCIH 芳香疗法介绍 ↗</a></div></section>
+</main>
+<footer><a class="brand" href="./">Earth Healing <small>地球疗愈</small></a><p>Nature. Culture. A world of stories.</p><span>© 2026 · <a href="#about" data-zh="编辑原则" data-en="Editorial principles">编辑原则</a></span></footer>
+<dialog id="storyDialog" aria-labelledby="dialogTitle"><button id="closeDialog" class="close-dialog" aria-label="关闭 / Close">×</button><div id="storyContent"></div></dialog>
+<div id="toast" role="status" hidden></div>
+<noscript><p style="padding:2rem">请启用 JavaScript 使用地图；故事资料可在 <a href="./data/stories.json">双语内容文件</a> 中阅读。 Enable JavaScript for the map, or open the <a href="./data/stories.json">bilingual story data</a>.</p></noscript>
+</body></html>

@@ -1,0 +1,4002 @@
+[
+  {
+    "id": "EH-W1-0001",
+    "zh": "人参",
+    "en": "Ginseng",
+    "latin": "Panax ginseng",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0002",
+    "zh": "黄芪",
+    "en": "Astragalus",
+    "latin": "Astragalus mongholicus",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0003",
+    "zh": "当归",
+    "en": "Chinese Angelica",
+    "latin": "Angelica sinensis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0004",
+    "zh": "熟地黄",
+    "en": "Prepared Rehmannia",
+    "latin": "Rehmannia glutinosa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0005",
+    "zh": "生地黄",
+    "en": "Fresh Rehmannia",
+    "latin": "Rehmannia glutinosa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0006",
+    "zh": "甘草",
+    "en": "Licorice Root",
+    "latin": "Glycyrrhiza uralensis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0007",
+    "zh": "白芍",
+    "en": "White Peony Root",
+    "latin": "Paeonia lactiflora",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0008",
+    "zh": "赤芍",
+    "en": "Red Peony Root",
+    "latin": "Paeonia lactiflora",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0009",
+    "zh": "黄芩",
+    "en": "Scutellaria Root",
+    "latin": "Scutellaria baicalensis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0010",
+    "zh": "黄连",
+    "en": "Coptis Rhizome",
+    "latin": "Coptis chinensis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0011",
+    "zh": "柴胡",
+    "en": "Bupleurum Root",
+    "latin": "Bupleurum chinense",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0012",
+    "zh": "白术",
+    "en": "Atractylodes Macrocephala",
+    "latin": "Atractylodes macrocephala",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0013",
+    "zh": "茯苓",
+    "en": "Poria",
+    "latin": "Wolfiporia cocos",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0014",
+    "zh": "半夏",
+    "en": "Pinellia",
+    "latin": "Pinellia ternata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0015",
+    "zh": "生姜",
+    "en": "Fresh Ginger",
+    "latin": "Zingiber officinale",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0016",
+    "zh": "干姜",
+    "en": "Dried Ginger",
+    "latin": "Zingiber officinale",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0017",
+    "zh": "大枣",
+    "en": "Jujube",
+    "latin": "Ziziphus jujuba",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0018",
+    "zh": "枸杞子",
+    "en": "Goji Berry",
+    "latin": "Lycium barbarum",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0019",
+    "zh": "五味子",
+    "en": "Schisandra",
+    "latin": "Schisandra chinensis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0020",
+    "zh": "菊花",
+    "en": "Chrysanthemum Flower",
+    "latin": "Chrysanthemum morifolium",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0021",
+    "zh": "金银花",
+    "en": "Honeysuckle Flower",
+    "latin": "Lonicera japonica",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0022",
+    "zh": "连翘",
+    "en": "Forsythia Fruit",
+    "latin": "Forsythia suspensa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0023",
+    "zh": "薄荷",
+    "en": "Chinese Mint",
+    "latin": "Mentha canadensis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0024",
+    "zh": "艾叶",
+    "en": "Mugwort Leaf",
+    "latin": "Artemisia argyi",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0025",
+    "zh": "麻黄",
+    "en": "Ephedra",
+    "latin": "Ephedra sinica",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0026",
+    "zh": "桂枝",
+    "en": "Cinnamon Twig",
+    "latin": "Cinnamomum cassia",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0027",
+    "zh": "肉桂",
+    "en": "Cinnamon Bark",
+    "latin": "Cinnamomum cassia",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0028",
+    "zh": "紫苏叶",
+    "en": "Perilla Leaf",
+    "latin": "Perilla frutescens",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0029",
+    "zh": "桔梗",
+    "en": "Platycodon Root",
+    "latin": "Platycodon grandiflorus",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0030",
+    "zh": "麦冬",
+    "en": "Ophiopogon Root",
+    "latin": "Ophiopogon japonicus",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0031",
+    "zh": "北沙参",
+    "en": "Glehnia Root",
+    "latin": "Glehnia littoralis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0032",
+    "zh": "石斛",
+    "en": "Dendrobium",
+    "latin": "Dendrobium spp.",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0033",
+    "zh": "百合",
+    "en": "Lily Bulb",
+    "latin": "Lilium spp.",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0034",
+    "zh": "莲子",
+    "en": "Lotus Seed",
+    "latin": "Nelumbo nucifera",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0035",
+    "zh": "薏苡仁",
+    "en": "Coix Seed",
+    "latin": "Coix lacryma-jobi",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0036",
+    "zh": "山药",
+    "en": "Chinese Yam",
+    "latin": "Dioscorea polystachya",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0037",
+    "zh": "山楂",
+    "en": "Hawthorn Fruit",
+    "latin": "Crataegus pinnatifida",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0038",
+    "zh": "麦芽",
+    "en": "Malted Barley",
+    "latin": "Hordeum vulgare",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0039",
+    "zh": "陈皮",
+    "en": "Tangerine Peel",
+    "latin": "Citrus reticulata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0040",
+    "zh": "枳实",
+    "en": "Immature Bitter Orange",
+    "latin": "Citrus aurantium",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0041",
+    "zh": "厚朴",
+    "en": "Magnolia Bark",
+    "latin": "Magnolia officinalis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0042",
+    "zh": "砂仁",
+    "en": "Amomum Fruit",
+    "latin": "Wurfbainia villosa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0043",
+    "zh": "木香",
+    "en": "Aucklandia Root",
+    "latin": "Aucklandia costus",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0044",
+    "zh": "党参",
+    "en": "Codonopsis",
+    "latin": "Codonopsis pilosula",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0045",
+    "zh": "黄精",
+    "en": "Polygonatum Rhizome",
+    "latin": "Polygonatum sibiricum",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0046",
+    "zh": "杜仲",
+    "en": "Eucommia Bark",
+    "latin": "Eucommia ulmoides",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0047",
+    "zh": "巴戟天",
+    "en": "Morinda Root",
+    "latin": "Morinda officinalis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0048",
+    "zh": "菟丝子",
+    "en": "Dodder Seed",
+    "latin": "Cuscuta chinensis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0049",
+    "zh": "山茱萸",
+    "en": "Cornus Fruit",
+    "latin": "Cornus officinalis",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0050",
+    "zh": "泽泻",
+    "en": "Alisma Rhizome",
+    "latin": "Alisma orientale",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0051",
+    "zh": "车前子",
+    "en": "Plantago Seed",
+    "latin": "Plantago asiatica",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0052",
+    "zh": "牡丹皮",
+    "en": "Moutan Bark",
+    "latin": "Paeonia suffruticosa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0053",
+    "zh": "知母",
+    "en": "Anemarrhena Rhizome",
+    "latin": "Anemarrhena asphodeloides",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0054",
+    "zh": "黄柏",
+    "en": "Phellodendron Bark",
+    "latin": "Phellodendron chinense",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0055",
+    "zh": "龙胆",
+    "en": "Gentiana Root",
+    "latin": "Gentiana scabra",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0056",
+    "zh": "栀子",
+    "en": "Gardenia Fruit",
+    "latin": "Gardenia jasminoides",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0057",
+    "zh": "大黄",
+    "en": "Chinese Rhubarb",
+    "latin": "Rheum palmatum",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0058",
+    "zh": "瓜蒌",
+    "en": "Trichosanthes Fruit",
+    "latin": "Trichosanthes kirilowii",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0059",
+    "zh": "贝母",
+    "en": "Fritillaria Bulb",
+    "latin": "Fritillaria spp.",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0060",
+    "zh": "苦杏仁",
+    "en": "Apricot Kernel",
+    "latin": "Prunus armeniaca",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0061",
+    "zh": "紫苏子",
+    "en": "Perilla Seed",
+    "latin": "Perilla frutescens",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0062",
+    "zh": "桑白皮",
+    "en": "Mulberry Root Bark",
+    "latin": "Morus alba",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0063",
+    "zh": "枇杷叶",
+    "en": "Loquat Leaf",
+    "latin": "Eriobotrya japonica",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0064",
+    "zh": "淫羊藿",
+    "en": "Epimedium",
+    "latin": "Epimedium spp.",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0065",
+    "zh": "补骨脂",
+    "en": "Psoralea Fruit",
+    "latin": "Cullen corylifolium",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0066",
+    "zh": "狗脊",
+    "en": "Cibotium Rhizome",
+    "latin": "Cibotium barometz",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0067",
+    "zh": "骨碎补",
+    "en": "Drynaria Rhizome",
+    "latin": "Drynaria fortunei",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0068",
+    "zh": "牛膝",
+    "en": "Achyranthes Root",
+    "latin": "Achyranthes bidentata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0069",
+    "zh": "续断",
+    "en": "Dipsacus Root",
+    "latin": "Dipsacus asper",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0070",
+    "zh": "三七",
+    "en": "Notoginseng",
+    "latin": "Panax notoginseng",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0071",
+    "zh": "红花",
+    "en": "Safflower",
+    "latin": "Carthamus tinctorius",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0072",
+    "zh": "桃仁",
+    "en": "Peach Kernel",
+    "latin": "Prunus persica",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0073",
+    "zh": "益母草",
+    "en": "Motherwort",
+    "latin": "Leonurus japonicus",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0074",
+    "zh": "丹参",
+    "en": "Danshen",
+    "latin": "Salvia miltiorrhiza",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0075",
+    "zh": "姜黄",
+    "en": "Turmeric Rhizome",
+    "latin": "Curcuma longa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0076",
+    "zh": "延胡索",
+    "en": "Corydalis",
+    "latin": "Corydalis yanhusuo",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0077",
+    "zh": "乳香",
+    "en": "Frankincense in Chinese Materia Medica",
+    "latin": "Boswellia spp.",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0078",
+    "zh": "没药",
+    "en": "Myrrh in Chinese Materia Medica",
+    "latin": "Commiphora spp.",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0079",
+    "zh": "冰片",
+    "en": "Borneol",
+    "latin": "Dryobalanops / synthetic sources",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0080",
+    "zh": "石菖蒲",
+    "en": "Acorus Rhizome",
+    "latin": "Acorus tatarinowii",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0081",
+    "zh": "远志",
+    "en": "Polygala Root",
+    "latin": "Polygala tenuifolia",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0082",
+    "zh": "酸枣仁",
+    "en": "Sour Jujube Seed",
+    "latin": "Ziziphus jujuba var. spinosa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0083",
+    "zh": "合欢皮",
+    "en": "Albizia Bark",
+    "latin": "Albizia julibrissin",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0084",
+    "zh": "天麻",
+    "en": "Gastrodia",
+    "latin": "Gastrodia elata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0085",
+    "zh": "钩藤",
+    "en": "Uncaria Hook",
+    "latin": "Uncaria rhynchophylla",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0086",
+    "zh": "蒺藜",
+    "en": "Tribulus Fruit",
+    "latin": "Tribulus terrestris",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0087",
+    "zh": "葛根",
+    "en": "Kudzu Root",
+    "latin": "Pueraria montana var. lobata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0088",
+    "zh": "葛花",
+    "en": "Pueraria Flower",
+    "latin": "Pueraria montana var. lobata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0089",
+    "zh": "苦参",
+    "en": "Sophora Root",
+    "latin": "Sophora flavescens",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0090",
+    "zh": "槐花",
+    "en": "Sophora Flower",
+    "latin": "Styphnolobium japonicum",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0091",
+    "zh": "板蓝根",
+    "en": "Isatis Root",
+    "latin": "Isatis indigotica",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0092",
+    "zh": "大青叶",
+    "en": "Isatis Leaf",
+    "latin": "Isatis indigotica",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0093",
+    "zh": "穿心莲",
+    "en": "Andrographis",
+    "latin": "Andrographis paniculata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0094",
+    "zh": "鱼腥草",
+    "en": "Houttuynia",
+    "latin": "Houttuynia cordata",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0095",
+    "zh": "蒲公英",
+    "en": "Dandelion Herb",
+    "latin": "Taraxacum mongolicum",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0096",
+    "zh": "马齿苋",
+    "en": "Purslane",
+    "latin": "Portulaca oleracea",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0097",
+    "zh": "青蒿",
+    "en": "Artemisia Annua",
+    "latin": "Artemisia annua",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0098",
+    "zh": "夏枯草",
+    "en": "Prunella Spike",
+    "latin": "Prunella vulgaris",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0099",
+    "zh": "桑叶",
+    "en": "Mulberry Leaf",
+    "latin": "Morus alba",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0100",
+    "zh": "桑椹",
+    "en": "Mulberry Fruit",
+    "latin": "Morus alba",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0101",
+    "zh": "荷叶",
+    "en": "Lotus Leaf",
+    "latin": "Nelumbo nucifera",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0102",
+    "zh": "桂花",
+    "en": "Osmanthus Flower",
+    "latin": "Osmanthus fragrans",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0103",
+    "zh": "玫瑰花",
+    "en": "Rose Bud in Chinese Herbal Tradition",
+    "latin": "Rosa rugosa",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0104",
+    "zh": "辛夷",
+    "en": "Magnolia Flower Bud",
+    "latin": "Magnolia biondii",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0105",
+    "zh": "山楂叶",
+    "en": "Chinese Hawthorn Leaf",
+    "latin": "Crataegus pinnatifida",
+    "group": "Chinese Materia Medica",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0106",
+    "zh": "针刺",
+    "en": "Acupuncture",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0107",
+    "zh": "艾灸",
+    "en": "Moxibustion",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0108",
+    "zh": "拔罐",
+    "en": "Cupping",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0109",
+    "zh": "刮痧",
+    "en": "Gua Sha",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0110",
+    "zh": "推拿",
+    "en": "Tuina",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0111",
+    "zh": "导引",
+    "en": "Daoyin",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0112",
+    "zh": "气功",
+    "en": "Qigong",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0113",
+    "zh": "太极",
+    "en": "Tai Chi",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0114",
+    "zh": "中医食疗",
+    "en": "Chinese Dietary Therapy",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0115",
+    "zh": "中药浴",
+    "en": "Chinese Herbal Bath",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0116",
+    "zh": "瑶浴",
+    "en": "Yao Medicinal Bath",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0117",
+    "zh": "经络理论",
+    "en": "Meridian Theory",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0118",
+    "zh": "藏象理论",
+    "en": "Zang-Fu Theory",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0119",
+    "zh": "阴阳养生思想",
+    "en": "Yin-Yang in Health Thought",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0120",
+    "zh": "五行养生思想",
+    "en": "Five Phases in Health Thought",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0121",
+    "zh": "四时养生",
+    "en": "Seasonal Living in Chinese Tradition",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0122",
+    "zh": "二十四节气与养生文化",
+    "en": "Twenty-Four Solar Terms & Health Culture",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0123",
+    "zh": "易经与中国养生宇宙观",
+    "en": "Yijing Influence on Chinese Health Cosmology",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0124",
+    "zh": "中药铺与传统药房",
+    "en": "Chinese Apothecary Tradition",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0125",
+    "zh": "中药炮制",
+    "en": "Paozhi Processing Tradition",
+    "latin": null,
+    "group": "Chinese Core Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0126",
+    "zh": "薰衣草",
+    "en": "Lavender",
+    "latin": "Lavandula angustifolia",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0127",
+    "zh": "大马士革玫瑰",
+    "en": "Damask Rose",
+    "latin": "Rosa damascena",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0128",
+    "zh": "玫瑰天竺葵",
+    "en": "Rose Geranium",
+    "latin": "Pelargonium graveolens",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0129",
+    "zh": "橙花",
+    "en": "Neroli / Bitter Orange Blossom",
+    "latin": "Citrus aurantium",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0130",
+    "zh": "佛手柑",
+    "en": "Bergamot",
+    "latin": "Citrus bergamia",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0131",
+    "zh": "甜橙",
+    "en": "Sweet Orange",
+    "latin": "Citrus sinensis",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0132",
+    "zh": "柠檬",
+    "en": "Lemon",
+    "latin": "Citrus limon",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0133",
+    "zh": "葡萄柚",
+    "en": "Grapefruit",
+    "latin": "Citrus × paradisi",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0134",
+    "zh": "苦橙叶",
+    "en": "Petitgrain",
+    "latin": "Citrus aurantium",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0135",
+    "zh": "迷迭香",
+    "en": "Rosemary",
+    "latin": "Salvia rosmarinus",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0136",
+    "zh": "百里香",
+    "en": "Common Thyme",
+    "latin": "Thymus vulgaris",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0137",
+    "zh": "药用鼠尾草",
+    "en": "Common Sage",
+    "latin": "Salvia officinalis",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0138",
+    "zh": "快乐鼠尾草",
+    "en": "Clary Sage",
+    "latin": "Salvia sclarea",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0139",
+    "zh": "胡椒薄荷",
+    "en": "Peppermint",
+    "latin": "Mentha × piperita",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0140",
+    "zh": "留兰香",
+    "en": "Spearmint",
+    "latin": "Mentha spicata",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0141",
+    "zh": "蓝桉",
+    "en": "Eucalyptus Globulus",
+    "latin": "Eucalyptus globulus",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0142",
+    "zh": "茶树精油植物",
+    "en": "Tea Tree",
+    "latin": "Melaleuca alternifolia",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0143",
+    "zh": "乳香",
+    "en": "Frankincense",
+    "latin": "Boswellia spp.",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0144",
+    "zh": "没药",
+    "en": "Myrrh",
+    "latin": "Commiphora spp.",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0145",
+    "zh": "檀香",
+    "en": "Sandalwood",
+    "latin": "Santalum album",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0146",
+    "zh": "阿特拉斯雪松",
+    "en": "Atlas Cedarwood",
+    "latin": "Cedrus atlantica",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0147",
+    "zh": "弗吉尼亚雪松",
+    "en": "Virginian Cedarwood",
+    "latin": "Juniperus virginiana",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0148",
+    "zh": "广藿香",
+    "en": "Patchouli",
+    "latin": "Pogostemon cablin",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0149",
+    "zh": "岩兰草",
+    "en": "Vetiver",
+    "latin": "Chrysopogon zizanioides",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0150",
+    "zh": "依兰依兰",
+    "en": "Ylang Ylang",
+    "latin": "Cananga odorata",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0151",
+    "zh": "茉莉",
+    "en": "Jasmine Sambac",
+    "latin": "Jasminum sambac",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0152",
+    "zh": "大花茉莉",
+    "en": "Jasmine Grandiflorum",
+    "latin": "Jasminum grandiflorum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0153",
+    "zh": "罗马洋甘菊",
+    "en": "Roman Chamomile",
+    "latin": "Chamaemelum nobile",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0154",
+    "zh": "德国洋甘菊",
+    "en": "German Chamomile",
+    "latin": "Matricaria chamomilla",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0155",
+    "zh": "玫瑰草",
+    "en": "Palmarosa",
+    "latin": "Cymbopogon martinii",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0156",
+    "zh": "柠檬草",
+    "en": "Lemongrass",
+    "latin": "Cymbopogon citratus",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0157",
+    "zh": "香茅",
+    "en": "Citronella",
+    "latin": "Cymbopogon winterianus",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0158",
+    "zh": "姜精油",
+    "en": "Ginger Essential Oil",
+    "latin": "Zingiber officinale",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0159",
+    "zh": "豆蔻",
+    "en": "Cardamom",
+    "latin": "Elettaria cardamomum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0160",
+    "zh": "黑胡椒",
+    "en": "Black Pepper",
+    "latin": "Piper nigrum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0161",
+    "zh": "肉桂芳香油",
+    "en": "Cinnamon Bark Aromatic",
+    "latin": "Cinnamomum verum / cassia",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0162",
+    "zh": "丁香",
+    "en": "Clove Bud",
+    "latin": "Syzygium aromaticum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0163",
+    "zh": "罗勒",
+    "en": "Sweet Basil",
+    "latin": "Ocimum basilicum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0164",
+    "zh": "牛至",
+    "en": "Oregano",
+    "latin": "Origanum vulgare",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0165",
+    "zh": "甜马郁兰",
+    "en": "Sweet Marjoram",
+    "latin": "Origanum majorana",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0166",
+    "zh": "丝柏",
+    "en": "Cypress",
+    "latin": "Cupressus sempervirens",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0167",
+    "zh": "杜松子",
+    "en": "Juniper Berry",
+    "latin": "Juniperus communis",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0168",
+    "zh": "欧洲赤松",
+    "en": "Scots Pine",
+    "latin": "Pinus sylvestris",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0169",
+    "zh": "银冷杉",
+    "en": "Silver Fir",
+    "latin": "Abies alba",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0170",
+    "zh": "黑云杉",
+    "en": "Black Spruce",
+    "latin": "Picea mariana",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0171",
+    "zh": "意大利永久花",
+    "en": "Helichrysum Italicum",
+    "latin": "Helichrysum italicum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0172",
+    "zh": "胡萝卜籽",
+    "en": "Carrot Seed",
+    "latin": "Daucus carota",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0173",
+    "zh": "茴香",
+    "en": "Fennel",
+    "latin": "Foeniculum vulgare",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0174",
+    "zh": "茴芹",
+    "en": "Anise",
+    "latin": "Pimpinella anisum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0175",
+    "zh": "芫荽籽",
+    "en": "Coriander Seed",
+    "latin": "Coriandrum sativum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0176",
+    "zh": "孜然",
+    "en": "Cumin",
+    "latin": "Cuminum cyminum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0177",
+    "zh": "姜黄芳香油",
+    "en": "Turmeric Aromatic Oil",
+    "latin": "Curcuma longa",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0178",
+    "zh": "桉樟",
+    "en": "Ravintsara",
+    "latin": "Cinnamomum camphora ct. cineole",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0179",
+    "zh": "绿花白千层",
+    "en": "Niaouli",
+    "latin": "Melaleuca quinquenervia",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0180",
+    "zh": "白千层",
+    "en": "Cajeput",
+    "latin": "Melaleuca cajuputi",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0181",
+    "zh": "古巴香脂",
+    "en": "Copaiba",
+    "latin": "Copaifera spp.",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0182",
+    "zh": "安息香",
+    "en": "Benzoin",
+    "latin": "Styrax spp.",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0183",
+    "zh": "榄香脂",
+    "en": "Elemi",
+    "latin": "Canarium luzonicum",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0184",
+    "zh": "岩蔷薇树脂",
+    "en": "Labdanum",
+    "latin": "Cistus ladanifer",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0185",
+    "zh": "桂花原精",
+    "en": "Osmanthus Absolute",
+    "latin": "Osmanthus fragrans",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0186",
+    "zh": "晚香玉原精",
+    "en": "Tuberose Absolute",
+    "latin": "Agave amica",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0187",
+    "zh": "紫罗兰叶原精",
+    "en": "Violet Leaf Absolute",
+    "latin": "Viola odorata",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0188",
+    "zh": "木兰花香材",
+    "en": "Magnolia Flower Aromatic",
+    "latin": "Magnolia spp.",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0189",
+    "zh": "莲花原精",
+    "en": "Lotus Absolute",
+    "latin": "Nelumbo nucifera",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0190",
+    "zh": "黄兰",
+    "en": "Champaca",
+    "latin": "Magnolia champaca",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0191",
+    "zh": "日本扁柏",
+    "en": "Hinoki",
+    "latin": "Chamaecyparis obtusa",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0192",
+    "zh": "柚子香气",
+    "en": "Yuzu",
+    "latin": "Citrus junos",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0193",
+    "zh": "紫苏芳香",
+    "en": "Shiso",
+    "latin": "Perilla frutescens",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0194",
+    "zh": "沉香",
+    "en": "Agarwood / Oud",
+    "latin": "Aquilaria spp.",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0195",
+    "zh": "圣木",
+    "en": "Palo Santo",
+    "latin": "Bursera graveolens",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0196",
+    "zh": "香草",
+    "en": "Vanilla",
+    "latin": "Vanilla planifolia",
+    "group": "Aroma & Essential Oils",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0197",
+    "zh": "煎剂",
+    "en": "Decoction",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0198",
+    "zh": "浸泡茶剂",
+    "en": "Infusion",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0199",
+    "zh": "酊剂",
+    "en": "Tincture",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0200",
+    "zh": "流浸膏",
+    "en": "Fluid Extract",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0201",
+    "zh": "干浸膏",
+    "en": "Dry Extract",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0202",
+    "zh": "糖浆剂",
+    "en": "Syrup",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0203",
+    "zh": "蜜膏/糖膏",
+    "en": "Electuary",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0204",
+    "zh": "散剂",
+    "en": "Powder",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0205",
+    "zh": "丸剂",
+    "en": "Pill",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0206",
+    "zh": "片剂",
+    "en": "Tablet",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0207",
+    "zh": "胶囊",
+    "en": "Capsule",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0208",
+    "zh": "含片/锭剂",
+    "en": "Pastille / Lozenge",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0209",
+    "zh": "药膏",
+    "en": "Salve",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0210",
+    "zh": "香膏",
+    "en": "Balm",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0211",
+    "zh": "软膏",
+    "en": "Ointment",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0212",
+    "zh": "乳膏",
+    "en": "Cream",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0213",
+    "zh": "擦剂",
+    "en": "Liniment",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0214",
+    "zh": "浸泡油",
+    "en": "Infused Oil",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0215",
+    "zh": "按摩油",
+    "en": "Massage Oil",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0216",
+    "zh": "泥敷/药敷",
+    "en": "Poultice",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0217",
+    "zh": "湿敷/热敷",
+    "en": "Compress",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0218",
+    "zh": "膏贴",
+    "en": "Plaster",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0219",
+    "zh": "药酒",
+    "en": "Herbal Wine",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0220",
+    "zh": "药醋",
+    "en": "Medicinal Vinegar",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0221",
+    "zh": "蜜醋剂",
+    "en": "Oxymel",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0222",
+    "zh": "纯露",
+    "en": "Hydrosol",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0223",
+    "zh": "水蒸气蒸馏",
+    "en": "Steam Distillation",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0224",
+    "zh": "水中蒸馏",
+    "en": "Hydrodistillation",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0225",
+    "zh": "冷压榨取",
+    "en": "Expression / Cold Pressing",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0226",
+    "zh": "脂吸法",
+    "en": "Enfleurage",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0227",
+    "zh": "浸渍法",
+    "en": "Maceration",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0228",
+    "zh": "树脂浸膏",
+    "en": "Resinoid",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0229",
+    "zh": "原精",
+    "en": "Absolute",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0230",
+    "zh": "合香",
+    "en": "Incense Blend",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0231",
+    "zh": "熏蒸方",
+    "en": "Fumigation Blend",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0232",
+    "zh": "草药浴方",
+    "en": "Herbal Bath Blend",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0233",
+    "zh": "浴盐配方",
+    "en": "Salt Bath Blend",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0234",
+    "zh": "香囊/药香袋",
+    "en": "Herbal Sachet",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0235",
+    "zh": "草本茶配方",
+    "en": "Medicinal Tea Blend",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0236",
+    "zh": "发酵草本制剂",
+    "en": "Fermented Herbal Preparation",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0237",
+    "zh": "传统栓剂形式",
+    "en": "Suppository Historical Form",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0238",
+    "zh": "药钵与研杵",
+    "en": "Apothecary Mortar & Pestle",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0239",
+    "zh": "蒸馏器",
+    "en": "Alembic Still",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0240",
+    "zh": "药房天平",
+    "en": "Apothecary Balance",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0241",
+    "zh": "草药干燥架",
+    "en": "Herb Drying Cabinet / Rack",
+    "latin": null,
+    "group": "Apothecary & Preparations",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0242",
+    "zh": "阿育吠陀",
+    "en": "Ayurveda",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0243",
+    "zh": "三体质 Dosha 理论",
+    "en": "Tridosha Concept",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0244",
+    "zh": "五业净化传统",
+    "en": "Panchakarma Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0245",
+    "zh": "阿育吠陀油浴按摩",
+    "en": "Abhyanga",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0246",
+    "zh": "滴油额疗传统",
+    "en": "Shirodhara",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0247",
+    "zh": "鼻腔用油传统",
+    "en": "Nasya",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0248",
+    "zh": "Rasayana 调养传统",
+    "en": "Ayurvedic Rasayana Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0249",
+    "zh": "南非醉茄",
+    "en": "Ashwagandha",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0250",
+    "zh": "圣罗勒",
+    "en": "Tulsi",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0251",
+    "zh": "印度楝",
+    "en": "Neem",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0252",
+    "zh": "余甘子/印度醋栗",
+    "en": "Amla",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0253",
+    "zh": "婆罗米",
+    "en": "Brahmi",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0254",
+    "zh": "积雪草",
+    "en": "Gotu Kola",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0255",
+    "zh": "三果配方",
+    "en": "Triphala",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0256",
+    "zh": "酥油制剂传统",
+    "en": "Ghee in Ayurvedic Preparations",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0257",
+    "zh": "调息法",
+    "en": "Pranayama",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0258",
+    "zh": "瑜伽体式健康传统",
+    "en": "Yoga Asana as Health Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0259",
+    "zh": "阿育吠陀日常起居法",
+    "en": "Ayurvedic Dinacharya",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0260",
+    "zh": "阿育吠陀季节起居法",
+    "en": "Ayurvedic Ritucharya",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0261",
+    "zh": "阿育吠陀药房传统",
+    "en": "Ayurvedic Pharmacy",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0262",
+    "zh": "尤纳尼医学",
+    "en": "Unani Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0263",
+    "zh": "Mizaj 体质气质理论",
+    "en": "Humoral Temperament / Mizaj",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0264",
+    "zh": "尤纳尼饮食调养",
+    "en": "Ilaj-bil-Ghiza",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0265",
+    "zh": "尤纳尼药物疗法传统",
+    "en": "Ilaj-bil-Dawa",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0266",
+    "zh": "尤纳尼拔罐 Hijama",
+    "en": "Hijama in Unani Context",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0267",
+    "zh": "波斯玫瑰纯露传统",
+    "en": "Persian Rosewater Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0268",
+    "zh": "藏红花与波斯医药传统",
+    "en": "Saffron in Persian Medical Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0269",
+    "zh": "黑种草籽传统",
+    "en": "Black Seed / Nigella Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0270",
+    "zh": "番泻叶与阿拉伯-波斯药房",
+    "en": "Senna in Arabic-Persian Pharmacies",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0271",
+    "zh": "甘草与尤纳尼传统",
+    "en": "Liquorice in Unani Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0272",
+    "zh": "中世纪伊斯兰药房蒸馏传统",
+    "en": "Distillation in Medieval Islamic Pharmacy",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0273",
+    "zh": "Attar 香油传统",
+    "en": "Attar Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0274",
+    "zh": "Hammam 浴疗文化",
+    "en": "Hammam Health Culture",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0275",
+    "zh": "尤纳尼起居调摄传统",
+    "en": "Regimenal Therapy in Unani",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0276",
+    "zh": "希腊-阿拉伯药物知识传承",
+    "en": "Greco-Arabic Materia Medica Transmission",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0277",
+    "zh": "日本汉方",
+    "en": "Kampo",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0278",
+    "zh": "汉方“证”辨识框架",
+    "en": "Sho Pattern Concept in Kampo",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0279",
+    "zh": "葛根汤的日本汉方传统",
+    "en": "Kakkonto Formula Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0280",
+    "zh": "芍药甘草汤的日本汉方传统",
+    "en": "Shakuyakukanzoto Formula Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0281",
+    "zh": "抑肝散的日本汉方传统",
+    "en": "Yokukansan Formula Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0282",
+    "zh": "大建中汤的日本汉方传统",
+    "en": "Daikenchuto Formula Tradition",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0283",
+    "zh": "日本灸法",
+    "en": "Japanese Moxibustion",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0284",
+    "zh": "日本针灸",
+    "en": "Japanese Acupuncture",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0285",
+    "zh": "指压",
+    "en": "Shiatsu",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0286",
+    "zh": "日本温泉文化",
+    "en": "Onsen Culture",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0287",
+    "zh": "森林浴",
+    "en": "Shinrin-yoku",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0288",
+    "zh": "桧木浴文化",
+    "en": "Hinoki Bath Culture",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0289",
+    "zh": "香道",
+    "en": "Japanese Incense Kodo",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0290",
+    "zh": "柚子浴",
+    "en": "Yuzu Bath",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0291",
+    "zh": "日本药草园传统",
+    "en": "Japanese Medicinal Herb Gardens",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0292",
+    "zh": "韩医学",
+    "en": "Korean Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0293",
+    "zh": "韩国针灸传统",
+    "en": "Korean Acupuncture Traditions",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0294",
+    "zh": "韩国艾灸传统",
+    "en": "Korean Moxibustion Traditions",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0295",
+    "zh": "四象体质医学",
+    "en": "Sasang Constitutional Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0296",
+    "zh": "韩方汤药文化",
+    "en": "Korean Herbal Decoction Culture",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0297",
+    "zh": "韩国人参文化",
+    "en": "Ginseng Culture in Korea",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0298",
+    "zh": "汗蒸房文化",
+    "en": "Jjimjilbang Bath Culture",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0299",
+    "zh": "艾草蒸熏传统",
+    "en": "Mugwort Steam Traditions in Korea",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0300",
+    "zh": "韩国寺院饮食与养生文化",
+    "en": "Korean Temple Food & Wellness Culture",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0301",
+    "zh": "韩国药材市场文化",
+    "en": "Korean Medicinal Herb Markets",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0302",
+    "zh": "泰国传统医学",
+    "en": "Thai Traditional Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0303",
+    "zh": "泰式按摩",
+    "en": "Nuad Thai",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0304",
+    "zh": "泰式草药热敷球",
+    "en": "Thai Herbal Compress",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0305",
+    "zh": "泰式草药蒸汽",
+    "en": "Thai Herbal Steam",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0306",
+    "zh": "印尼 Jamu 草药传统",
+    "en": "Jamu",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0307",
+    "zh": "流动 Jamu 饮品传统",
+    "en": "Jamu Gendong",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0308",
+    "zh": "巴厘岛 Boreh 草药身体敷法",
+    "en": "Balinese Boreh",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0309",
+    "zh": "菲律宾 Hilot 手法传统",
+    "en": "Hilot",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0310",
+    "zh": "越南草药浴传统",
+    "en": "Vietnamese Herbal Bath Traditions",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0311",
+    "zh": "高棉传统医学",
+    "en": "Traditional Khmer Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0312",
+    "zh": "藏医药 Sowa Rigpa",
+    "en": "Sowa Rigpa",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0313",
+    "zh": "藏医药浴传统",
+    "en": "Tibetan Medicinal Bathing",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0314",
+    "zh": "藏药本草传统",
+    "en": "Tibetan Materia Medica",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0315",
+    "zh": "藏医灸疗传统",
+    "en": "Tibetan Moxibustion Traditions",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0316",
+    "zh": "蒙医药传统",
+    "en": "Mongolian Traditional Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0317",
+    "zh": "蒙医灸疗传统",
+    "en": "Mongolian Moxibustion Traditions",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0318",
+    "zh": "蒙古饮食与乳食养生传统",
+    "en": "Mongolian Dairy & Dietary Health Traditions",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0319",
+    "zh": "傣医药",
+    "en": "Dai Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0320",
+    "zh": "苗医药",
+    "en": "Miao Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0321",
+    "zh": "壮医药",
+    "en": "Zhuang Medicine",
+    "latin": null,
+    "group": "Global Traditional Systems",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0322",
+    "zh": "矿泉浴疗",
+    "en": "Balneotherapy",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0323",
+    "zh": "温泉浴文化",
+    "en": "Thermal Spring Bathing",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0324",
+    "zh": "古罗马浴场文化",
+    "en": "Roman Bath Culture",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0325",
+    "zh": "古希腊阿斯克勒庇俄斯圣所水仪式",
+    "en": "Greek Asclepian Water Rituals",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0326",
+    "zh": "奥斯曼 Hammam",
+    "en": "Ottoman Hammam",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0327",
+    "zh": "摩洛哥 Hammam",
+    "en": "Moroccan Hammam",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0328",
+    "zh": "芬兰桑拿",
+    "en": "Finnish Sauna",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0329",
+    "zh": "爱沙尼亚烟熏桑拿",
+    "en": "Estonian Smoke Sauna",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0330",
+    "zh": "俄式蒸浴 Banya",
+    "en": "Russian Banya",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0331",
+    "zh": "日本公共浴场 Sento",
+    "en": "Japanese Sento",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0332",
+    "zh": "日本温泉 Onsen",
+    "en": "Japanese Onsen",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0333",
+    "zh": "韩国汗蒸房",
+    "en": "Korean Jjimjilbang",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0334",
+    "zh": "瑶族药浴",
+    "en": "Yao Herbal Bath",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0335",
+    "zh": "藏医药浴",
+    "en": "Tibetan Medicinal Bath",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0336",
+    "zh": "越南红瑶草药浴",
+    "en": "Vietnamese Red Dao Herbal Bath",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0337",
+    "zh": "泰式草药蒸汽浴",
+    "en": "Thai Herbal Steam Bath",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0338",
+    "zh": "土耳其温泉文化",
+    "en": "Turkish Thermal Springs",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0339",
+    "zh": "匈牙利温泉浴文化",
+    "en": "Hungarian Thermal Bath Culture",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0340",
+    "zh": "冰岛地热浴文化",
+    "en": "Icelandic Geothermal Bath Culture",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0341",
+    "zh": "北欧冷热交替浴传统",
+    "en": "Nordic Cold-Water & Sauna Contrast Tradition",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0342",
+    "zh": "欧洲海浴文化",
+    "en": "Sea Bathing Culture in Europe",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0343",
+    "zh": "海水疗传统",
+    "en": "Thalassotherapy",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0344",
+    "zh": "19世纪欧洲水疗法",
+    "en": "Hydrotherapy in 19th-Century Europe",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0345",
+    "zh": "Kneipp 水疗传统",
+    "en": "Kneipp Water Cure Tradition",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0346",
+    "zh": "热石浴传统",
+    "en": "Hot Stone Bathing Traditions",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0347",
+    "zh": "草药足浴",
+    "en": "Herbal Foot Bath",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0348",
+    "zh": "草药蒸汽帐篷传统",
+    "en": "Steam Tent / Herbal Steam Traditions",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0349",
+    "zh": "矿物泥浴",
+    "en": "Mineral Mud Bath",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0350",
+    "zh": "盐浴传统",
+    "en": "Salt Bath Traditions",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0351",
+    "zh": "硫磺泉文化",
+    "en": "Sulfur Spring Culture",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0352",
+    "zh": "森林温泉疗愈文化",
+    "en": "Forest Hot-Spring Retreat Culture",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0353",
+    "zh": "公共浴场社交文化",
+    "en": "Bathhouse Social Culture",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0354",
+    "zh": "圣河沐浴传统",
+    "en": "Sacred River Bathing Traditions",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0355",
+    "zh": "朝圣圣泉与井",
+    "en": "Pilgrimage Springs & Wells",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0356",
+    "zh": "海湖蓝色空间疗愈",
+    "en": "Blue-Space Restorative Practice",
+    "latin": null,
+    "group": "Water & Bath",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0357",
+    "zh": "格里高利圣咏",
+    "en": "Gregorian Chant",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0358",
+    "zh": "拜占庭圣咏",
+    "en": "Byzantine Chant",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0359",
+    "zh": "吠陀吟诵",
+    "en": "Vedic Chanting",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0360",
+    "zh": "佛经诵念",
+    "en": "Buddhist Sutra Chanting",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0361",
+    "zh": "藏传佛教诵唱",
+    "en": "Tibetan Buddhist Chanting",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0362",
+    "zh": "日本声明梵呗",
+    "en": "Shomyo Buddhist Chant",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0363",
+    "zh": "道教经韵",
+    "en": "Daoist Liturgical Chant",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0364",
+    "zh": "锡克 Kirtan 圣歌",
+    "en": "Sikh Kirtan",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0365",
+    "zh": "苏菲 Dhikr 记主仪式",
+    "en": "Sufi Dhikr",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0366",
+    "zh": "Qawwali 苏菲音乐",
+    "en": "Qawwali",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0367",
+    "zh": "犹太 Nigun 无词圣歌",
+    "en": "Jewish Nigun",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0368",
+    "zh": "太鼓集体击鼓",
+    "en": "Taiko Community Drumming",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0369",
+    "zh": "西非鼓乐疗愈语境",
+    "en": "West African Drum Healing Contexts",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0370",
+    "zh": "框鼓仪式传统",
+    "en": "Frame Drum Ritual Traditions",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0371",
+    "zh": "萨满鼓传统",
+    "en": "Shamanic Drum Traditions",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0372",
+    "zh": "颂钵传统",
+    "en": "Singing Bowl Traditions",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0373",
+    "zh": "现代 Gong Bath 声浴",
+    "en": "Gong Bath Contemporary Practice",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0374",
+    "zh": "钟铃仪式",
+    "en": "Bell Rituals",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0375",
+    "zh": "海螺声仪式",
+    "en": "Conch Shell Sound Rituals",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0376",
+    "zh": "泛音歌唱",
+    "en": "Overtone Singing",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0377",
+    "zh": "图瓦呼麦",
+    "en": "Tuvan Throat Singing",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0378",
+    "zh": "蒙古呼麦",
+    "en": "Mongolian Khoomei",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0379",
+    "zh": "摇篮曲安抚传统",
+    "en": "Lullaby as Soothing Practice",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0380",
+    "zh": "群体歌唱与身心福祉",
+    "en": "Communal Singing & Wellbeing",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0381",
+    "zh": "音乐治疗",
+    "en": "Music Therapy",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0382",
+    "zh": "神经音乐治疗",
+    "en": "Neurologic Music Therapy",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0383",
+    "zh": "聆听型音乐放松",
+    "en": "Receptive Music Relaxation",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0384",
+    "zh": "振动声学疗法",
+    "en": "Vibroacoustic Therapy",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0385",
+    "zh": "双耳节拍产品",
+    "en": "Binaural Beat Products",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0386",
+    "zh": "等时音产品",
+    "en": "Isochronic Tone Products",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0387",
+    "zh": "自然声景",
+    "en": "Nature Soundscapes",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0388",
+    "zh": "海浪声冥想",
+    "en": "Ocean Sound Meditation",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0389",
+    "zh": "雨声放松",
+    "en": "Rain Sound Relaxation",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0390",
+    "zh": "Mantra 咒音冥想",
+    "en": "Mantra Meditation",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0391",
+    "zh": "“疗愈频率”形而上主张",
+    "en": "Sound Frequency Metaphysical Claims",
+    "latin": null,
+    "group": "Sound & Chant",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0392",
+    "zh": "森林浴",
+    "en": "Forest Bathing",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0393",
+    "zh": "园艺治疗",
+    "en": "Horticultural Therapy",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0394",
+    "zh": "疗愈园艺",
+    "en": "Therapeutic Gardening",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0395",
+    "zh": "疗愈花园设计",
+    "en": "Healing Garden Design",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0396",
+    "zh": "荒野疗愈项目",
+    "en": "Wilderness Therapy",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0397",
+    "zh": "自然接触减压",
+    "en": "Nature-Based Stress Reduction",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0398",
+    "zh": "蓝色空间身心福祉",
+    "en": "Blue-Space Wellbeing",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0399",
+    "zh": "海洋疗愈项目",
+    "en": "Ocean Therapy Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0400",
+    "zh": "山居修习传统",
+    "en": "Mountain Retreat Traditions",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0401",
+    "zh": "圣林传统",
+    "en": "Sacred Grove Traditions",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0402",
+    "zh": "植物园学习与福祉",
+    "en": "Botanical Garden Learning & Wellbeing",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0403",
+    "zh": "药草园实践",
+    "en": "Herb Garden Practice",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0404",
+    "zh": "花园种植与身心福祉",
+    "en": "Flower Gardening & Wellbeing",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0405",
+    "zh": "生态疗法",
+    "en": "Ecotherapy",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0406",
+    "zh": "绿色处方项目",
+    "en": "Green Prescription Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0407",
+    "zh": "动物辅助治疗",
+    "en": "Animal-Assisted Therapy",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0408",
+    "zh": "动物辅助活动",
+    "en": "Animal-Assisted Activities",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0409",
+    "zh": "马辅助服务",
+    "en": "Equine-Assisted Services",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0410",
+    "zh": "犬辅助项目",
+    "en": "Canine-Assisted Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0411",
+    "zh": "猫伴随支持项目",
+    "en": "Cat-Assisted Companionship Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0412",
+    "zh": "农场动物辅助项目",
+    "en": "Farm Animal-Assisted Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0413",
+    "zh": "海豚辅助疗法主张",
+    "en": "Dolphin-Assisted Therapy Claims",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0414",
+    "zh": "观鸟与身心福祉",
+    "en": "Birdwatching & Wellbeing",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0415",
+    "zh": "养蜂与身心福祉项目",
+    "en": "Beekeeping & Wellbeing Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0416",
+    "zh": "马匹梳理互动",
+    "en": "Therapeutic Horse Grooming",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0417",
+    "zh": "伴侣动物关系",
+    "en": "Companion Animal Bond",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0418",
+    "zh": "人宠共同调节研究",
+    "en": "Human–Animal Co-Regulation Research",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0419",
+    "zh": "宠物探访项目",
+    "en": "Pet Visiting Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0420",
+    "zh": "医疗场景动物辅助项目",
+    "en": "Hospital Animal-Assisted Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0421",
+    "zh": "养老场景动物辅助项目",
+    "en": "Elder-Care Animal-Assisted Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0422",
+    "zh": "儿童动物辅助项目",
+    "en": "Children’s Animal-Assisted Programs",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0423",
+    "zh": "自然观察日志",
+    "en": "Nature Journaling",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0424",
+    "zh": "自然慢行",
+    "en": "Slow Walking in Nature",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0425",
+    "zh": "日出日落观照",
+    "en": "Sunrise / Sunset Contemplation",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0426",
+    "zh": "物候观察",
+    "en": "Seasonal Phenology Observation",
+    "latin": null,
+    "group": "Nature & Animals",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0427",
+    "zh": "欧洲 Cunning Folk 民间疗愈",
+    "en": "European Cunning-Folk Healing",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0428",
+    "zh": "Wise Woman 草药传统",
+    "en": "Wise Woman Herbal Traditions",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0429",
+    "zh": "修道院药草园",
+    "en": "Monastic Herb Gardens",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0430",
+    "zh": "修道院药房",
+    "en": "Monastic Apothecaries",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0431",
+    "zh": "护符与口述疗愈词式",
+    "en": "Charms & Spoken Healing Formulas",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0432",
+    "zh": "护佑草束传统",
+    "en": "Protective Herb Bundles",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0433",
+    "zh": "烟熏净化传统",
+    "en": "Smoke Cleansing Traditions",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0434",
+    "zh": "香仪式",
+    "en": "Incense Rituals",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0435",
+    "zh": "疗愈朝圣地",
+    "en": "Pilgrimage Healing Shrines",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0436",
+    "zh": "圣井与圣泉",
+    "en": "Holy Wells & Sacred Springs",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0437",
+    "zh": "Curanderismo 民间疗愈",
+    "en": "Curanderismo",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0438",
+    "zh": "Limpia 净化仪式",
+    "en": "Limpia Cleansing Traditions",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0439",
+    "zh": "Temazcal 蒸浴传统",
+    "en": "Temazcal Traditions",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0440",
+    "zh": "安第斯 Despacho 仪式语境",
+    "en": "Andean Despacho Ritual Contexts",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0441",
+    "zh": "亚马逊植物仪式语境",
+    "en": "Amazonian Plant Ceremony Contexts",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0442",
+    "zh": "萨米 Noaidi 历史语境",
+    "en": "Sámi Healing & Noaidi Historical Context",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0443",
+    "zh": "西伯利亚萨满疗愈语境",
+    "en": "Siberian Shamanic Healing Contexts",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0444",
+    "zh": "蒙古萨满疗愈语境",
+    "en": "Mongolian Shamanic Healing Contexts",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0445",
+    "zh": "韩国 Gut 仪式疗愈语境",
+    "en": "Korean Gut Ritual Healing Contexts",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0446",
+    "zh": "修验道山岳修行",
+    "en": "Japanese Shugendo Mountain Practice",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0447",
+    "zh": "中国民间祝由/咒术疗愈史",
+    "en": "Chinese Folk Incantation Healing History",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0448",
+    "zh": "疗愈护符物件",
+    "en": "Talismanic Healing Objects",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0449",
+    "zh": "晶石疗愈传统",
+    "en": "Crystal Healing Traditions",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0450",
+    "zh": "石英/水晶象征",
+    "en": "Quartz Symbolism",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0451",
+    "zh": "玉石养生象征",
+    "en": "Jade Health Symbolism",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0452",
+    "zh": "琥珀民间药用史",
+    "en": "Amber Folk Medicine History",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0453",
+    "zh": "盐洞与盐疗主张",
+    "en": "Salt Caves / Halotherapy Claims",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0454",
+    "zh": "泥土/黏土疗法传统",
+    "en": "Clay / Geotherapy Traditions",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0455",
+    "zh": "药用矿物传统",
+    "en": "Medicinal Mineral Traditions",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0456",
+    "zh": "热石身体疗法",
+    "en": "Hot Stone Bodywork",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0457",
+    "zh": "灵气 Reiki",
+    "en": "Reiki",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0458",
+    "zh": "治疗性触摸",
+    "en": "Therapeutic Touch",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0459",
+    "zh": "Healing Touch 体系",
+    "en": "Healing Touch",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0460",
+    "zh": "脉轮疗愈传统与现代改编",
+    "en": "Chakra Healing Traditions & Modern Adaptations",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0461",
+    "zh": "气场疗愈主张",
+    "en": "Aura Healing Claims",
+    "latin": null,
+    "group": "Folk Ritual Stone Energy",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0462",
+    "zh": "《黄帝内经》",
+    "en": "Huangdi Neijing",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0463",
+    "zh": "《神农本草经》",
+    "en": "Shennong Bencao Jing",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0464",
+    "zh": "《伤寒杂病论》传统",
+    "en": "Shanghan Zabing Lun Tradition",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0465",
+    "zh": "《金匮要略》",
+    "en": "Jingui Yaolue",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0466",
+    "zh": "《本草纲目》",
+    "en": "Bencao Gangmu",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0467",
+    "zh": "《针灸甲乙经》",
+    "en": "Zhenjiu Jiayi Jing",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0468",
+    "zh": "《针灸大成》",
+    "en": "Compendium of Acupuncture and Moxibustion",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0469",
+    "zh": "《易经》",
+    "en": "Yijing",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0470",
+    "zh": "《遮罗迦集》",
+    "en": "Charaka Samhita",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0471",
+    "zh": "《妙闻集》",
+    "en": "Sushruta Samhita",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0472",
+    "zh": "《八支心要》",
+    "en": "Ashtanga Hridaya",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0473",
+    "zh": "《医典》",
+    "en": "Canon of Medicine",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0474",
+    "zh": "《药物志》 De Materia Medica",
+    "en": "De Materia Medica",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0475",
+    "zh": "《希波克拉底文集》",
+    "en": "Hippocratic Corpus",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0476",
+    "zh": "盖伦医学传统",
+    "en": "Galenic Medical Tradition",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0477",
+    "zh": "文艺复兴时期欧洲本草书",
+    "en": "European Herbals of the Renaissance",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0478",
+    "zh": "Culpeper 草药书传统",
+    "en": "Culpeper’s Complete Herbal",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0479",
+    "zh": "日本本草学 Honzōgaku",
+    "en": "Japanese Honzo-gaku",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0480",
+    "zh": "《东医宝鉴》",
+    "en": "Donguibogam",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0481",
+    "zh": "《四部医典》传统",
+    "en": "Four Medical Tantras",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0482",
+    "zh": "20世纪法国“Aromatherapy”术语史",
+    "en": "Aromatherapy Term in 20th-Century France",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0483",
+    "zh": "现代精油蒸馏产业发展",
+    "en": "Rise of Modern Essential-Oil Distillation Industry",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0484",
+    "zh": "19世纪欧洲水疗运动",
+    "en": "19th-Century European Hydrotherapy Movement",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0485",
+    "zh": "现代音乐治疗专业化",
+    "en": "Modern Music Therapy Professionalization",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0486",
+    "zh": "现代园艺治疗发展",
+    "en": "Modern Horticultural Therapy Development",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0487",
+    "zh": "动物辅助干预领域发展",
+    "en": "Animal-Assisted Intervention Field Development",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0488",
+    "zh": "WHO 传统医学项目",
+    "en": "WHO Traditional Medicine Programs",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0489",
+    "zh": "WHO 全球传统医学中心",
+    "en": "WHO Global Traditional Medicine Centre",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0490",
+    "zh": "邱园药用植物收藏与研究",
+    "en": "Kew Gardens Medicinal Plant Collections",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0491",
+    "zh": "爱丁堡皇家植物园民族植物收藏",
+    "en": "Royal Botanic Garden Edinburgh Ethnobotany Collections",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0492",
+    "zh": "切尔西药草园",
+    "en": "Chelsea Physic Garden",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0493",
+    "zh": "帕多瓦植物园",
+    "en": "Padua Botanical Garden",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0494",
+    "zh": "格拉斯香水与芳香植物文化",
+    "en": "Grasse Perfumery & Aromatic Plant Culture",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0495",
+    "zh": "普罗旺斯薰衣草与芳香景观",
+    "en": "Provence Lavender & Aromatic Landscape",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0496",
+    "zh": "香料之路与药用芳香物",
+    "en": "Spice Routes & Medicinal Aromatics",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0497",
+    "zh": "丝绸之路与医药知识交流",
+    "en": "Silk Roads & Medical Knowledge Exchange",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0498",
+    "zh": "印度洋贸易与芳香药材流动",
+    "en": "Indian Ocean Trade & Aromatic Materia Medica",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0499",
+    "zh": "现代生药学",
+    "en": "Modern Pharmacognosy",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  },
+  {
+    "id": "EH-W1-0500",
+    "zh": "民族植物学作为学科",
+    "en": "Ethnobotany as a Field",
+    "latin": null,
+    "group": "Texts History Institutions",
+    "status": "research_index_unreviewed"
+  }
+]
