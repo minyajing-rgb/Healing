@@ -27,10 +27,14 @@ jobs:
       - name: Build static website and media
         run: |
           node --check web/site.js
+          node --check web/map-experience.js
           python scripts/build_site.py
           python scripts/prepare_release.py
+          python scripts/enhance_map.py
       - name: Browser tests and screenshots
-        run: python scripts/test_site.py
+        run: |
+          python scripts/test_site.py
+          python scripts/test_map_experience.py
       - name: Save site and preview artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -80,7 +84,7 @@ jobs:
                   with urllib.request.urlopen(req,timeout=20) as r: current=json.load(r)
                   if current.get('source_commit')==expected:
                       checked=[]
-                      for path in ('index.html','map.html','site.js','site.css','assets/garden.avif','data/stories.json','data/land-110m.json'):
+                      for path in ('index.html','map.html','site.js','site.css','map-experience.js','map-experience.css','vendor/maplibre-gl.js','data/land-50m.json','data/stories.json'):
                           with urllib.request.urlopen(base+path,timeout=20) as r:
                               data=r.read();assert r.status==200 and len(data)>100
                               checked.append({'path':path,'status':r.status,'bytes':len(data)})
