@@ -1,1 +1,3 @@
 Basemap: Natural Earth, public domain; packaged by world-atlas (see vendor license). D3 and TopoJSON: ISC licenses in vendor/. User-provided artwork is illustrative and not historical evidence. Original photos and movies on external source websites remain with their rights holders. They are linked, not republished.
+
+MapLibre GL JS 5.6.0: see vendor/MAPLIBRE-LICENSE. Garden base uses Natural Earth (public domain), packaged with world-atlas. Geographic detail is an optional external OpenFreeMap service, with OpenMapTiles / OpenStreetMap attribution shown by the map. No Google Maps API is activated or billed.

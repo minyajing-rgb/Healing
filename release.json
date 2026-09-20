@@ -1,10 +1,10 @@
 {
-  "release": "2026.09.20-r1",
-  "source_commit": "ff43c5f30350d8975a4c4f0d28e71b85d357fe13",
+  "release": "2026.09.20-map2",
+  "source_commit": "4013ae0664f49dd9f8ed62950760c5c9bd2e988c",
   "published_stories": 19,
   "research_index_records": 500,
   "validated_video_proxies": 3,
-  "map": "Natural Earth geographic coastlines, not historical borders",
+  "map": "Natural Earth 1:50m geography; optional present-day OpenFreeMap detail, not historical boundaries",
   "dependency_digests": [
     {
       "path": "vendor/d3.min.js",
@@ -35,8 +35,34 @@
       "path": "vendor/WORLD-ATLAS-LICENSE",
       "source": "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/LICENSE",
       "sha256": "8048290dfdb6e83fbed17e8985c8cfc4ce9da9b842642f3d3e497280790cfa31"
+    },
+    {
+      "path": "vendor/maplibre-gl.js",
+      "source": "https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js",
+      "sha256": "07e6ca71a5b6d835a7c3803fb484f0a6e5f0dcbfa131407666edb9e9316564f9"
+    },
+    {
+      "path": "vendor/maplibre-gl.css",
+      "source": "https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.css",
+      "sha256": "792ac997dcf6ae6f643eb4e2dee4630c85e7056526bd8fb85ffe83c67d6c41b4"
+    },
+    {
+      "path": "vendor/MAPLIBRE-LICENSE",
+      "source": "https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/LICENSE.txt",
+      "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2"
+    },
+    {
+      "path": "data/land-50m.json",
+      "source": "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-50m.json",
+      "sha256": "619477ff690c086885e45cb91707d783805561bd75ae8e437b7d4694b0204e0f"
     }
   ],
   "artwork_sha256": "a4da328e715e84ea27a352cc760df1d1b6dcde0ee29a2538c61d993e779abcd0",
-  "video_format": "VP9/WebM"
+  "video_format": "VP9/WebM",
+  "map_engine": "MapLibre GL JS 5.6.0",
+  "map_styles": [
+    "garden-local",
+    "geographic-detail-openfreemap"
+  ],
+  "google_maps_enabled": false
 }
