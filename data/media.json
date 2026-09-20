@@ -2,34 +2,61 @@
   {
     "id": "butterfly_garden_trailer",
     "path": "./assets/films/butterfly_garden_trailer.webm",
+    "mime": "video/webm",
     "zh": "蝴蝶花园 · 概念片段",
     "en": "Butterfly garden · concept clip",
-    "status": "validated_low_resolution_proxy",
+    "status": "validated_web_preview",
     "width": 160,
+    "height": 90,
     "duration": 10.0,
-    "mime": "video/webm",
     "derivative": "VP9 browser-compatible preview; original resolution unchanged"
   },
   {
     "id": "estate_lifestyle_scenes",
     "path": "./assets/films/estate_lifestyle_scenes.webm",
+    "mime": "video/webm",
     "zh": "庄园生活 · 概念片段",
     "en": "Estate life · concept clip",
-    "status": "validated_low_resolution_proxy",
+    "status": "validated_web_preview",
     "width": 160,
+    "height": 90,
     "duration": 10.0,
-    "mime": "video/webm",
     "derivative": "VP9 browser-compatible preview; original resolution unchanged"
+  },
+  {
+    "id": "perfume_lab_tutorial",
+    "path": "./assets/films/perfume_lab_tutorial.webm",
+    "mime": "video/webm",
+    "zh": "香水工坊 · 概念片段",
+    "en": "Perfume atelier · concept clip",
+    "status": "validated_web_preview",
+    "width": 160,
+    "height": 90,
+    "duration": 10.0,
+    "derivative": "validated browser-compatible WebM preview"
+  },
+  {
+    "id": "provence_estate_sim",
+    "path": "./assets/films/provence_estate_sim.webm",
+    "mime": "video/webm",
+    "zh": "普罗旺斯庄园 · 概念片段",
+    "en": "Provence estate · concept clip",
+    "status": "validated_web_preview",
+    "width": 160,
+    "height": 90,
+    "duration": 10.0,
+    "derivative": "validated browser-compatible WebM preview"
   },
   {
     "id": "rare_ingredient_expedition",
     "path": "./assets/films/rare_ingredient_expedition.webm",
+    "mime": "video/webm",
     "zh": "香材探索 · 概念片段",
     "en": "Ingredient discovery · concept clip",
-    "status": "validated_low_resolution_proxy",
+    "status": "validated_web_preview",
     "width": 160,
+    "height": 90,
     "duration": 10.0,
-    "mime": "video/webm",
     "derivative": "VP9 browser-compatible preview; original resolution unchanged"
   }
 ]

@@ -1,9 +1,9 @@
 {
   "release": "2026.09.20-atlas4",
-  "source_commit": "f35e0c682f35aefe4504e0f0e0d1bf11c1a32887",
+  "source_commit": "f561c8b31e89141e73d29214188d7cb30cd0ffc0",
   "published_stories": 19,
   "research_index_records": 500,
-  "validated_video_proxies": 3,
+  "validated_video_proxies": 5,
   "map": "Self-hosted Natural Earth atlas with local story coordinates and timeline; not historical boundaries",
   "dependency_digests": [
     {
