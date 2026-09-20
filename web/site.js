@@ -31,15 +31,15 @@
   };
   const icon=type=>'<span class="icon" aria-hidden="true"><svg viewBox="0 0 64 64">'+(paths[type]||paths.plant)+'</svg></span>';
   const storyArt={
-    grasse:'./assets/media/hero-garden.avif',
-    padua:'./assets/media/atlas-lavender.avif',
-    chelsea:'./assets/media/atlas-lavender.avif',
-    forest:'./assets/media/hero-garden.avif',
-    rongoa:'./assets/media/hero-garden.avif',
-    ebers:'./assets/media/map-atlas.avif',
-    kallawaya:'./assets/media/map-atlas.avif',
-    argan:'./assets/media/map-atlas.avif',
-    jamu:'./assets/media/atlas-lavender.avif'
+    grasse:'./assets/reference/images/provence_perfume_estate.webp',
+    padua:'./assets/reference/images/provence_bird_botanical_atlas.webp',
+    chelsea:'./assets/reference/images/provence_bird_botanical_atlas.webp',
+    forest:'./assets/reference/images/provence_perfume_estate.webp',
+    rongoa:'./assets/reference/images/provence_perfume_estate.webp',
+    ebers:'./assets/reference/images/alishan_healing_adventure.webp',
+    kallawaya:'./assets/reference/images/alishan_healing_adventure.webp',
+    argan:'./assets/reference/images/alishan_healing_adventure.webp',
+    jamu:'./assets/reference/images/provence_bird_botanical_atlas.webp'
   };
   const art=(s,label=false)=>{
     const src=storyArt[s.id];
@@ -134,7 +134,7 @@
   function renderFilms(){
     const filmStories=stories.filter(s=>s.film);
     let html=filmStories.map(s=>'<article class="film-card">'+art(s)+'<div class="film-copy"><h3>'+escapeHTML(s[lang].title)+'</h3><p>'+tx('官方来源影像 · 外部播放','Official-source film · plays on the source website')+'</p><a href="'+escapeHTML(safeURL(s.film))+'" target="_blank" rel="noopener noreferrer">'+tx('▶ 观看纪录片 ↗','▶ Watch the documentary ↗')+'</a></div></article>').join('');
-    html+=media.map((m,i)=>'<article class="film-card"><video controls playsinline preload="metadata" poster="'+['./assets/media/hero-garden.avif','./assets/media/atlas-lavender.avif','./assets/media/map-atlas.avif'][i%3]+'" aria-label="'+escapeHTML(m[lang]||m.en)+'"><source src="'+escapeHTML(m.path)+'" type="'+escapeHTML(m.mime||'video/webm')+'"></video><div class="film-copy"><span class="media-kicker">EARTH HEALING FILM</span><h3>'+escapeHTML(m[lang]||m.en)+'</h3><p>'+tx('用户提供的概念影像 · 用于网站世界观与场景体验，不作为历史证据','User-supplied concept film · part of the visual world, not historical evidence')+'</p></div></article>').join('');
+    html+=media.map((m,i)=>'<article class="film-card"><video controls playsinline preload="metadata" poster="'+['./assets/reference/images/provence_perfume_estate.webp','./assets/reference/images/provence_bird_botanical_atlas.webp','./assets/reference/images/alishan_healing_adventure.webp'][i%3]+'" aria-label="'+escapeHTML(m[lang]||m.en)+'"><source src="'+escapeHTML(m.path)+'" type="'+escapeHTML(m.mime||'video/webm')+'"></video><div class="film-copy"><span class="media-kicker">EARTH HEALING FILM</span><h3>'+escapeHTML(m[lang]||m.en)+'</h3><p>'+tx('用户提供的概念影像 · 用于网站世界观与场景体验，不作为历史证据','User-supplied concept film · part of the visual world, not historical evidence')+'</p></div></article>').join('');
     $('filmGrid').innerHTML=html;
   }
   document.addEventListener('click',async event=>{
