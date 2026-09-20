@@ -25,9 +25,6 @@ jobs:
           python -m pip install --quiet 'Pillow>=11.3,<13' 'playwright==1.55.0'
           python -m playwright install --with-deps chromium
       - name: Build static website and media
-        env:
-          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
-          GOOGLE_MAPS_MAP_ID: ${{ vars.GOOGLE_MAPS_MAP_ID }}
         run: |
           node --check web/site.js
           node --check web/map-experience.js
