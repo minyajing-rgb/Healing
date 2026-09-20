@@ -2,15 +2,7 @@ name: Publish Earth Healing
 on:
   push:
     branches: [main]
-    paths:
-      - 'web/**'
-      - 'scripts/build_site.py'
-      - 'scripts/test_site.py'
-      - 'data/published-stories.json'
-      - 'data/canonical_entries_wave1_500.jsonl'
-      - 'assets/reference/**'
-      - 'CNAME'
-      - '.github/workflows/publish-site.yml'
+    paths: ['web/**', 'scripts/**', 'media-source/**', 'data/published-stories.json', 'data/canonical_entries_wave1_500.jsonl', 'assets/reference/**', 'CNAME', '.github/workflows/publish-site.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,7 +14,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    # Pages itself deploys the protected gh-pages branch; main only builds and validates its output.
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,10 +24,11 @@ jobs:
           sudo apt-get install -y -qq ffmpeg fonts-noto-cjk
           python -m pip install --quiet 'Pillow>=11.3,<13' 'playwright==1.55.0'
           python -m playwright install --with-deps chromium
-      - name: Build static website
+      - name: Build static website and media
         run: |
           node --check web/site.js
           python scripts/build_site.py
+          python scripts/prepare_release.py
       - name: Browser tests and screenshots
         run: python scripts/test_site.py
       - name: Save site and preview artifacts
@@ -58,15 +50,13 @@ jobs:
           python - <<'PY'
           import json
           p=json.load(open('/tmp/earth-healing-pages.json'))
-          assert p['source']['branch']=='gh-pages', 'Unexpected Pages source: refusing to overwrite another publication branch'
+          assert p['source']['branch']=='gh-pages', 'Unexpected Pages source'
           assert p['source']['path']=='/'
           print('Publishing to enabled site:',p['html_url'])
           PY
           git fetch origin gh-pages --depth=1
           git worktree add --detach /tmp/earth-healing-publication origin/gh-pages
-          if [ ! -f _site/CNAME ] && [ -f /tmp/earth-healing-publication/CNAME ]; then
-            cp /tmp/earth-healing-publication/CNAME _site/CNAME
-          fi
+          if [ ! -f _site/CNAME ] && [ -f /tmp/earth-healing-publication/CNAME ]; then cp /tmp/earth-healing-publication/CNAME _site/CNAME; fi
           rsync -a --delete --exclude='.git' --exclude='.github' _site/ /tmp/earth-healing-publication/
           git -C /tmp/earth-healing-publication config user.name 'github-actions[bot]'
           git -C /tmp/earth-healing-publication config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -78,8 +68,6 @@ jobs:
           gh api --method POST repos/${{ github.repository }}/pages/builds > /tmp/earth-healing-build.json
           cat /tmp/earth-healing-build.json
       - name: Verify public website
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           python - <<'PY'
           import json,os,time,urllib.request,pathlib
@@ -96,11 +84,10 @@ jobs:
                           with urllib.request.urlopen(base+path,timeout=20) as r:
                               data=r.read();assert r.status==200 and len(data)>100
                               checked.append({'path':path,'status':r.status,'bytes':len(data)})
-                      result={'url':base,'source_commit':expected,'release':current,'public_resources':checked,'status':'LIVE_VERIFIED'}
-                      break
+                      result={'url':base,'source_commit':expected,'release':current,'public_resources':checked,'status':'LIVE_VERIFIED'};break
               except Exception as e: print('Waiting for publication:',str(e))
               time.sleep(8)
-          assert result,'Public site did not reach the expected source commit within the verification window'
+          assert result,'Public site did not reach expected commit'
           pathlib.Path('site-report/deployment-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
           print(json.dumps(result,ensure_ascii=False,indent=2))
           PY
