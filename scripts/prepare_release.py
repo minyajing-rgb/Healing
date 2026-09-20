@@ -23,12 +23,21 @@ for item in manifest:
     item['derivative']='VP9 browser-compatible preview; original resolution unchanged'
 (OUT/'data/media.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
 js=(OUT/'site.js').read_text()
-assert js.count('type="video/mp4"')==1
-js=js.replace('type="video/mp4"','type="video/webm"')
-(OUT/'site.js').write_text(js)
+assert "m.mime||'video/webm'" in js,'Media renderer must respect manifest MIME types'
+# The approved production hero is the new high-resolution web artwork. Keep the
+# legacy garden crop only for provenance/backward compatibility.
+hero=OUT/'assets/media/hero-garden.webp'
+atlas=OUT/'assets/media/map-atlas.webp'
+botanical=OUT/'assets/media/atlas-lavender.webp'
+for asset_path in (hero,atlas,botanical):
+    pic=Image.open(asset_path);pic.load();assert pic.width>=1000,asset_path
 with (OUT/'site.css').open('a') as f:
-    f.write('\n/* Layout hardening after real-browser visual review. */\n.button,.secondary{white-space:nowrap;flex-shrink:0}.explorer-search input{min-width:0}.hero-landscape{background-image:url(./assets/garden.jpg);background-image:image-set(url(./assets/garden.avif) type("image/avif"),url(./assets/garden.jpg) type("image/jpeg"));}\n')
+    f.write('\n/* Layout hardening after real-browser visual review. */\n.button,.secondary{white-space:nowrap;flex-shrink:0}.explorer-search input{min-width:0}.hero-landscape{background-image:url(./assets/media/hero-garden.webp)!important;}\n')
 release=json.loads((OUT/'release.json').read_text())
-release['artwork_sha256']=expected;release['video_format']='VP9/WebM'
+release['artwork_sha256']=expected
+release['production_hero_sha256']=hashlib.sha256(hero.read_bytes()).hexdigest()
+release['production_map_art_sha256']=hashlib.sha256(atlas.read_bytes()).hexdigest()
+release['production_botanical_art_sha256']=hashlib.sha256(botanical.read_bytes()).hexdigest()
+release['video_format']='VP9/WebM'
 for path in (OUT/'release.json',REPORT/'build-summary.json'):path.write_text(json.dumps(release,ensure_ascii=False,indent=2))
 print('Validated high-quality garden crop and',len(manifest),'WebM previews')
