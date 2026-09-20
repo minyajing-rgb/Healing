@@ -16,6 +16,11 @@ with (OUT/'assets/PROVENANCE.md').open('a') as f:
 manifest=json.loads((OUT/'data/media.json').read_text())
 for item in manifest:
     original=OUT/item['path'].removeprefix('./')
+    if original.suffix.lower()=='.webm':
+        subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(original),'-f','null','-'],check=True,capture_output=True,timeout=30)
+        item['mime']='video/webm'
+        item['derivative']='validated browser-compatible WebM preview'
+        continue
     dest=original.with_suffix('.webm')
     subprocess.run(['ffmpeg','-y','-v','error','-i',str(original),'-an','-c:v','libvpx-vp9','-b:v','0','-crf','26',str(dest)],check=True,timeout=60)
     subprocess.run(['ffmpeg','-v','error','-xerror','-i',str(dest),'-f','null','-'],check=True,capture_output=True,timeout=30)
