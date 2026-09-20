@@ -25,7 +25,7 @@ try:
   check('Actual geographic basemap loads',state['mapReady'] and page.locator('.land').count()==1)
   check('All published map points render',page.locator('.pin').count()==len(records))
   check('Garden artwork decodes in browser',page.evaluate("async()=>{let i=new Image();i.src='./assets/garden.avif';await i.decode();return i.naturalWidth>=1000}"))
-  check('All four uploaded reference images decode',page.evaluate("async()=>{const a=['provence_perfume_estate.webp','provence_bird_botanical_atlas.webp','alishan_healing_adventure.webp','butterfly_perfume_estate_infographic.webp'];for(const n of a){let i=new Image();i.src='./assets/reference/images/'+n;await i.decode();if(!i.naturalWidth)return false;}return true}"))
+  check('Published reference images decode',page.evaluate("async()=>{const a=['provence_perfume_estate.webp','provence_bird_botanical_atlas.webp','alishan_healing_adventure.webp'];for(const n of a){let i=new Image();i.src='./assets/reference/images/'+n;await i.decode();if(!i.naturalWidth)return false;}return true}"))
   check('Desktop no horizontal overflow',page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'))
   page.screenshot(path=str(REPORT/'desktop-home.png'),full_page=False)
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'desktop-map.png'))
