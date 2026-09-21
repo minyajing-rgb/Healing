@@ -25,11 +25,8 @@ hq=im.convert('RGB').resize((im.width*2,im.height*2),Image.Resampling.LANCZOS)
 hq=ImageEnhance.Sharpness(hq).enhance(1.16)
 hq.save(OUT/'assets/garden@2x.jpg',quality=94,subsampling=0,optimize=True)
 
-# Earth Healing follows the same self-hosted atlas pattern as the Bible/Buddhist site.
-# No Google Maps API key is required for the public map.
-(OUT/'google-map-config.js').write_text(
-    'window.EARTH_HEALING_GOOGLE_MAPS = Object.freeze({apiKey:"",mapId:"",productionDomain:"healing.saga1001.com"});\n',
-    encoding='utf-8')
+# Earth Healing follows the same self-hosted atlas pattern as bible.saga1001.com:
+# MapLibre + keyless OpenFreeMap detail. No Google Maps runtime configuration is emitted.
 
 payload=json.loads((ROOT/'data/published-stories.json').read_text())
 records=payload['stories']
@@ -96,6 +93,7 @@ for p in sorted((ROOT/'assets/reference/images').glob('*')):
         reference_images.append({'id':p.stem,'path':'./assets/reference/images/'+p.name,'width':pic.width,'height':pic.height,'status':'user_reference_web_proxy'})
         audit.append({'file':p.name,'decodable':True,'used':True,'published_path':'./assets/reference/images/'+p.name})
     except Exception as e:audit.append({'file':p.name,'decodable':False,'excluded_reason':str(e)})
+assert len(reference_images)==4,f'Expected all four user reference images, got {len(reference_images)}'
 write_json(OUT/'data/reference-images.json',reference_images)
 video_dir=ROOT/'assets/reference/videos'
 candidates={}
@@ -113,6 +111,7 @@ for stem,p in sorted(candidates.items()):
         shutil.copy2(p,OUT/'assets/films'/p.name)
         zh,en=titles[stem]
         media.append({'id':stem,'path':'./assets/films/'+p.name,'mime':'video/webm' if p.suffix.lower()=='.webm' else 'video/mp4','zh':zh,'en':en,'status':'validated_web_preview','width':info['streams'][0].get('width'),'height':info['streams'][0].get('height'),'duration':float(info['format']['duration'])})
+assert len(media)==5,f'Expected all five user concept videos, got {len(media)}'
 write_json(OUT/'data/media.json',media)
 write_json(REPORT/'media-validation.json',audit)
 
