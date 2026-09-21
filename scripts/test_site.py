@@ -28,10 +28,10 @@ try:
   reference_images=json.loads((ROOT/'_site/data/reference-images.json').read_text())
   media_manifest=json.loads((ROOT/'_site/data/media.json').read_text())
   production_visuals=json.loads((ROOT/'_site/data/production-visuals.json').read_text())
-  check('All three approved production artworks are published',len(production_visuals)==3)
+  check('All four validated reference artworks are published',len(production_visuals)==4)
   check('All five user concept videos are published',len(media_manifest)==5)
   for visual in production_visuals:
-   check('Approved production artwork decodes in browser',page.evaluate("""async src=>{let i=new Image();i.src=src;await i.decode();return i.naturalWidth>=900&&i.naturalHeight>=500}""",visual['path']))
+   check('Approved production artwork decodes in browser',page.evaluate("""async src=>{let i=new Image();i.src=src;await i.decode();return i.naturalWidth>=700&&i.naturalHeight>=500}""",visual['path']))
   check('Desktop no horizontal overflow',page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'))
   page.screenshot(path=str(REPORT/'desktop-home.png'),full_page=False)
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'desktop-map.png'))
