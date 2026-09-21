@@ -131,7 +131,7 @@ for name in ('map.html','story-provence.html','atlas-lavender.html','story.html'
 if (ROOT/'CNAME').exists():shutil.copy2(ROOT/'CNAME',OUT/'CNAME')
 (OUT/'ASSET-LICENSES.txt').write_text('Basemap: Natural Earth, public domain; packaged by world-atlas (see vendor license). D3 and TopoJSON: ISC licenses in vendor/. User-provided artwork is illustrative and not historical evidence. Original photos and movies on external source websites remain with their rights holders. They are linked, not republished.\n',encoding='utf-8')
 sha=os.environ.get('GITHUB_SHA','local')
-release={'release':'2026.09.20-r1','source_commit':sha,'published_stories':len(records),'research_index_records':len(catalog),'validated_video_proxies':len(media),'map':'Natural Earth geographic coastlines, not historical borders','dependency_digests':deps ,'google_maps_enabled':False,'google_map_id_enabled':False}
+release={'release':'2026.09.20-r1','source_commit':sha,'published_stories':len(records),'research_index_records':len(catalog),'validated_video_proxies':len(media),'published_reference_images':len(reference_images),'map':'Natural Earth geographic coastlines, not historical borders','dependency_digests':deps ,'google_maps_enabled':False,'google_map_id_enabled':False}
 write_json(OUT/'release.json',release)
 write_json(REPORT/'build-summary.json',release)
 # Check local HTML resources before allowing deployment.
