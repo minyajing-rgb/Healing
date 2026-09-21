@@ -3,9 +3,9 @@ from __future__ import annotations
 import hashlib,json,pathlib,subprocess,time,urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'_site';REPORT=ROOT/'site-report'
 remote={
- 'vendor/maplibre-gl.js':'https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.js',
- 'vendor/maplibre-gl.css':'https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.css',
- 'vendor/MAPLIBRE-LICENSE':'https://unpkg.com/maplibre-gl@6.6.0/LICENSE.txt',
+ 'vendor/maplibre-gl.js':'https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js',
+ 'vendor/maplibre-gl.css':'https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.css',
+ 'vendor/MAPLIBRE-LICENSE':'https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/LICENSE.txt',
  'data/land-50m.json':'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-50m.json'
 }
 digests=[]
@@ -71,9 +71,9 @@ for path in OUT.glob('*.html'):
 with (OUT/'map-experience.css').open('a',encoding='utf-8') as f:
     f.write('\n.eh-pin-ring>span{transform:rotate(45deg)}.is-cluster .eh-pin-ring>span{transform:none}.eh-cluster-list{display:grid;gap:7px;padding:10px}.eh-cluster-list button{border:1px solid #d5be8d;background:#fffaf0;color:#64336d;border-radius:10px;min-height:44px;padding:8px;font-size:14px;text-align:left}.maplibregl-popup-content{border:1px solid #d3b77a;border-radius:15px;background:#fffaf0}\n')
 release=json.loads((OUT/'release.json').read_text())
-release.update({'release':'2026.09.21-biblemap1','map_engine':'self-hosted MapLibre GL JS 6.6.0 + OpenFreeMap cloud detail','map_styles':['healing-atlas-local','openfreemap-positron'],'google_maps_enabled':False,'map':'Same no-key architecture as bible.saga1001.com: branded Natural Earth atlas plus MapLibre/OpenFreeMap cloud detail; story coordinates and timeline synchronized; not historical boundaries','geography_normalization':json.loads(result.stdout)})
+release.update({'release':'2026.09.21-biblemap1','map_engine':'self-hosted MapLibre GL JS 5.6.0 + OpenFreeMap cloud detail','map_styles':['healing-atlas-local','openfreemap-positron'],'google_maps_enabled':False,'map':'Same no-key architecture as bible.saga1001.com: branded Natural Earth atlas plus MapLibre/OpenFreeMap cloud detail; story coordinates and timeline synchronized; not historical boundaries','geography_normalization':json.loads(result.stdout)})
 release['dependency_digests'].extend(digests)
 for path in (OUT/'release.json',REPORT/'build-summary.json'):path.write_text(json.dumps(release,ensure_ascii=False,indent=2),encoding='utf-8')
 with (OUT/'ASSET-LICENSES.txt').open('a',encoding='utf-8') as f:
-    f.write('\nMapLibre GL JS 6.6.0: see vendor/MAPLIBRE-LICENSE. The branded overview uses Natural Earth (public domain), packaged with world-atlas; dateline rings are normalized for planar rendering. Deep geographic detail follows the same keyless pattern used by bible.saga1001.com: MapLibre with OpenFreeMap Positron, with OpenFreeMap / OpenMapTiles / OpenStreetMap attribution supplied by the style. No Google API key is required. Historical dates come from Earth Healing story data; the modern basemap does not represent historical borders.\n')
+    f.write('\nMapLibre GL JS 5.6.0: see vendor/MAPLIBRE-LICENSE. The branded overview uses Natural Earth (public domain), packaged with world-atlas; dateline rings are normalized for planar rendering. Deep geographic detail follows the same keyless pattern used by bible.saga1001.com: MapLibre with OpenFreeMap Positron, with OpenFreeMap / OpenMapTiles / OpenStreetMap attribution supplied by the style. No Google API key is required. Historical dates come from Earth Healing story data; the modern basemap does not represent historical borders.\n')
 print(json.dumps(release,ensure_ascii=False,indent=2))
