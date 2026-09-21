@@ -7,6 +7,7 @@
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const duration=()=>matchMedia('(prefers-reduced-motion:reduce)').matches?0:650;
   let map,data=[],markers=[],activeStyle='garden',activeRegion='all',scheduled=false,enhanced=false,available=[],gardenStyle,switching=0,detailTimer,detailHealth='not_requested',popup;
+  const detailStyle='https://tiles.openfreemap.org/styles/positron';
   const palette={plant:'#557657',aroma:'#944373',water:'#287e99',body:'#986735',sound:'#764c9b',mind:'#8173ad',nature:'#4e7867',animal:'#9b714a',ritual:'#bd7255',apothecary:'#7a637c'};
   const glyph={plant:'❧',aroma:'◇',water:'≈',body:'○',sound:'♪',mind:'◌',nature:'△',animal:'♧',ritual:'✦',apothecary:'⚗'};
   const views={all:{center:[18,17],zoom:1.05},asia:{center:[94,29],zoom:2.55},europe:{center:[13,48],zoom:3.5},africa:{center:[16,4],zoom:2.3},americas:{center:[-85,12],zoom:1.8},oceania:{center:[155,-24],zoom:2.3}};
