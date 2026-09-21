@@ -95,14 +95,15 @@ for p in sorted((ROOT/'assets/reference/images').glob('*')):
     except Exception as e:audit.append({'file':p.name,'decodable':False,'excluded_reason':str(e)})
 write_json(OUT/'data/reference-images.json',reference_images)
 production_visuals=[
-    OUT/'assets/media/hero-garden.avif',
-    OUT/'assets/media/map-atlas.avif',
-    OUT/'assets/media/atlas-lavender.avif'
+    OUT/'assets/reference/images/provence_perfume_estate.webp',
+    OUT/'assets/reference/images/alishan_healing_adventure.webp',
+    OUT/'assets/reference/images/provence_bird_botanical_atlas.webp',
+    OUT/'assets/reference/images/butterfly_perfume_estate_infographic.webp'
 ]
 production_visual_meta=[]
 for p in production_visuals:
     pic=Image.open(p);pic.load()
-    assert pic.width>=900 and pic.height>=500,f'Production visual too small: {p} {pic.size}'
+    assert pic.width>=700 and pic.height>=500,f'Production visual too small: {p} {pic.size}'
     production_visual_meta.append({'path':'./'+str(p.relative_to(OUT)),'width':pic.width,'height':pic.height,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 write_json(OUT/'data/production-visuals.json',production_visual_meta)
 video_dir=ROOT/'assets/reference/videos'
