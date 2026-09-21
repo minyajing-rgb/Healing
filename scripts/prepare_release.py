@@ -34,7 +34,7 @@ assert "m.mime||'video/webm'" in js,'Media renderer must respect manifest MIME t
 hero=OUT/'assets/garden.avif'
 assert hero.exists()
 with (OUT/'site.css').open('a') as f:
-    f.write('\n/* Layout hardening after real-browser visual review. */\n.button,.secondary{white-space:nowrap;flex-shrink:0}.explorer-search input{min-width:0}.hero-landscape{background-image:url(./assets/garden.jpg)!important;}\n')
+    f.write('\n/* Layout hardening after real-browser visual review. */\n.button,.secondary{white-space:nowrap;flex-shrink:0}.explorer-search input{min-width:0} .hero-landscape{background-image:url(./assets/reference/images/provence_perfume_estate.webp)!important;}\n')
 release=json.loads((OUT/'release.json').read_text())
 release['artwork_sha256']=expected
 release['video_format']='VP9/WebM'
