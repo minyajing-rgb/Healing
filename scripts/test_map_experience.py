@@ -45,7 +45,7 @@ try:
   check('Branded atlas control is visible','Healing world atlas' in page.locator('.map-style-switch').inner_text())
   page.locator('[data-map-style="cloud"]').click()
   page.wait_for_function("window.EARTH_HEALING_MAP.state().style==='cloud'",timeout=15000)
-  page.wait_for_function("['loaded','raster-fallback'].includes(window.EARTH_HEALING_MAP.state().detailHealth)",timeout=30000)
+  page.wait_for_function("['loaded','raster-fallback','fallback'].includes(window.EARTH_HEALING_MAP.state().detailHealth)",timeout=30000)
   check('Keyless cloud detail activates without API key',page.evaluate("window.EARTH_HEALING_MAP.engine==='maplibre+openfreemap-osm-fallback' && ['loaded','raster-fallback'].includes(window.EARTH_HEALING_MAP.state().detailHealth)"))
   check('Cloud detail can zoom beyond atlas overview',page.evaluate("window.EARTH_HEALING_MAP.state().zoom>=4"))
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-openfreemap-detail.png'))
