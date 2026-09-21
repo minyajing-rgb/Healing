@@ -14,14 +14,14 @@
   const current=()=>window.EARTH_HEALING?.state()||{year:2026,region:'all'};
   function visibleStories(){const ids=new Set([...$('storyRail').querySelectorAll('[data-story]')].map(e=>e.dataset.story));return data.filter(s=>ids.has(s.id));}
   function hint(zh,en){$('mapExperienceHint').textContent=text(zh,en);}
-  function home(){if(activeStyle==='cloud'&&window.EARTH_HEALING_CLOUD_MAP?.state?.().active){window.EARTH_HEALING_CLOUD_MAP.reset();return;}if(!map)return;const r=views[current().region]||views.all;if(current().region==='all')map.fitBounds([[-174,-56],[179,74]],{padding:{top:45,bottom:90,left:40,right:55},maxZoom:2,duration:duration(),bearing:0,pitch:0});else map.easeTo({...r,zoom:Math.max(r.zoom||3.3,4.4),bearing:0,pitch:0,duration:duration()});}
-  function focus(s){if(activeStyle==='cloud'&&window.EARTH_HEALING_CLOUD_MAP?.focus?.(s))return;if(map&&s)map.easeTo({center:s.coordinates,zoom:Math.max(map.getZoom(),5.2),duration:duration()});}
+  function home(){if(!map)return;const r=views[current().region]||views.all;if(current().region==='all')map.fitBounds([[-174,-56],[179,74]],{padding:{top:45,bottom:90,left:40,right:55},maxZoom:activeStyle==='cloud'?2.4:2,duration:duration(),bearing:activeStyle==='cloud'?8:0,pitch:activeStyle==='cloud'?35:0});else map.easeTo({...r,zoom:Math.max(r.zoom||3.3,activeStyle==='cloud'?5.2:4.4),bearing:activeStyle==='cloud'?8:0,pitch:activeStyle==='cloud'?48:0,duration:duration()});}
+  function focus(s){if(!map||!s)return;map.flyTo({center:s.coordinates,zoom:Math.max(map.getZoom(),activeStyle==='cloud'?12:5.2),pitch:activeStyle==='cloud'?52:0,bearing:activeStyle==='cloud'?8:0,duration:activeStyle==='cloud'?1800:duration(),essential:true});}
   function updateStyleButtons(){document.querySelectorAll('[data-map-style]').forEach(b=>{b.disabled=b.dataset.mapStyle==='cloud'?false:!enhanced;b.classList.toggle('chosen',b.dataset.mapStyle===activeStyle);b.setAttribute('aria-pressed',String(b.dataset.mapStyle===activeStyle));});$('mapCanvas').dataset.mapStyle=activeStyle;}
   function translate(){
     document.querySelectorAll('[data-map-zh]').forEach(e=>e.textContent=e.getAttribute('data-map-'+language()));
-    $('mapEngineStatus').textContent=activeStyle==='cloud'?text('云端地图 · Leaflet / OSM','Cloud map · Leaflet / OSM'):(enhanced?text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre'):text('轻量地图','Lightweight map'));
-    hint(activeStyle==='cloud'?'OpenStreetMap 云端细节 · 可放大到城镇与街道 · 无需 API Key':'疗愈图谱 · 地点、年代与 Story 联动',activeStyle==='cloud'?'OpenStreetMap cloud detail · zoom to towns and streets · no API key required':'Healing atlas · place, time and Story stay synchronized');
-    if(enhanced){if(activeStyle==='detail'&&map.isStyleLoaded())for(const l of map.getStyle().layers||[])if(l.type==='symbol'&&l.layout?.['text-field'])map.setLayoutProperty(l.id,'text-field',['coalesce',['get',language()==='zh'?'name:zh':'name:en'],['get','name']]);drawMarkers();}
+    $('mapEngineStatus').textContent=activeStyle==='cloud'?text('云端地图 · MapLibre / OpenFreeMap','Cloud map · MapLibre / OpenFreeMap'):(enhanced?text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre'):text('轻量地图','Lightweight map'));
+    hint(activeStyle==='cloud'?'OpenFreeMap 云端细节 · 可放大到城镇与街道 · 无需 API Key':'疗愈图谱 · 地点、年代与 Story 联动',activeStyle==='cloud'?'OpenFreeMap cloud detail · zoom to towns and streets · no API key required':'Healing atlas · place, time and Story stay synchronized');
+    if(enhanced){if(activeStyle==='cloud'&&map.isStyleLoaded())for(const l of map.getStyle().layers||[])if(l.type==='symbol'&&l.layout?.['text-field'])try{map.setLayoutProperty(l.id,'text-field',['coalesce',['get',language()==='zh'?'name:zh':'name:en'],['get','name']]);}catch{}drawMarkers();}
   }
   function controls(){
     if(location.pathname.endsWith('map.html'))document.body.classList.add('map-focused-page');
@@ -43,14 +43,19 @@
     {id:'islands',type:'fill',source:'land',paint:{'fill-color':'rgba(218,211,161,0.90)','fill-opacity':0.92}},
     {id:'coastline',type:'line',source:'land',paint:{'line-color':'#d8ac4c','line-width':1.15,'line-opacity':0.92}}
   ]};}
-  function restoreGarden(failed=false){clearTimeout(detailTimer);window.EARTH_HEALING_CLOUD_MAP?.deactivate?.();activeStyle='garden';if(failed)detailHealth='fallback';map.setMaxZoom(8);map.setStyle(gardenStyle);updateStyleButtons();translate();}
+  function restoreGarden(failed=false){clearTimeout(detailTimer);activeStyle='garden';if(failed)detailHealth='fallback';map.setMaxZoom(8);map.scrollZoom.disable();try{map.dragRotate.disable();map.touchZoomRotate.disableRotation();}catch{}map.setStyle(gardenStyle);map.easeTo({pitch:0,bearing:0,duration:duration()});updateStyleButtons();translate();}
   async function changeStyle(style){
-    if(style==='cloud'){
-      const ok=window.EARTH_HEALING_CLOUD_MAP?.activate?.();
-      if(ok){activeStyle='cloud';updateStyleButtons();translate();return;}
-    }
     if(!enhanced)return;
-    restoreGarden();
+    if(style!=='cloud'){restoreGarden();return;}
+    popup?.remove();clearTimeout(detailTimer);activeStyle='cloud';detailHealth='loading';updateStyleButtons();translate();
+    map.setMaxZoom(19);map.scrollZoom.enable();try{map.dragRotate.enable();map.touchZoomRotate.enableRotation();}catch{}
+    let settled=false;
+    const finish=()=>{if(settled||activeStyle!=='cloud')return;settled=true;detailHealth='loaded';updateStyleButtons();translate();home();schedule();};
+    const fail=()=>{if(settled)return;settled=true;restoreGarden(true);hint('云端地图暂不可用，已回到疗愈世界图谱。','Cloud map unavailable; returned to the healing atlas.');};
+    const onError=()=>fail();
+    map.once('style.load',finish);map.once('error',onError);
+    detailTimer=setTimeout(fail,14000);
+    try{map.setStyle(detailStyle);}catch{fail();}
   }
   function cluster(items){const groups=[];for(const s of items){const p=map.project(s.coordinates);if(p.x<-40||p.x>map.getContainer().clientWidth+40||p.y<-40||p.y>map.getContainer().clientHeight+40)continue;const g=groups.find(g=>Math.hypot(g.p.x-p.x,g.p.y-p.y)<58);if(g)g.stories.push(s);else groups.push({p,stories:[s]});}return groups;}
   function openCluster(group){
@@ -62,7 +67,7 @@
     }else map.fitBounds(bounds,{padding:90,maxZoom:activeStyle==='garden'?5.7:12,duration:duration()});
   }
   function drawMarkers(){
-    if(!enhanced||!map)return;markers.forEach(m=>m.remove());markers=[];available=visibleStories();if(activeStyle==='cloud'){window.EARTH_HEALING_CLOUD_MAP?.sync?.();return;}
+    if(!enhanced||!map)return;markers.forEach(m=>m.remove());markers=[];available=visibleStories();
     for(const group of cluster(available)){
       const s=group.stories[0],multiple=group.stories.length>1,lang=language();
       const wrap=node('div','eh-map-marker'+(multiple?' is-cluster':'')),b=node('button','eh-map-pin');b.type='button';b.style.setProperty('--pin-color',palette[s.themes[0]]||'#775983');
@@ -73,7 +78,7 @@
       wrap.append(b,label);markers.push(new maplibregl.Marker({element:wrap,anchor:'center'}).setLngLat(s.coordinates).addTo(map));
     }
     const r=current().region;if(r!==activeRegion){activeRegion=r;home();}
-    if(activeStyle!=='cloud')$('mapEngineStatus').textContent=text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre');
+    $('mapEngineStatus').textContent=activeStyle==='cloud'?text('云端地图 · MapLibre / OpenFreeMap','Cloud map · MapLibre / OpenFreeMap'):text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre');
   }
   function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;drawMarkers();});}
   async function enhance(){
@@ -83,9 +88,9 @@
     const res=await fetch('./data/land-50m.json');if(!res.ok)throw new Error('Basemap unavailable');const world=await res.json();gardenStyle=localStyle(topojson.feature(world,world.objects.land||Object.values(world.objects)[0]));
     const pane=node('div','map-gl-pane');pane.id='mapGl';pane.setAttribute('aria-label',text('可交互疗愈地图','Interactive healing map'));$('mapCanvas').prepend(pane);
     map=new maplibregl.Map({container:pane,style:gardenStyle,center:[18,17],zoom:1.05,minZoom:-1,maxZoom:6,renderWorldCopies:false,attributionControl:{compact:false},dragRotate:false,pitchWithRotate:false,touchPitch:false,canvasContextAttributes:{preserveDrawingBuffer:true}});
-    map.touchZoomRotate.disableRotation();map.scrollZoom.disable();
+    map.touchZoomRotate.disableRotation();map.scrollZoom.disable();map.addControl(new maplibregl.NavigationControl({showCompass:true}),"bottom-left");
     let initError;
-    map.on('error',event=>{if(enhanced&&activeStyle==='cloud')restoreGarden(true);else if(!enhanced)initError=event.error;});
+    map.on('error',event=>{if(!enhanced)initError=event.error;});
     await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(initError||new Error('Map initialization timeout')),16000);map.once('load',()=>{clearTimeout(timeout);resolve();});});
     enhanced=true;$('mapCanvas').classList.add('map-enhanced');document.body.classList.add('map-experience-ready');$('worldSvg').setAttribute('aria-hidden','true');
     const hideSvgPins=()=>$('worldSvg').querySelectorAll('.pin').forEach(p=>p.setAttribute('tabindex','-1'));hideSvgPins();updateStyleButtons();
@@ -96,7 +101,7 @@
     for(const [id,action] of Object.entries({zoomIn:()=>map.zoomIn({duration:duration()}),zoomOut:()=>map.zoomOut({duration:duration()}),zoomReset:home}))$(id).addEventListener('click',e=>{e.stopImmediatePropagation();action();},true);
     $('mapView').addEventListener('click',()=>setTimeout(()=>{map.resize();schedule();},30));$('clearFilters').addEventListener('click',()=>setTimeout(home,0));
     document.addEventListener('click',e=>{const target=e.target.closest('[data-map-story],[data-story]');if(!target)return;const s=data.find(s=>s.id===(target.dataset.mapStory||target.dataset.story));if(s)setTimeout(()=>focus(s),20);});
-    window.EARTH_HEALING_MAP={engine:'maplibre+leaflet-osm',state:()=>({ready:enhanced,style:activeStyle,detailHealth,cloud:window.EARTH_HEALING_CLOUD_MAP?.state?.(),visible:available.length,markers:markers.length,zoom:activeStyle==='cloud'?window.EARTH_HEALING_CLOUD_MAP?.state?.().zoom:map.getZoom(),center:activeStyle==='cloud'?window.EARTH_HEALING_CLOUD_MAP?.state?.().center:map.getCenter().toArray()}),setStyle:changeStyle,reset:home};
+    window.EARTH_HEALING_MAP={engine:'maplibre+openfreemap',state:()=>({ready:enhanced,style:activeStyle,detailHealth,visible:available.length,markers:markers.length,zoom:map.getZoom(),center:map.getCenter().toArray()}),setStyle:changeStyle,reset:home};
     home();translate();drawMarkers();
   }
   controls();let attempts=0;
