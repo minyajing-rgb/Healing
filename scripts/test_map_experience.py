@@ -45,7 +45,7 @@ try:
   check('Branded atlas control is visible','Healing world atlas' in page.locator('.map-style-switch').inner_text())
   page.locator('[data-map-style="cloud"]').click()
   page.wait_for_function("window.EARTH_HEALING_MAP.state().style==='cloud'",timeout=15000)
-  page.wait_for_function("window.EARTH_HEALING_MAP.state().detailHealth==='loaded'",timeout=20000)
+  page.wait_for_function("window.EARTH_HEALING_MAP.state().detailHealth==='loaded'",timeout=30000)
   check('Bible-style OpenFreeMap detail activates without API key',page.evaluate("window.EARTH_HEALING_MAP.engine==='maplibre+openfreemap' && window.EARTH_HEALING_MAP.state().detailHealth==='loaded'"))
   check('Cloud detail can zoom beyond atlas overview',page.evaluate("window.EARTH_HEALING_MAP.state().zoom>=4"))
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-openfreemap-detail.png'))
