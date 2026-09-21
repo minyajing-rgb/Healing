@@ -3,9 +3,9 @@ from __future__ import annotations
 import hashlib,json,pathlib,subprocess,time,urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'_site';REPORT=ROOT/'site-report'
 remote={
- 'vendor/maplibre-gl.js':'https://cdn.jsdelivr.net/npm/maplibre-gl@6.6.0/dist/maplibre-gl.js',
- 'vendor/maplibre-gl.css':'https://cdn.jsdelivr.net/npm/maplibre-gl@6.6.0/dist/maplibre-gl.css',
- 'vendor/MAPLIBRE-LICENSE':'https://cdn.jsdelivr.net/npm/maplibre-gl@6.6.0/LICENSE.txt',
+ 'vendor/maplibre-gl.js':'https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.js',
+ 'vendor/maplibre-gl.css':'https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.css',
+ 'vendor/MAPLIBRE-LICENSE':'https://unpkg.com/maplibre-gl@6.6.0/LICENSE.txt',
  'data/land-50m.json':'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-50m.json'
 }
 digests=[]
