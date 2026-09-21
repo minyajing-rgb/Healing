@@ -30,6 +30,8 @@ try:
   production_visuals=json.loads((ROOT/'_site/data/production-visuals.json').read_text())
   check('Validated high-resolution hero artwork is published',len(production_visuals)==1)
   check('All five user concept videos are published',len(media_manifest)==5)
+  check('All supplied reference images are published',len(reference_images)>=4)
+  check('All supplied reference images render in the website gallery',page.locator('#referenceGallery img').count()==len(reference_images))
   for visual in production_visuals:
    check('Approved production artwork decodes in browser',page.evaluate("""async src=>{let i=new Image();i.src=src;await i.decode();return i.naturalWidth>=700&&i.naturalHeight>=500}""",visual['path']))
   check('Desktop no horizontal overflow',page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'))
