@@ -95,10 +95,7 @@ for p in sorted((ROOT/'assets/reference/images').glob('*')):
     except Exception as e:audit.append({'file':p.name,'decodable':False,'excluded_reason':str(e)})
 write_json(OUT/'data/reference-images.json',reference_images)
 production_visuals=[
-    OUT/'assets/reference/images/provence_perfume_estate.webp',
-    OUT/'assets/reference/images/alishan_healing_adventure.webp',
-    OUT/'assets/reference/images/provence_bird_botanical_atlas.webp',
-    OUT/'assets/reference/images/butterfly_perfume_estate_infographic.webp'
+    OUT/'assets/garden@2x.jpg'
 ]
 production_visual_meta=[]
 for p in production_visuals:
