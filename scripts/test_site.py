@@ -25,6 +25,10 @@ try:
   check('Actual geographic basemap loads',state['mapReady'] and page.locator('.land').count()==1)
   check('All published map points render',page.locator('.pin').count()==len(records))
   check('Garden artwork decodes in browser',page.evaluate("async()=>{let i=new Image();i.src='./assets/garden.avif';await i.decode();return i.naturalWidth>=1000}"))
+  reference_images=json.loads((ROOT/'_site/data/reference-images.json').read_text())
+  media_manifest=json.loads((ROOT/'_site/data/media.json').read_text())
+  check('All four user reference images are published',len(reference_images)==4)
+  check('All five user concept videos are published',len(media_manifest)==5)
   check('Desktop no horizontal overflow',page.evaluate('document.documentElement.scrollWidth<=innerWidth+2'))
   page.screenshot(path=str(REPORT/'desktop-home.png'),full_page=False)
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'desktop-map.png'))
@@ -60,8 +64,9 @@ try:
   check('Deep link opens selected story','格拉斯' in page.locator('#dialogTitle').inner_text())
   page.locator('#storyDialog').screenshot(path=str(REPORT/'desktop-story.png'))
   page.keyboard.press('Escape');page.evaluate('scrollTo(0,0)');page.screenshot(path=str(REPORT/'desktop-full.png'),full_page=True)
+  check('All five published videos render in the media section',page.locator('#filmGrid video').count()==5)
   video_results=[]
-  for video in page.locator('video').all():
+  for video in page.locator('#filmGrid video').all():
    video.scroll_into_view_if_needed()
    result=video.evaluate("""async v=>{
      v.muted=true;v.preload='auto';
