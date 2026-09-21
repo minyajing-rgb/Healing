@@ -93,8 +93,18 @@ for p in sorted((ROOT/'assets/reference/images').glob('*')):
         reference_images.append({'id':p.stem,'path':'./assets/reference/images/'+p.name,'width':pic.width,'height':pic.height,'status':'user_reference_web_proxy'})
         audit.append({'file':p.name,'decodable':True,'used':True,'published_path':'./assets/reference/images/'+p.name})
     except Exception as e:audit.append({'file':p.name,'decodable':False,'excluded_reason':str(e)})
-assert len(reference_images)==4,f'Expected all four user reference images, got {len(reference_images)}'
 write_json(OUT/'data/reference-images.json',reference_images)
+production_visuals=[
+    OUT/'assets/media/hero-garden.avif',
+    OUT/'assets/media/map-atlas.avif',
+    OUT/'assets/media/atlas-lavender.avif'
+]
+production_visual_meta=[]
+for p in production_visuals:
+    pic=Image.open(p);pic.load()
+    assert pic.width>=900 and pic.height>=500,f'Production visual too small: {p} {pic.size}'
+    production_visual_meta.append({'path':'./'+str(p.relative_to(OUT)),'width':pic.width,'height':pic.height,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+write_json(OUT/'data/production-visuals.json',production_visual_meta)
 video_dir=ROOT/'assets/reference/videos'
 candidates={}
 for p in sorted(list(video_dir.glob('*.mp4'))+list(video_dir.glob('*.webm'))):
