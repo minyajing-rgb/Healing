@@ -8,6 +8,12 @@
   const duration=()=>matchMedia('(prefers-reduced-motion:reduce)').matches?0:650;
   let map,data=[],markers=[],activeStyle='garden',activeRegion='all',scheduled=false,enhanced=false,available=[],gardenStyle,switching=0,detailTimer,detailHealth='not_requested',popup;
   const detailStyle='https://tiles.openfreemap.org/styles/positron';
+  const rasterDetailStyle={
+    version:8,
+    name:'Earth Healing — OSM street detail fallback',
+    sources:{osm:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256,maxzoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'}},
+    layers:[{id:'osm-streets',type:'raster',source:'osm',minzoom:0,maxzoom:19}]
+  };
   const palette={plant:'#557657',aroma:'#944373',water:'#287e99',body:'#986735',sound:'#764c9b',mind:'#8173ad',nature:'#4e7867',animal:'#9b714a',ritual:'#bd7255',apothecary:'#7a637c'};
   const glyph={plant:'❧',aroma:'◇',water:'≈',body:'○',sound:'♪',mind:'◌',nature:'△',animal:'♧',ritual:'✦',apothecary:'⚗'};
   const views={all:{center:[18,17],zoom:1.05},asia:{center:[94,29],zoom:2.55},europe:{center:[13,48],zoom:3.5},africa:{center:[16,4],zoom:2.3},americas:{center:[-85,12],zoom:1.8},oceania:{center:[155,-24],zoom:2.3}};
@@ -20,8 +26,8 @@
   function updateStyleButtons(){document.querySelectorAll('[data-map-style]').forEach(b=>{b.disabled=b.dataset.mapStyle==='cloud'?false:!enhanced;b.classList.toggle('chosen',b.dataset.mapStyle===activeStyle);b.setAttribute('aria-pressed',String(b.dataset.mapStyle===activeStyle));});$('mapCanvas').dataset.mapStyle=activeStyle;}
   function translate(){
     document.querySelectorAll('[data-map-zh]').forEach(e=>e.textContent=e.getAttribute('data-map-'+language()));
-    $('mapEngineStatus').textContent=activeStyle==='cloud'?text('云端地图 · MapLibre / OpenFreeMap','Cloud map · MapLibre / OpenFreeMap'):(enhanced?text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre'):text('轻量地图','Lightweight map'));
-    hint(activeStyle==='cloud'?'OpenFreeMap 云端细节 · 可放大到城镇与街道 · 无需 API Key':'疗愈图谱 · 地点、年代与 Story 联动',activeStyle==='cloud'?'OpenFreeMap cloud detail · zoom to towns and streets · no API key required':'Healing atlas · place, time and Story stay synchronized');
+    $('mapEngineStatus').textContent=activeStyle==='cloud'?(detailHealth==='raster-fallback'?text('云端地图 · MapLibre / OpenStreetMap','Cloud map · MapLibre / OpenStreetMap'):text('云端地图 · MapLibre / OpenFreeMap','Cloud map · MapLibre / OpenFreeMap')):(enhanced?text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre'):text('轻量地图','Lightweight map'));
+    hint(activeStyle==='cloud'?(detailHealth==='raster-fallback'?'OpenStreetMap 街道细节 · 可继续放大 · 无需 API Key':'OpenFreeMap 云端细节 · 可放大到城镇与街道 · 无需 API Key'):'疗愈图谱 · 地点、年代与 Story 联动',activeStyle==='cloud'?(detailHealth==='raster-fallback'?'OpenStreetMap street detail · keep zooming · no API key required':'OpenFreeMap cloud detail · zoom to towns and streets · no API key required'):'Healing atlas · place, time and Story stay synchronized');
     if(enhanced){if(activeStyle==='cloud'&&map.isStyleLoaded())for(const l of map.getStyle().layers||[])if(l.type==='symbol'&&l.layout?.['text-field'])try{map.setLayoutProperty(l.id,'text-field',['coalesce',['get',language()==='zh'?'name:zh':'name:en'],['get','name']]);}catch{}drawMarkers();}
   }
   function controls(){
@@ -50,12 +56,23 @@
     if(style!=='cloud'){restoreGarden();return;}
     popup?.remove();clearTimeout(detailTimer);activeStyle='cloud';detailHealth='loading';updateStyleButtons();translate();
     map.setMaxZoom(19);map.scrollZoom.enable();try{map.dragRotate.enable();map.touchZoomRotate.enableRotation();}catch{}
-    let settled=false;
-    const finish=()=>{if(settled||activeStyle!=='cloud')return;settled=true;detailHealth='loaded';updateStyleButtons();translate();home();schedule();};
-    const fail=()=>{if(settled)return;settled=true;restoreGarden(true);hint('云端地图暂不可用，已回到疗愈世界图谱。','Cloud map unavailable; returned to the healing atlas.');};
-    map.once('style.load',finish);
-    detailTimer=setTimeout(fail,25000);
-    try{map.setStyle(detailStyle);}catch{fail();}
+    let phase='vector';
+    const ready=()=>{
+      if(activeStyle!=='cloud')return;
+      clearTimeout(detailTimer);
+      detailHealth=phase==='vector'?'loaded':'raster-fallback';
+      updateStyleButtons();translate();home();schedule();
+    };
+    const fallback=()=>{
+      if(activeStyle!=='cloud'||phase==='raster')return;
+      phase='raster';detailHealth='raster-loading';updateStyleButtons();translate();
+      map.once('style.load',ready);
+      try{map.setStyle(rasterDetailStyle);}catch{restoreGarden(true);}
+      detailTimer=setTimeout(()=>{if(activeStyle==='cloud'&&detailHealth==='raster-loading')restoreGarden(true);},12000);
+    };
+    map.once('style.load',ready);
+    try{map.setStyle(detailStyle);}catch{fallback();return;}
+    detailTimer=setTimeout(fallback,8500);
   }
   function cluster(items){const groups=[];for(const s of items){const p=map.project(s.coordinates);if(p.x<-40||p.x>map.getContainer().clientWidth+40||p.y<-40||p.y>map.getContainer().clientHeight+40)continue;const g=groups.find(g=>Math.hypot(g.p.x-p.x,g.p.y-p.y)<58);if(g)g.stories.push(s);else groups.push({p,stories:[s]});}return groups;}
   function openCluster(group){
@@ -78,7 +95,7 @@
       wrap.append(b,label);markers.push(new maplibregl.Marker({element:wrap,anchor:'center'}).setLngLat(s.coordinates).addTo(map));
     }
     const r=current().region;if(r!==activeRegion){activeRegion=r;home();}
-    $('mapEngineStatus').textContent=activeStyle==='cloud'?text('云端地图 · MapLibre / OpenFreeMap','Cloud map · MapLibre / OpenFreeMap'):text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre');
+    $('mapEngineStatus').textContent=activeStyle==='cloud'?(detailHealth==='raster-fallback'?text('云端地图 · MapLibre / OpenStreetMap','Cloud map · MapLibre / OpenStreetMap'):text('云端地图 · MapLibre / OpenFreeMap','Cloud map · MapLibre / OpenFreeMap')):text('疗愈世界图谱 · MapLibre','Healing world atlas · MapLibre');
   }
   function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;drawMarkers();});}
   async function enhance(){
@@ -101,7 +118,7 @@
     for(const [id,action] of Object.entries({zoomIn:()=>map.zoomIn({duration:duration()}),zoomOut:()=>map.zoomOut({duration:duration()}),zoomReset:home}))$(id).addEventListener('click',e=>{e.stopImmediatePropagation();action();},true);
     $('mapView').addEventListener('click',()=>setTimeout(()=>{map.resize();schedule();},30));$('clearFilters').addEventListener('click',()=>setTimeout(home,0));
     document.addEventListener('click',e=>{const target=e.target.closest('[data-map-story],[data-story]');if(!target)return;const s=data.find(s=>s.id===(target.dataset.mapStory||target.dataset.story));if(s)setTimeout(()=>focus(s),20);});
-    window.EARTH_HEALING_MAP={engine:'maplibre+openfreemap',state:()=>({ready:enhanced,style:activeStyle,detailHealth,visible:available.length,markers:markers.length,zoom:map.getZoom(),center:map.getCenter().toArray()}),setStyle:changeStyle,reset:home};
+    window.EARTH_HEALING_MAP={engine:'maplibre+openfreemap-osm-fallback',state:()=>({ready:enhanced,style:activeStyle,detailHealth,visible:available.length,markers:markers.length,zoom:map.getZoom(),center:map.getCenter().toArray()}),setStyle:changeStyle,reset:home};
     home();translate();drawMarkers();
   }
   controls();let attempts=0;
