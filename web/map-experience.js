@@ -53,9 +53,8 @@
     let settled=false;
     const finish=()=>{if(settled||activeStyle!=='cloud')return;settled=true;detailHealth='loaded';updateStyleButtons();translate();home();schedule();};
     const fail=()=>{if(settled)return;settled=true;restoreGarden(true);hint('云端地图暂不可用，已回到疗愈世界图谱。','Cloud map unavailable; returned to the healing atlas.');};
-    const onError=()=>fail();
-    map.once('style.load',finish);map.once('error',onError);
-    detailTimer=setTimeout(fail,14000);
+    map.once('style.load',finish);
+    detailTimer=setTimeout(fail,25000);
     try{map.setStyle(detailStyle);}catch{fail();}
   }
   function cluster(items){const groups=[];for(const s of items){const p=map.project(s.coordinates);if(p.x<-40||p.x>map.getContainer().clientWidth+40||p.y<-40||p.y>map.getContainer().clientHeight+40)continue;const g=groups.find(g=>Math.hypot(g.p.x-p.x,g.p.y-p.y)<58);if(g)g.stories.push(s);else groups.push({p,stories:[s]});}return groups;}
