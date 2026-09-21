@@ -49,7 +49,7 @@ try:
   check('Keyless cloud detail activates or safely degrades without API key',page.evaluate("window.EARTH_HEALING_MAP.engine==='maplibre+openfreemap-osm-fallback' && ['loaded','raster-fallback','fallback'].includes(window.EARTH_HEALING_MAP.state().detailHealth)"))
   check('Cloud detail can zoom beyond atlas overview',page.evaluate("window.EARTH_HEALING_MAP.state().zoom>=4"))
   page.locator('.explorer-shell').screenshot(path=str(REPORT/'map-openfreemap-detail.png'))
-  page.locator('[data-map-style="garden"]').click();page.wait_for_timeout(400)
+  page.locator('button[data-map-style="garden"]').click();page.wait_for_timeout(400)
   check('Return to branded atlas works',page.evaluate("window.EARTH_HEALING_MAP.state().style")=='garden')
   page.locator('#listView').click();check('List alternative remains available',page.locator('#mapList').is_visible())
   mobile=browser.new_page(viewport={'width':390,'height':844},is_mobile=True,has_touch=True,reduced_motion='reduce');mobile.on('pageerror',lambda e:errors.append(str(e)))
