@@ -31,13 +31,13 @@
   };
   const icon=type=>'<span class="icon" aria-hidden="true"><svg viewBox="0 0 64 64">'+(paths[type]||paths.plant)+'</svg></span>';
   const storyArt={
-    grasse:'./assets/media/hero-garden.avif',
-    padua:'./assets/media/atlas-lavender.avif',
-    chelsea:'./assets/media/atlas-lavender.avif',
-    forest:'./assets/media/map-atlas.avif',
-    rongoa:'./assets/media/map-atlas.avif',
+    grasse:'./assets/reference/images/provence_perfume_estate.webp',
+    padua:'./assets/reference/images/provence_bird_botanical_atlas.webp',
+    chelsea:'./assets/reference/images/provence_bird_botanical_atlas.webp',
+    forest:'./assets/reference/images/alishan_healing_adventure.webp',
+    rongoa:'./assets/reference/images/alishan_healing_adventure.webp',
     ebers:'./assets/garden.jpg',
-    kallawaya:'./assets/media/map-atlas.avif',
+    kallawaya:'./assets/reference/images/alishan_healing_adventure.webp',
     argan:'./assets/garden.jpg',
     jamu:'./assets/garden.jpg'
   };
