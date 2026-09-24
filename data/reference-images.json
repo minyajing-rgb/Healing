@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "alishan_healing_adventure",
+    "path": "./assets/reference/images/alishan_healing_adventure.webp",
+    "width": 900,
+    "height": 507,
+    "status": "user_reference_web_proxy"
+  },
+  {
+    "id": "butterfly_perfume_estate_infographic",
+    "path": "./assets/reference/images/butterfly_perfume_estate_infographic.webp",
+    "width": 1400,
+    "height": 764,
+    "status": "user_reference_web_proxy"
+  },
+  {
+    "id": "provence_bird_botanical_atlas",
+    "path": "./assets/reference/images/provence_bird_botanical_atlas.webp",
+    "width": 900,
+    "height": 506,
+    "status": "user_reference_web_proxy"
+  },
+  {
+    "id": "provence_perfume_estate",
+    "path": "./assets/reference/images/provence_perfume_estate.webp",
+    "width": 1400,
+    "height": 788,
+    "status": "user_reference_web_proxy"
+  }
+]

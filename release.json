@@ -1,9 +1,10 @@
 {
   "release": "2026.09.21-biblemap1",
-  "source_commit": "318f024ec698ec367cb36ff42f57f35b444da6e6",
+  "source_commit": "0d17ea73c34f47e6cf5420976b1d4092cde605a4",
   "published_stories": 19,
   "research_index_records": 500,
   "validated_video_proxies": 5,
+  "published_reference_images": 4,
   "map": "Same no-key architecture as bible.saga1001.com: branded Natural Earth atlas plus MapLibre/OpenFreeMap cloud detail; story coordinates and timeline synchronized; not historical boundaries",
   "dependency_digests": [
     {

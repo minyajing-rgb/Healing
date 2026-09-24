@@ -10,7 +10,7 @@
   let year=Number(params.get('year')??2026);if(!Number.isFinite(year))year=2026;year=Math.max(-1600,Math.min(2026,year));
   let theme=params.get('theme')||params.get('filter')||'all';
   let region=params.get('region')||'all', mode='cumulative', query=params.get('q')||'', visible=[], selected=null;
-  let stories=[], research=[], media=[], allLoaded=false, mapReady=false, currentDialog=null, pageSize=24, timer=null, svg, viewport, pins, projection, zoom, zoomK=1, toastTimer;
+  let stories=[], research=[], media=[], referenceImages=[], allLoaded=false, mapReady=false, currentDialog=null, pageSize=24, timer=null, svg, viewport, pins, projection, zoom, zoomK=1, toastTimer;
   let saved=new Set(store.get('eh-bookmarks',[]));
   const tx=(zh,en)=>lang==='zh'?zh:en;
   const themes={all:['全部','All','✧'],plant:['植物','Plants','❧'],aroma:['芳香','Aroma','◇'],water:['水与浴','Water','≈'],body:['身体','Body','○'],sound:['声音','Sound','♪'],mind:['冥想','Mind','◌'],nature:['自然','Nature','△'],animal:['动物','Animals','♧'],ritual:['仪式','Ritual','✦'],apothecary:['药师制剂','Apothecary','⚗']};
@@ -31,15 +31,17 @@
   };
   const icon=type=>'<span class="icon" aria-hidden="true"><svg viewBox="0 0 64 64">'+(paths[type]||paths.plant)+'</svg></span>';
   const storyArt={
-    grasse:'./assets/garden@2x.jpg',
-    padua:'./assets/garden@2x.jpg',
-    chelsea:'./assets/garden@2x.jpg',
-    forest:'./assets/garden@2x.jpg',
-    rongoa:'./assets/garden@2x.jpg',
-    ebers:'./assets/garden.jpg',
-    kallawaya:'./assets/garden@2x.jpg',
-    argan:'./assets/garden.jpg',
-    jamu:'./assets/garden.jpg'
+    grasse:'./assets/reference/images/provence_perfume_estate.webp',
+    padua:'./assets/reference/images/provence_bird_botanical_atlas.webp',
+    chelsea:'./assets/reference/images/provence_bird_botanical_atlas.webp',
+    forest:'./assets/reference/images/alishan_healing_adventure.webp',
+    rongoa:'./assets/reference/images/alishan_healing_adventure.webp',
+    ebers:'./assets/reference/images/provence_bird_botanical_atlas.webp',
+    kallawaya:'./assets/reference/images/alishan_healing_adventure.webp',
+    argan:'./assets/reference/images/butterfly_perfume_estate_infographic.webp',
+    jamu:'./assets/reference/images/butterfly_perfume_estate_infographic.webp',
+    gnawa:'./assets/reference/images/butterfly_perfume_estate_infographic.webp',
+    lum:'./assets/reference/images/alishan_healing_adventure.webp'
   };
   const art=(s,label=false)=>{
     const src=storyArt[s.id];
@@ -131,9 +133,25 @@
     $('moreLibrary').hidden=records.length<=pageSize;
   }
   function renderFilms(){
+    const captions={
+      alishan_healing_adventure:[tx('阿里山森林疗愈','Alishan Healing Adventure'),'Nature · Forest · Journey'],
+      butterfly_perfume_estate_infographic:[tx('香蝶香氛庄园','Butterfly Perfume Estate'),'Garden · Aroma · Lab'],
+      provence_bird_botanical_atlas:[tx('玫瑰、鸟与生态图鉴','Rose, Bird & Ecological Atlas'),'Botanical · Ecology · Place'],
+      provence_perfume_estate:[tx('普罗旺斯香水庄园','Provence Perfume Estate'),'Garden · Craft · Fragrance']
+    };
+    if($('referenceGallery'))$('referenceGallery').innerHTML=referenceImages.map(img=>{
+      const cap=captions[img.id]||[img.id,'Earth Healing'];
+      return '<figure class="reference-visual"><img src="'+escapeHTML(img.path)+'" alt="'+escapeHTML(cap[0])+'" loading="lazy"><figcaption><strong>'+escapeHTML(cap[0])+'</strong><small>'+escapeHTML(cap[1])+'</small></figcaption></figure>';
+    }).join('');
+    const posters=[
+      './assets/reference/images/butterfly_perfume_estate_infographic.webp',
+      './assets/reference/images/provence_perfume_estate.webp',
+      './assets/reference/images/provence_bird_botanical_atlas.webp',
+      './assets/reference/images/alishan_healing_adventure.webp'
+    ];
     const filmStories=stories.filter(s=>s.film);
     let html=filmStories.map(s=>'<article class="film-card">'+art(s)+'<div class="film-copy"><h3>'+escapeHTML(s[lang].title)+'</h3><p>'+tx('官方来源影像 · 外部播放','Official-source film · plays on the source website')+'</p><a href="'+escapeHTML(safeURL(s.film))+'" target="_blank" rel="noopener noreferrer">'+tx('▶ 观看纪录片 ↗','▶ Watch the documentary ↗')+'</a></div></article>').join('');
-    html+=media.map((m,i)=>'<article class="film-card"><video controls playsinline preload="metadata" poster="'+['./assets/garden.jpg','./assets/garden.jpg','./assets/garden.jpg'][i%3]+'" aria-label="'+escapeHTML(m[lang]||m.en)+'"><source src="'+escapeHTML(m.path)+'" type="'+escapeHTML(m.mime||'video/webm')+'"></video><div class="film-copy"><span class="media-kicker">EARTH HEALING FILM</span><h3>'+escapeHTML(m[lang]||m.en)+'</h3><p>'+tx('用户提供的概念影像 · 用于网站世界观与场景体验，不作为历史证据','User-supplied concept film · part of the visual world, not historical evidence')+'</p></div></article>').join('');
+    html+=media.map((m,i)=>'<article class="film-card"><video controls playsinline preload="metadata" poster="'+posters[i%posters.length]+'" aria-label="'+escapeHTML(m[lang]||m.en)+'"><source src="'+escapeHTML(m.path)+'" type="'+escapeHTML(m.mime||'video/webm')+'"></video><div class="film-copy"><span class="media-kicker">EARTH HEALING FILM</span><h3>'+escapeHTML(m[lang]||m.en)+'</h3><p>'+tx('用户提供的概念影像 · 用于网站世界观与场景体验，不作为历史证据','User-supplied concept film · part of the visual world, not historical evidence')+'</p></div></article>').join('');
     $('filmGrid').innerHTML=html;
   }
   document.addEventListener('click',async event=>{
@@ -171,7 +189,7 @@
   (async()=>{
     try{
       const data=await loadJSON('./data/stories.json');stories=data.stories.filter(s=>s.status==='published');
-      [research,media]=await Promise.all([loadJSON('./data/research-index.json',[]),loadJSON('./data/media.json',[])]);
+      [research,media,referenceImages]=await Promise.all([loadJSON('./data/research-index.json',[]),loadJSON('./data/media.json',[]),loadJSON('./data/reference-images.json',[])]);
       allLoaded=true;renderFeatured();renderExplorer();renderLibrary();renderFilms();
       try{await setupMap();}catch(error){$('mapLoading').textContent=tx('地图资源未能加载，可使用列表继续阅读。','The map could not load. All stories remain available in the list.');switchView(true);}
       const id=params.get('story')||(location.pathname.endsWith('story-provence.html')?'grasse':null);
