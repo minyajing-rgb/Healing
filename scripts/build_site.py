@@ -6,6 +6,13 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'_site'
 REPORT=ROOT/'site-report'
 REPORT.mkdir(exist_ok=True)
+# Fail before downloads when an HTML reference points to a missing or truncated image.
+for name in ('butterfly_perfume_estate_infographic.webp', 'provence_perfume_estate.webp',
+             'alishan_healing_adventure.webp', 'provence_bird_botanical_atlas.webp'):
+    source=ROOT/'assets/reference/images'/name
+    with Image.open(source) as image:
+        image.load()
+        assert image.width >= 600 and image.height >= 400, f'Invalid reference image: {source}'
 if OUT.exists(): shutil.rmtree(OUT)
 shutil.copytree(ROOT/'web',OUT)
 (OUT/'data').mkdir(exist_ok=True)
