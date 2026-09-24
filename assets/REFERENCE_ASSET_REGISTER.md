@@ -10,6 +10,7 @@ The repository now contains **web-optimized derivatives** of all 9 user-provided
 - `COMMITTED_WEB_PROXY` = a lightweight derivative is committed in GitHub for website prototyping and integration.
 - The original high-resolution conversation upload remains the master source in the current ChatGPT conversation context and is **not represented as an archival original** by the proxy.
 - Before production launch, replace a proxy with the highest-quality licensed/user-owned master when practical.
+- 2026-09-24 repair: all four committed WebP reference proxies were truncated and could not decode. Their original bytes cannot be recovered from this repository. To restore the published layouts, the four image paths currently contain valid temporary derivatives of existing site artwork: butterfly infographic ← `web/assets/media/map-atlas.avif`; Provence estate ← `web/assets/media/hero-garden.avif`; Alishan poster ← `web/assets/showcase/earth-healing-home-approved.jpg`; Provence botanical atlas ← `web/assets/media/atlas-lavender.avif`. These are layout stand-ins, not the named original artworks. Replace them with the corresponding licensed originals when available.
 
 | Asset | Type | GitHub path | Intended website use | Status |
 |---|---|---|---|---|
